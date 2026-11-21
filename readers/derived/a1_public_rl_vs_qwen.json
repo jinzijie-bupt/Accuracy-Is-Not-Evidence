@@ -1,0 +1,573 @@
+{
+ "provenance": {
+  "script": "a1_public_rl_vs_qwen.py",
+  "script_sha16": "30663bed84f67af5",
+  "common_sha16": "ee7681202487b7de",
+  "generated_utc": "2026-09-24T04:36:00Z",
+  "inputs": [
+   {
+    "path": "readers/read_p4nat_selective_v1.py",
+    "sha16": "e9cebf164625af69"
+   },
+   {
+    "path": "readers/read_p4nat_v1.py",
+    "sha16": "40d59264fb665ee9"
+   },
+   {
+    "path": "results/judgment_20260921/gamma/gamma_14Ln_natbase_a05_g1_s0_tf5_timer1_default_node2__vs__14Ln_base_timer1_default_node2.json",
+    "sha16": "706be07487709d5d"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json",
+    "sha16": "a0b9797f9208b0e1"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json",
+    "sha16": "370af855b3e3ff91"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json",
+    "sha16": "d27b01fa57fa8530"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_natbase_a05_g1_s0_tf5_timer1_default_node2_nat_o0n200R3.json",
+    "sha16": "2a59c64f0f494c1b"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json",
+    "sha16": "045f0a6e201240be"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node4_nat_o0n200R3.json",
+    "sha16": "7f083bc8068a0b31"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json",
+    "sha16": "3c5b17c1ba49e3f6"
+   },
+   {
+    "path": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node3_nat_o0n200R3.json",
+    "sha16": "e7636efaebadcd04"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+    "sha16": "558f0dfd1addc589"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+    "sha16": "e797eed8aca92097"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_textfirst_tf5meta_node3_full.json",
+    "sha16": "9b05b28141d657b9"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_tf5meta_node3_full.json",
+    "sha16": "77c7bc24e3f22c8b"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+    "sha16": "cb0e43af2dac8f3e"
+   },
+   {
+    "path": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_tf5meta_node3_full.json",
+    "sha16": "ea60be471efd78f2"
+   },
+   {
+    "path": "results/native_full_20260918/p4nat_TimeZero-Charades-7B_timer1_default_tf5meta_node2_full.json",
+    "sha16": "5631d43be7923904"
+   },
+   {
+    "path": "results/native_full_20260918/p4nat_qwenbase_timer1_default_tf5meta_node2_full.json",
+    "sha16": "ef0f981a38543d30"
+   },
+   {
+    "path": "results/native_full_20260918/p4nat_tzbase_timer1_default_tf5meta_node2_full.json",
+    "sha16": "99c4d64c5dac1438"
+   }
+  ]
+ },
+ "sanity": {
+  "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json",
+  "arm": "results/native_audit_20260917/14Ln_natbase_a05_g1_s0_tf5_timer1_default_node2_nat_o0n200R3.json",
+  "gamma_mask": 1.729077662375581,
+  "ci": [
+   1.4374144951535481,
+   2.0054785884456767
+  ],
+  "gamma_swap": 1.4207151669391171,
+  "ci_swap": [
+   1.1376860052665714,
+   1.6870845108558437
+  ],
+  "brief_expected": [
+   1.729,
+   1.434,
+   2.026
+  ],
+  "registered_reader_product": "results/judgment_20260921/gamma/gamma_14Ln_natbase_a05_g1_s0_tf5_timer1_default_node2__vs__14Ln_base_timer1_default_node2.json",
+  "registered": [
+   1.729077662375581,
+   1.4374144951535481,
+   2.0054785884456767,
+   1.4207151669391171,
+   1.1376860052665714,
+   1.6870845108558437
+  ],
+  "note": "point estimate matches the brief (1.729). The CI matches the registered read_14Ln_v1 product bit-for-bit ([1.4374, 2.0055]); the brief's [1.434, 2.026] is not reproduced by that reader's stream -- it is within Monte-Carlo variation of the same bootstrap (B=10000 gives [1.433, 2.021]; video order-of-appearance gives [1.426, 2.028]).",
+  "pass": true
+ },
+ "gamma_pairs": [
+  {
+   "n_H_int": 103,
+   "n_hits_base": 112,
+   "n_hits_arm": 142,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.56,
+   "R50_audit_arm": 0.71,
+   "mask": {
+    "gamma": -0.07806703490812848,
+    "gamma_ci95": [
+     -0.15926768544912331,
+     0.00755098897633216
+    ],
+    "n_videos": 50,
+    "pos_frac": 0.4174757281553398,
+    "n_pos": 43,
+    "n_zero": 0,
+    "dE_arm": 0.1316780479470112,
+    "dO_arm": -0.031797180667469824,
+    "dE_base": 0.17300879866786847,
+    "dO_base": -0.068533464854741,
+    "sign_frac": 0.4174757281553398,
+    "sign_frac_wilson95": [
+     0.3268873640675524,
+     0.5139983727274672
+    ],
+    "sign_frac_cluster_ci95": [
+     0.30610827664399093,
+     0.5333333333333333
+    ],
+    "gamma_c": -0.11369806228071715,
+    "gamma_c_ci95": [
+     -0.2454364051306635,
+     0.02535249291775626
+    ]
+   },
+   "swap": {
+    "gamma": -0.05431349058154419,
+    "gamma_ci95": [
+     -0.12376565372881199,
+     0.01659852632756613
+    ],
+    "n_videos": 50,
+    "pos_frac": 0.4854368932038835,
+    "n_pos": 50,
+    "n_zero": 0,
+    "dE_arm": 0.06318602959653395,
+    "dO_arm": -0.0073541875494505665,
+    "dE_base": 0.06466031086229028,
+    "dO_base": -0.06019339686523844,
+    "sign_frac": 0.4854368932038835,
+    "sign_frac_wilson95": [
+     0.391190583237978,
+     0.5807304291376137
+    ],
+    "sign_frac_cluster_ci95": [
+     0.3616931879134633,
+     0.6226415094339622
+    ],
+    "gamma_c": -0.12788525177778415,
+    "gamma_c_ci95": [
+     -0.3203234609084189,
+     0.08408347963476767
+    ]
+   },
+   "nll_base": 1.3474328085788556,
+   "nll_arm": 1.3632745341543795,
+   "d_nll": 0.01584172557552425,
+   "d_nll_ci95": [
+    -0.056394607429798044,
+    0.08509416397951701
+   ],
+   "label": "TimeZero vs Qwen",
+   "env": "A",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "n_H_int": 102,
+   "n_hits_base": 112,
+   "n_hits_arm": 142,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.56,
+   "R50_audit_arm": 0.71,
+   "mask": {
+    "gamma": -0.0741685472051404,
+    "gamma_ci95": [
+     -0.16036968599451365,
+     0.01659555861077975
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.4019607843137255,
+    "n_pos": 41,
+    "n_zero": 0,
+    "dE_arm": 0.13491290619933002,
+    "dO_arm": -0.03356977263538833,
+    "dE_base": 0.17617525725645558,
+    "dO_base": -0.06647596878340314,
+    "sign_frac": 0.4019607843137255,
+    "sign_frac_wilson95": [
+     0.31204486602704057,
+     0.4989932638055992
+    ],
+    "sign_frac_cluster_ci95": [
+     0.2765957446808511,
+     0.5267881144393242
+    ],
+    "gamma_c": -0.12054555614032446,
+    "gamma_c_ci95": [
+     -0.282341035678679,
+     0.03952717092917139
+    ]
+   },
+   "swap": {
+    "gamma": -0.016550386369657593,
+    "gamma_ci95": [
+     -0.0757415798740356,
+     0.04572702961030343
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.49019607843137253,
+    "n_pos": 50,
+    "n_zero": 0,
+    "dE_arm": 0.08144331666679112,
+    "dO_arm": -0.006299379650146776,
+    "dE_base": 0.04051318822318439,
+    "dO_base": -0.06377989446341109,
+    "sign_frac": 0.49019607843137253,
+    "sign_frac_wilson95": [
+     0.3953140272637241,
+     0.5857897857195398
+    ],
+    "sign_frac_cluster_ci95": [
+     0.38886054421768707,
+     0.5978288883908561
+    ],
+    "gamma_c": -0.07730496483342655,
+    "gamma_c_ci95": [
+     -0.2360228795743525,
+     0.09637912280253984
+    ]
+   },
+   "nll_base": 1.3500340808890612,
+   "nll_arm": 1.3608951294222016,
+   "d_nll": 0.010861048533140271,
+   "d_nll_ci95": [
+    -0.060799710220201655,
+    0.0833438289963214
+   ],
+   "label": "TimeZero vs Qwen",
+   "env": "B",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "n_H_int": 101,
+   "n_hits_base": 112,
+   "n_hits_arm": 136,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.56,
+   "R50_audit_arm": 0.68,
+   "mask": {
+    "gamma": 0.0176324585007832,
+    "gamma_ci95": [
+     -0.01807449051508709,
+     0.05803745520762473
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.6039603960396039,
+    "n_pos": 61,
+    "n_zero": 0,
+    "dE_arm": 0.19672337924135228,
+    "dO_arm": -0.07335564313716175,
+    "dE_base": 0.1853262602806062,
+    "dO_base": -0.0671203035971246,
+    "sign_frac": 0.6039603960396039,
+    "sign_frac_wilson95": [
+     0.5064566738465976,
+     0.6938457660108579
+    ],
+    "sign_frac_cluster_ci95": [
+     0.5,
+     0.7263397129186602
+    ],
+    "gamma_c": -0.017476946915479182,
+    "gamma_c_ci95": [
+     -0.09712808887609148,
+     0.05855543413911273
+    ]
+   },
+   "swap": {
+    "gamma": 0.047397797192643296,
+    "gamma_ci95": [
+     0.004794071612681894,
+     0.08762257204587014
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.5742574257425742,
+    "n_pos": 58,
+    "n_zero": 0,
+    "dE_arm": 0.07317910944731726,
+    "dO_arm": -0.08355179564064899,
+    "dE_base": 0.046484358573221606,
+    "dO_base": -0.06284874932210133,
+    "sign_frac": 0.5742574257425742,
+    "sign_frac_wilson95": [
+     0.4768501452900997,
+     0.6662230260366542
+    ],
+    "sign_frac_cluster_ci95": [
+     0.49,
+     0.6538461538461539
+    ],
+    "gamma_c": 0.05683318815651529,
+    "gamma_c_ci95": [
+     -0.0638393168580754,
+     0.1496020588929149
+    ]
+   },
+   "nll_base": 1.348138569072945,
+   "nll_arm": 1.2760408938986907,
+   "d_nll": -0.07209767517425414,
+   "d_nll_ci95": [
+    -0.10424621916492063,
+    -0.041341266670509934
+   ],
+   "label": "Time-R1 vs Qwen",
+   "env": "B",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "n_H_int": 110,
+   "n_hits_base": 119,
+   "n_hits_arm": 137,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.595,
+   "R50_audit_arm": 0.685,
+   "mask": {
+    "gamma": 0.03606565281082552,
+    "gamma_ci95": [
+     0.006015162048739545,
+     0.06833505201646684
+    ],
+    "n_videos": 55,
+    "pos_frac": 0.6090909090909091,
+    "n_pos": 67,
+    "n_zero": 0,
+    "dE_arm": 0.1606005700044554,
+    "dO_arm": -0.061541834139614914,
+    "dE_base": 0.12108530017773926,
+    "dO_base": -0.06499145115550549,
+    "sign_frac": 0.6090909090909091,
+    "sign_frac_wilson95": [
+     0.5156993628097574,
+     0.6951201422160979
+    ],
+    "sign_frac_cluster_ci95": [
+     0.4915254237288136,
+     0.7263182720953327
+    ],
+    "gamma_c": 0.04045232742081625,
+    "gamma_c_ci95": [
+     -0.021508585065481835,
+     0.1028091576302277
+    ]
+   },
+   "swap": {
+    "gamma": 0.0322523420114578,
+    "gamma_ci95": [
+     -0.012295303790170966,
+     0.07553324582480045
+    ],
+    "n_videos": 55,
+    "pos_frac": 0.6,
+    "n_pos": 66,
+    "n_zero": 0,
+    "dE_arm": 0.0976807471619287,
+    "dO_arm": -0.031385766719370316,
+    "dE_base": 0.06026742241599343,
+    "dO_base": -0.03654674945384778,
+    "sign_frac": 0.6,
+    "sign_frac_wilson95": [
+     0.5065704511305059,
+     0.6866807618098613
+    ],
+    "sign_frac_cluster_ci95": [
+     0.509090909090909,
+     0.6942206152433426
+    ],
+    "gamma_c": 0.09034659334826588,
+    "gamma_c_ci95": [
+     -0.022116361258714034,
+     0.2112722505671654
+    ]
+   },
+   "nll_base": 1.37424516580631,
+   "nll_arm": 1.3113452031277848,
+   "d_nll": -0.06289996267852511,
+   "d_nll_ci95": [
+    -0.08499723950192929,
+    -0.041111855186679175
+   ],
+   "label": "Time-R1 vs Qwen",
+   "env": "C",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node4_nat_o0n200R3.json"
+  }
+ ],
+ "full_set_pairs": [
+  {
+   "label": "TimeZero vs Qwen",
+   "env": "A",
+   "order": "video-first",
+   "ref": "results/native_full_20260918/p4nat_qwenbase_timer1_default_tf5meta_node2_full.json",
+   "arm": "results/native_full_20260918/p4nat_tzbase_timer1_default_tf5meta_node2_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.4774193548387097,
+   "arm_R50": 0.675,
+   "delta_R50": 0.19758064516129037,
+   "delta_R50_ci95": [
+    0.17858980669216223,
+    0.21686197540903815
+   ],
+   "coverage_ref": 0.9954301075268818,
+   "coverage_arm": 1.0,
+   "n_videos": 1334,
+   "same_pred_rows": 71
+  },
+  {
+   "label": "TimeZero(official dir) vs Qwen",
+   "env": "A",
+   "order": "video-first",
+   "ref": "results/native_full_20260918/p4nat_qwenbase_timer1_default_tf5meta_node2_full.json",
+   "arm": "results/native_full_20260918/p4nat_TimeZero-Charades-7B_timer1_default_tf5meta_node2_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.4774193548387097,
+   "arm_R50": 0.6747311827956989,
+   "delta_R50": 0.1973118279569892,
+   "delta_R50_ci95": [
+    0.17853212581683928,
+    0.21635971838613594
+   ],
+   "coverage_ref": 0.9954301075268818,
+   "coverage_arm": 1.0,
+   "n_videos": 1334,
+   "same_pred_rows": 74
+  },
+  {
+   "label": "TimeZero vs Qwen",
+   "env": "B",
+   "order": "video-first",
+   "ref": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+   "arm": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_tf5meta_node3_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.47956989247311826,
+   "arm_R50": 0.6768817204301075,
+   "delta_R50": 0.19731182795698926,
+   "delta_R50_ci95": [
+    0.17939998706171564,
+    0.21612993255711235
+   ],
+   "coverage_ref": 0.9943548387096774,
+   "coverage_arm": 1.0,
+   "n_videos": 1334,
+   "same_pred_rows": 77
+  },
+  {
+   "label": "Time-R1 vs Qwen",
+   "env": "B",
+   "order": "video-first",
+   "ref": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+   "arm": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_tf5meta_node3_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.47956989247311826,
+   "arm_R50": 0.6010752688172043,
+   "delta_R50": 0.12150537634408604,
+   "delta_R50_ci95": [
+    0.10583519868925095,
+    0.13783751347404374
+   ],
+   "coverage_ref": 0.9943548387096774,
+   "coverage_arm": 1.0,
+   "n_videos": 1334,
+   "same_pred_rows": 522
+  },
+  {
+   "label": "TimeZero vs Qwen",
+   "env": "B",
+   "order": "text-first",
+   "ref": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "arm": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.23844086021505376,
+   "arm_R50": 0.7045698924731183,
+   "delta_R50": 0.46612903225806457,
+   "delta_R50_ci95": [
+    0.44329757592644187,
+    0.4890690092438799
+   ],
+   "coverage_ref": 0.9922043010752688,
+   "coverage_arm": 1.0,
+   "n_videos": 1334,
+   "same_pred_rows": 14
+  },
+  {
+   "label": "Time-R1 vs Qwen",
+   "env": "B",
+   "order": "text-first",
+   "ref": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "arm": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_textfirst_tf5meta_node3_full.json",
+   "styles": [
+    "timer1_default"
+   ],
+   "n": 3720,
+   "ref_R50": 0.23844086021505376,
+   "arm_R50": 0.5325268817204301,
+   "delta_R50": 0.2940860215053763,
+   "delta_R50_ci95": [
+    0.2706949955214063,
+    0.31756050483305037
+   ],
+   "coverage_ref": 0.9922043010752688,
+   "coverage_arm": 0.9994623655913979,
+   "n_videos": 1334,
+   "same_pred_rows": 155
+  }
+ ],
+ "not_computable": [
+  "Time-R1 vs Qwen, env C (node4, tf4.51), full test set: no Qwen2.5-VL-7B base full-set file exists on node4 (p4nat_Time-R1-7B_timer1_default_tf451_node4_full.json exists, the base counterpart does not) -> not computable.",
+  "VideoChat-R1 vs Qwen (vchat protocol): Qwen base vchat likelihood audit is still running on GPU -> left blank.",
+  "TimeZero vs Qwen, env C: no TimeZero audit on node4."
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "provenance": {
+  "script": "a6_vc_vs_qwen.py",
+  "script_sha16": "429cc7246ad43ea0",
+  "common_sha16": "ee7681202487b7de",
+  "generated_utc": "2026-09-24T05:36:40Z",
+  "inputs": [
+   {
+    "path": "results/native_audit_20260917/14Ln_vcbase_vchat_node3_nat_o0n200R3.json",
+    "sha16": "b9a26d9047904ea3"
+   },
+   {
+    "path": "results/native_audit_20260924/14Ln_qwenbase_vchat_node5_nat_o0n200R3.json",
+    "sha16": "84d0e46448f93590"
+   },
+   {
+    "path": "results/native_audit_20260924/14Ln_vcbase_vchat_node5_nat_o0n200R3.json",
+    "sha16": "aba2298e31f87a3b"
+   }
+  ]
+ },
+ "pairs": [
+  {
+   "n_H_int": 101,
+   "n_hits_base": 110,
+   "n_hits_arm": 143,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.55,
+   "R50_audit_arm": 0.715,
+   "mask": {
+    "gamma": 0.052389115669523326,
+    "gamma_ci95": [
+     0.015712033396581896,
+     0.08705903579442247
+    ],
+    "n_videos": 48,
+    "pos_frac": 0.7128712871287128,
+    "n_pos": 72,
+    "n_zero": 0,
+    "dE_arm": 0.1744484057003205,
+    "dO_arm": 0.0007202148778012535,
+    "dE_base": 0.11552167165452636,
+    "dO_base": -0.005817403498469532,
+    "sign_frac": 0.7128712871287128,
+    "sign_frac_wilson95": [
+     0.6181195096913985,
+     0.7920235814452965
+    ],
+    "sign_frac_cluster_ci95": [
+     0.6330181613929976,
+     0.7941176470588235
+    ],
+    "gamma_c": -0.0011371232548207015,
+    "gamma_c_ci95": [
+     -0.13017251499494675,
+     0.12035853867575072
+    ]
+   },
+   "swap": {
+    "gamma": 0.026609086695398985,
+    "gamma_ci95": [
+     -0.009777999075845952,
+     0.06425085514703718
+    ],
+    "n_videos": 48,
+    "pos_frac": 0.5445544554455446,
+    "n_pos": 55,
+    "n_zero": 0,
+    "dE_arm": 0.11953642324556189,
+    "dO_arm": 0.0019563568065648373,
+    "dE_base": 0.12048286197291948,
+    "dO_base": 0.02951188222932141,
+    "sign_frac": 0.5445544554455446,
+    "sign_frac_wilson95": [
+     0.44757998088881473,
+     0.6382639219072378
+    ],
+    "sign_frac_cluster_ci95": [
+     0.44551705170517053,
+     0.6422358979017166
+    ],
+    "gamma_c": -0.012134298029154769,
+    "gamma_c_ci95": [
+     -0.1360969882232322,
+     0.11467799107345113
+    ]
+   },
+   "nll_base": 0.661697759885613,
+   "nll_arm": 0.5609194576509038,
+   "d_nll": -0.10077830223470907,
+   "d_nll_ci95": [
+    -0.12770954719043387,
+    -0.07639133083652394
+   ],
+   "label": "VideoChat-R1 (node5) vs Qwen2.5-VL-7B (node5), vchat template",
+   "base": "results/native_audit_20260924/14Ln_qwenbase_vchat_node5_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260924/14Ln_vcbase_vchat_node5_nat_o0n200R3.json"
+  },
+  {
+   "n_H_int": 102,
+   "n_hits_base": 110,
+   "n_hits_arm": 144,
+   "n_structural_mismatch": 0,
+   "n_target_text_mismatch": 0,
+   "R50_audit_base": 0.55,
+   "R50_audit_arm": 0.72,
+   "mask": {
+    "gamma": 0.053957690658798255,
+    "gamma_ci95": [
+     0.016627592649833805,
+     0.08920665453004012
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.7156862745098039,
+    "n_pos": 73,
+    "n_zero": 0,
+    "dE_arm": 0.17653847822504926,
+    "dO_arm": 0.0013783824392329701,
+    "dE_base": 0.11560506110152524,
+    "dO_base": -0.005597344025492794,
+    "sign_frac": 0.7156862745098039,
+    "sign_frac_wilson95": [
+     0.6215651983133917,
+     0.7941509160548005
+    ],
+    "sign_frac_cluster_ci95": [
+     0.6330181613929976,
+     0.8043540729635182
+    ],
+    "gamma_c": 0.0016643301722493236,
+    "gamma_c_ci95": [
+     -0.13694040563048915,
+     0.1250518566962263
+    ]
+   },
+   "swap": {
+    "gamma": 0.033960669132628234,
+    "gamma_ci95": [
+     -0.0017588086198746045,
+     0.07291422904158712
+    ],
+    "n_videos": 49,
+    "pos_frac": 0.5686274509803921,
+    "n_pos": 58,
+    "n_zero": 0,
+    "dE_arm": 0.1300179261049127,
+    "dO_arm": 0.004552487039750116,
+    "dE_base": 0.12085341411560395,
+    "dO_base": 0.029348644183069605,
+    "sign_frac": 0.5686274509803921,
+    "sign_frac_wilson95": [
+     0.4717497773240239,
+     0.6605235317931281
+    ],
+    "sign_frac_cluster_ci95": [
+     0.4631380871533673,
+     0.6761904761904762
+    ],
+    "gamma_c": 0.005199876757601558,
+    "gamma_c_ci95": [
+     -0.11759526980264197,
+     0.13732730774292756
+    ]
+   },
+   "nll_base": 0.6619333666189181,
+   "nll_arm": 0.5606990253579491,
+   "d_nll": -0.10123434126096886,
+   "d_nll_ci95": [
+    -0.12707028626152742,
+    -0.07595093129768907
+   ],
+   "label": "VideoChat-R1 (node3) vs Qwen2.5-VL-7B (node5), vchat template",
+   "base": "results/native_audit_20260924/14Ln_qwenbase_vchat_node5_nat_o0n200R3.json",
+   "arm": "results/native_audit_20260917/14Ln_vcbase_vchat_node3_nat_o0n200R3.json"
+  }
+ ]
+}

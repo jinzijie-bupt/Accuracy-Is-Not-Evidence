@@ -1,0 +1,4307 @@
+{
+ "meta": {
+  "utc": "2026-09-11T06:06:06Z",
+  "anno": "charades_sta_test.txt",
+  "anno_sha16": "fab341679c20b091",
+  "n_items_total": 3720,
+  "n_dev": 1000,
+  "n_with_partner": 536,
+  "partner_rule": "same video, same (s,e), normalized caption differs; min word-set Jaccard, tie -> smaller qid",
+  "jaccard_p10_p50_p90": [
+   0.11764705882352941,
+   0.4,
+   0.6666666666666666
+  ],
+  "builder_sha16": "5cdf3858b65f01f6"
+ },
+ "map": {
+  "0": {
+   "caption": "person turn a light on.",
+   "partner_caption": "person is playing with the switch for the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 3,
+   "jaccard": 0.1818,
+   "n_candidates": 3
+  },
+  "1": {
+   "caption": "person flipped the light switch near the door.",
+   "partner_caption": "person turn a light on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 0,
+   "jaccard": 0.2,
+   "n_candidates": 3
+  },
+  "2": {
+   "caption": "person turn the light switch on.",
+   "partner_caption": "person is playing with the switch for the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 3,
+   "jaccard": 0.4,
+   "n_candidates": 3
+  },
+  "3": {
+   "caption": "person is playing with the switch for the light.",
+   "partner_caption": "person turn a light on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 0,
+   "jaccard": 0.1818,
+   "n_candidates": 3
+  },
+  "8": {
+   "caption": "person closes the door.",
+   "partner_caption": "person closing the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 9,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "9": {
+   "caption": "person closing the door.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 8,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "10": {
+   "caption": "person runs up the stairs.",
+   "partner_caption": "a person watches another run up some stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 11,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "11": {
+   "caption": "a person watches another run up some stairs.",
+   "partner_caption": "person runs up the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 10,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "12": {
+   "caption": "person runs to the window to look out.",
+   "partner_caption": "person runs to the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 15,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "13": {
+   "caption": "a person sits in a chair.",
+   "partner_caption": "the person sits in the chair momentarily.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 17,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "14": {
+   "caption": "person runs to the window.",
+   "partner_caption": "person runs to the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 15,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "15": {
+   "caption": "person runs to the door.",
+   "partner_caption": "person runs to the window to look out.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 12,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "16": {
+   "caption": "a person sits on a chair.",
+   "partner_caption": "the person sits in the chair momentarily.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 17,
+   "jaccard": 0.375,
+   "n_candidates": 2
+  },
+  "17": {
+   "caption": "the person sits in the chair momentarily.",
+   "partner_caption": "a person sits on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 16,
+   "jaccard": 0.375,
+   "n_candidates": 2
+  },
+  "20": {
+   "caption": "person sits in a chair.",
+   "partner_caption": "person sits down on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 21,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "21": {
+   "caption": "person sits down on a chair.",
+   "partner_caption": "person sits in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 20,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "28": {
+   "caption": "person takes a cup off a desk.",
+   "partner_caption": "a person takes a cup from a table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 31,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "29": {
+   "caption": "person opens the front door.",
+   "partner_caption": "the person opens a door leading outside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 30,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "30": {
+   "caption": "the person opens a door leading outside.",
+   "partner_caption": "person opens the front door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 29,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "31": {
+   "caption": "a person takes a cup from a table.",
+   "partner_caption": "person takes a cup off a desk.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 28,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "34": {
+   "caption": "person put on their shoes.",
+   "partner_caption": "person puts on some shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 42,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "35": {
+   "caption": "person holding a glass cup.",
+   "partner_caption": "person stands in doorway holding a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 40,
+   "jaccard": 0.5,
+   "n_candidates": 3
+  },
+  "37": {
+   "caption": "a person is in a entryway eating a sandwich.",
+   "partner_caption": "person eating a sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 41,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "38": {
+   "caption": "person holding a glass of water.",
+   "partner_caption": "person holding a cup in the doorway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 43,
+   "jaccard": 0.3,
+   "n_candidates": 3
+  },
+  "40": {
+   "caption": "person stands in doorway holding a glass.",
+   "partner_caption": "person holding a glass of water.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 38,
+   "jaccard": 0.4444,
+   "n_candidates": 3
+  },
+  "41": {
+   "caption": "person eating a sandwich.",
+   "partner_caption": "a person is in a entryway eating a sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 37,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "42": {
+   "caption": "person puts on some shoes.",
+   "partner_caption": "person put on their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 34,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "43": {
+   "caption": "person holding a cup in the doorway.",
+   "partner_caption": "person holding a glass of water.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 38,
+   "jaccard": 0.3,
+   "n_candidates": 3
+  },
+  "48": {
+   "caption": "person sitting on bed.",
+   "partner_caption": "person sitting on their bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 50,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "50": {
+   "caption": "person sitting on their bed.",
+   "partner_caption": "person sitting on bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 48,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "51": {
+   "caption": "a person throws a pair of shoes under the window.",
+   "partner_caption": "the person throws shoes under the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 52,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "52": {
+   "caption": "the person throws shoes under the window.",
+   "partner_caption": "a person throws a pair of shoes under the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 51,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "57": {
+   "caption": "a person runs through a doorway.",
+   "partner_caption": "a person runs into the dining room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 58,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "58": {
+   "caption": "a person runs into the dining room.",
+   "partner_caption": "a person runs through a doorway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 57,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "60": {
+   "caption": "the same person was laughing as he was undressing.",
+   "partner_caption": "person begins to undress.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 61,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "61": {
+   "caption": "person begins to undress.",
+   "partner_caption": "the same person was laughing as he was undressing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 60,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "63": {
+   "caption": "person laying on the bed sneezing.",
+   "partner_caption": "person is lying on bed sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 64,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "64": {
+   "caption": "person is lying on bed sneezing.",
+   "partner_caption": "person laying on the bed sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 63,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "72": {
+   "caption": "person putting groceries away.",
+   "partner_caption": "person put groceries away.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 75,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "75": {
+   "caption": "person put groceries away.",
+   "partner_caption": "person putting groceries away.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 72,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "85": {
+   "caption": "the person puts a picture on their desk.",
+   "partner_caption": "person put the picture on the desk.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 87,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "87": {
+   "caption": "person put the picture on the desk.",
+   "partner_caption": "the person puts a picture on their desk.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 85,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "89": {
+   "caption": "person opens the door.",
+   "partner_caption": "person they open the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 90,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "90": {
+   "caption": "person they open the door.",
+   "partner_caption": "person opens the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 89,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "91": {
+   "caption": "person laughs in the kitchen.",
+   "partner_caption": "person seems to be laughing into the blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 92,
+   "jaccard": 0.1818,
+   "n_candidates": 1
+  },
+  "92": {
+   "caption": "person seems to be laughing into the blanket.",
+   "partner_caption": "person laughs in the kitchen.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 91,
+   "jaccard": 0.1818,
+   "n_candidates": 1
+  },
+  "93": {
+   "caption": "person eats one.",
+   "partner_caption": "person eats it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 96,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "96": {
+   "caption": "person eats it.",
+   "partner_caption": "person eats one.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 93,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "100": {
+   "caption": "person drinking from a cup.",
+   "partner_caption": "person drinking from a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 101,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "101": {
+   "caption": "person drinking from a glass.",
+   "partner_caption": "person drinking from a cup.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 100,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "103": {
+   "caption": "person takes a towel from a container.",
+   "partner_caption": "person takes out a towel.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 104,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "104": {
+   "caption": "person takes out a towel.",
+   "partner_caption": "person takes a towel from a container.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 103,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "108": {
+   "caption": "a person sits in a chair.",
+   "partner_caption": "a man is sitting at a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 110,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "110": {
+   "caption": "a man is sitting at a chair.",
+   "partner_caption": "a person sits in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 108,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "115": {
+   "caption": "person puts a cup in the sink.",
+   "partner_caption": "person puts the cup in the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 117,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "117": {
+   "caption": "person puts the cup in the sink.",
+   "partner_caption": "person puts a cup in the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 115,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "118": {
+   "caption": "the person immediately opened a window.",
+   "partner_caption": "person opens a window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 119,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "119": {
+   "caption": "person opens a window.",
+   "partner_caption": "the person immediately opened a window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 118,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "120": {
+   "caption": "person opens the window.",
+   "partner_caption": "the person immediately opened a window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 118,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "125": {
+   "caption": "another person comes in takes the box away.",
+   "partner_caption": "person takes the box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 127,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "127": {
+   "caption": "person takes the box.",
+   "partner_caption": "another person comes in takes the box away.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 125,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "128": {
+   "caption": "the person sits on a pillow on the floor.",
+   "partner_caption": "person sitting on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 130,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "130": {
+   "caption": "person sitting on the floor.",
+   "partner_caption": "the person sits on a pillow on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 128,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "134": {
+   "caption": "person get something to look out the window with.",
+   "partner_caption": "person looks out the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 136,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "136": {
+   "caption": "person looks out the window.",
+   "partner_caption": "person get something to look out the window with.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 134,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "138": {
+   "caption": "person start sneezing with looking at the papers.",
+   "partner_caption": "a person is sneezing into a blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 139,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "139": {
+   "caption": "a person is sneezing into a blanket.",
+   "partner_caption": "person start sneezing with looking at the papers.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 138,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "140": {
+   "caption": "person is fixing a light bulb.",
+   "partner_caption": "a person is fixing a light on the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 141,
+   "jaccard": 0.5556,
+   "n_candidates": 2
+  },
+  "141": {
+   "caption": "a person is fixing a light on the room.",
+   "partner_caption": "person is fixing a light bulb.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 140,
+   "jaccard": 0.5556,
+   "n_candidates": 2
+  },
+  "142": {
+   "caption": "a person is fixing a light.",
+   "partner_caption": "a person is fixing a light on the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 141,
+   "jaccard": 0.625,
+   "n_candidates": 2
+  },
+  "143": {
+   "caption": "person puts the books down.",
+   "partner_caption": "person they immediately put their books down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 144,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "144": {
+   "caption": "person they immediately put their books down.",
+   "partner_caption": "person puts the books down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 143,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "145": {
+   "caption": "the person takes their phone out.",
+   "partner_caption": "the person takes their phone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 148,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "148": {
+   "caption": "the person takes their phone.",
+   "partner_caption": "the person takes their phone out.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 145,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "152": {
+   "caption": "person opens up the window.",
+   "partner_caption": "person begins opening the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 155,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "153": {
+   "caption": "a person is sitting on a bed.",
+   "partner_caption": "this person is sitting on their bed in the bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 154,
+   "jaccard": 0.4545,
+   "n_candidates": 2
+  },
+  "154": {
+   "caption": "this person is sitting on their bed in the bedroom.",
+   "partner_caption": "a person was sitting on a bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 157,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "155": {
+   "caption": "person begins opening the window.",
+   "partner_caption": "person opens up the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 152,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "156": {
+   "caption": "person opened the window.",
+   "partner_caption": "person opens up the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 152,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "157": {
+   "caption": "a person was sitting on a bed.",
+   "partner_caption": "this person is sitting on their bed in the bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 154,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "158": {
+   "caption": "a person opens a closet door.",
+   "partner_caption": "a person opens up the closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 159,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "159": {
+   "caption": "a person opens up the closet.",
+   "partner_caption": "a person opens a closet door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 158,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "160": {
+   "caption": "a person opens a closet.",
+   "partner_caption": "a person opens up the closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 159,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "164": {
+   "caption": "person puts it into a box.",
+   "partner_caption": "person puts the box down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 165,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "165": {
+   "caption": "person puts the box down.",
+   "partner_caption": "person puts it into a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 164,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "168": {
+   "caption": "the person laughs at something on the screen multiple times.",
+   "partner_caption": "the person begins laughing at something on the screen.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 169,
+   "jaccard": 0.5455,
+   "n_candidates": 1
+  },
+  "169": {
+   "caption": "the person begins laughing at something on the screen.",
+   "partner_caption": "the person laughs at something on the screen multiple times.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 168,
+   "jaccard": 0.5455,
+   "n_candidates": 1
+  },
+  "171": {
+   "caption": "a person throws a broom at the stairs.",
+   "partner_caption": "this person throws the broom down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 172,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "172": {
+   "caption": "this person throws the broom down.",
+   "partner_caption": "a person throws a broom at the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 171,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "173": {
+   "caption": "person turns off the light as they're leaving.",
+   "partner_caption": "person turns off a light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 174,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "174": {
+   "caption": "person turns off a light.",
+   "partner_caption": "person turns off the light as they're leaving.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 173,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "177": {
+   "caption": "person they close the box.",
+   "partner_caption": "the person closes a box that's been searched through.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 178,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "178": {
+   "caption": "the person closes a box that's been searched through.",
+   "partner_caption": "person they close the box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 177,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "181": {
+   "caption": "a person is sneezing on the medicine.",
+   "partner_caption": "person starts sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 182,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "182": {
+   "caption": "person starts sneezing.",
+   "partner_caption": "a person is sneezing on the medicine.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 181,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "183": {
+   "caption": "a person is sneezing.",
+   "partner_caption": "person starts sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 182,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "186": {
+   "caption": "person their phone rings so they close the fridge door.",
+   "partner_caption": "person closed the refrigerator door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 187,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "187": {
+   "caption": "person closed the refrigerator door.",
+   "partner_caption": "person their phone rings so they close the fridge door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 186,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "189": {
+   "caption": "person sit down in a chair.",
+   "partner_caption": "person sitting in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 190,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "190": {
+   "caption": "person sitting in a chair.",
+   "partner_caption": "person sit down in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 189,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "196": {
+   "caption": "person working on a laptop.",
+   "partner_caption": "person playing a casual game on their laptop.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 197,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "197": {
+   "caption": "person playing a casual game on their laptop.",
+   "partner_caption": "person working on a laptop.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 196,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "204": {
+   "caption": "a person opens their kitchen window.",
+   "partner_caption": "a person opens the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 205,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "205": {
+   "caption": "a person opens the window.",
+   "partner_caption": "a person opens their kitchen window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 204,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "206": {
+   "caption": "a person closes a door.",
+   "partner_caption": "person trying to close the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 207,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "207": {
+   "caption": "person trying to close the door.",
+   "partner_caption": "a person closes a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 206,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "211": {
+   "caption": "a person is putting some dishes into a box.",
+   "partner_caption": "person they put the box on a bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 212,
+   "jaccard": 0.2308,
+   "n_candidates": 2
+  },
+  "212": {
+   "caption": "person they put the box on a bed.",
+   "partner_caption": "a person is putting some dishes into a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 211,
+   "jaccard": 0.2308,
+   "n_candidates": 2
+  },
+  "213": {
+   "caption": "a person is putting some plates in a box.",
+   "partner_caption": "person they put the box on a bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 212,
+   "jaccard": 0.2308,
+   "n_candidates": 2
+  },
+  "215": {
+   "caption": "closes the doors.the person takes the food.",
+   "partner_caption": "a person closed a cabinet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 217,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "216": {
+   "caption": "person starts eating.",
+   "partner_caption": "person looks for something to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 218,
+   "jaccard": 0.125,
+   "n_candidates": 2
+  },
+  "217": {
+   "caption": "a person closed a cabinet.",
+   "partner_caption": "closes the doors.the person takes the food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 215,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "218": {
+   "caption": "person looks for something to eat.",
+   "partner_caption": "the person eats it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 219,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "219": {
+   "caption": "the person eats it.",
+   "partner_caption": "person looks for something to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 218,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "223": {
+   "caption": "person opens a fridge door.",
+   "partner_caption": "another person opens an oven door to look inside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 224,
+   "jaccard": 0.2727,
+   "n_candidates": 1
+  },
+  "224": {
+   "caption": "another person opens an oven door to look inside.",
+   "partner_caption": "person opens a fridge door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 223,
+   "jaccard": 0.2727,
+   "n_candidates": 1
+  },
+  "227": {
+   "caption": "person takes their shoes off.",
+   "partner_caption": "person takes off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 228,
+   "jaccard": 1.0,
+   "n_candidates": 1
+  },
+  "228": {
+   "caption": "person takes off their shoes.",
+   "partner_caption": "person takes their shoes off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 227,
+   "jaccard": 1.0,
+   "n_candidates": 1
+  },
+  "233": {
+   "caption": "a person was holding a blanket.",
+   "partner_caption": "a person is holding a blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 234,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "234": {
+   "caption": "a person is holding a blanket.",
+   "partner_caption": "a person was holding a blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 233,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "236": {
+   "caption": "a person eats some food.",
+   "partner_caption": "a person is in a basement eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 237,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "237": {
+   "caption": "a person is in a basement eating.",
+   "partner_caption": "a person eats some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 236,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "239": {
+   "caption": "person watching the television eating an apple.",
+   "partner_caption": "a person is standing eating something as they watch tv.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 240,
+   "jaccard": 0.1333,
+   "n_candidates": 2
+  },
+  "240": {
+   "caption": "a person is standing eating something as they watch tv.",
+   "partner_caption": "person watching the television eating an apple.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 239,
+   "jaccard": 0.1333,
+   "n_candidates": 2
+  },
+  "241": {
+   "caption": "person eating a sandwich out of a dish.",
+   "partner_caption": "person watching the television eating an apple.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 239,
+   "jaccard": 0.1667,
+   "n_candidates": 2
+  },
+  "242": {
+   "caption": "the person closes the laptop.",
+   "partner_caption": "the person closes the laptop screen.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 243,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "243": {
+   "caption": "the person closes the laptop screen.",
+   "partner_caption": "the person closes the laptop.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 242,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "245": {
+   "caption": "person begins to eat it.",
+   "partner_caption": "person they begin eating the fruit.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 249,
+   "jaccard": 0.1,
+   "n_candidates": 3
+  },
+  "247": {
+   "caption": "person removes a snack to eat.",
+   "partner_caption": "person they begin eating the fruit.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 249,
+   "jaccard": 0.0909,
+   "n_candidates": 3
+  },
+  "248": {
+   "caption": "person eat the food.",
+   "partner_caption": "person removes a snack to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 247,
+   "jaccard": 0.25,
+   "n_candidates": 3
+  },
+  "249": {
+   "caption": "person they begin eating the fruit.",
+   "partner_caption": "person removes a snack to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 247,
+   "jaccard": 0.0909,
+   "n_candidates": 3
+  },
+  "257": {
+   "caption": "person eating it.",
+   "partner_caption": "a person eats something from a jar.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 259,
+   "jaccard": 0.125,
+   "n_candidates": 3
+  },
+  "258": {
+   "caption": "a person is eating from a can.",
+   "partner_caption": "person eats it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 262,
+   "jaccard": 0.125,
+   "n_candidates": 3
+  },
+  "259": {
+   "caption": "a person eats something from a jar.",
+   "partner_caption": "person eating it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 257,
+   "jaccard": 0.125,
+   "n_candidates": 3
+  },
+  "262": {
+   "caption": "person eats it.",
+   "partner_caption": "a person is eating from a can.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 258,
+   "jaccard": 0.125,
+   "n_candidates": 3
+  },
+  "264": {
+   "caption": "person throws their blanket inside.",
+   "partner_caption": "person throwing a blanket into a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 265,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "265": {
+   "caption": "person throwing a blanket into a closet.",
+   "partner_caption": "person throws their blanket inside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 264,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "271": {
+   "caption": "person closes a cupboard door.",
+   "partner_caption": "the person closes a cupboard door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 272,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "272": {
+   "caption": "the person closes a cupboard door.",
+   "partner_caption": "person closes a cupboard door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 271,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "276": {
+   "caption": "person turns the light on.",
+   "partner_caption": "person turns on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 277,
+   "jaccard": 1.0,
+   "n_candidates": 1
+  },
+  "277": {
+   "caption": "person turns on the light.",
+   "partner_caption": "person turns the light on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 276,
+   "jaccard": 1.0,
+   "n_candidates": 1
+  },
+  "281": {
+   "caption": "person turns off the ceiling light.",
+   "partner_caption": "person turns the light off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 282,
+   "jaccard": 0.8333,
+   "n_candidates": 2
+  },
+  "282": {
+   "caption": "person turns the light off.",
+   "partner_caption": "person turns off the ceiling light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 281,
+   "jaccard": 0.8333,
+   "n_candidates": 2
+  },
+  "283": {
+   "caption": "person turns off the light.",
+   "partner_caption": "person turns off the ceiling light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 281,
+   "jaccard": 0.8333,
+   "n_candidates": 2
+  },
+  "284": {
+   "caption": "a person runs into a room.",
+   "partner_caption": "a person runs into the bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 285,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "285": {
+   "caption": "a person runs into the bedroom.",
+   "partner_caption": "a person runs into a room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 284,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "290": {
+   "caption": "person eating a sandwich.",
+   "partner_caption": "person repeats the process until he is finished with both.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 293,
+   "jaccard": 0.0769,
+   "n_candidates": 2
+  },
+  "291": {
+   "caption": "the person is sitting on a closed toilet eating.",
+   "partner_caption": "person repeats the process until he is finished with both.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 293,
+   "jaccard": 0.1875,
+   "n_candidates": 2
+  },
+  "293": {
+   "caption": "person repeats the process until he is finished with both.",
+   "partner_caption": "person eating a sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 290,
+   "jaccard": 0.0769,
+   "n_candidates": 2
+  },
+  "296": {
+   "caption": "a person is standing in their garage holding a pillow.",
+   "partner_caption": "person holding a pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 297,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "297": {
+   "caption": "person holding a pillow.",
+   "partner_caption": "a person is standing in their garage holding a pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 296,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "298": {
+   "caption": "person turns on a lightswitch.",
+   "partner_caption": "a person is walking to turn on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 301,
+   "jaccard": 0.2727,
+   "n_candidates": 2
+  },
+  "300": {
+   "caption": "person turns on the light.",
+   "partner_caption": "a person is walking to turn on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 301,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "301": {
+   "caption": "a person is walking to turn on the light.",
+   "partner_caption": "person turns on a lightswitch.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 298,
+   "jaccard": 0.2727,
+   "n_candidates": 2
+  },
+  "303": {
+   "caption": "the person is sitting on the floor.",
+   "partner_caption": "a person sits on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 308,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "305": {
+   "caption": "person begins to eat from a bowl on the floor.",
+   "partner_caption": "person eating as they are laying down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 309,
+   "jaccard": 0.0625,
+   "n_candidates": 3
+  },
+  "306": {
+   "caption": "person eats something.",
+   "partner_caption": "person begins to eat from a bowl on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 305,
+   "jaccard": 0.0833,
+   "n_candidates": 3
+  },
+  "308": {
+   "caption": "a person sits on the floor.",
+   "partner_caption": "the person is sitting on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 303,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "309": {
+   "caption": "person eating as they are laying down.",
+   "partner_caption": "person begins to eat from a bowl on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 305,
+   "jaccard": 0.0625,
+   "n_candidates": 3
+  },
+  "310": {
+   "caption": "person eating food in a home office / study.",
+   "partner_caption": "person eats something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 306,
+   "jaccard": 0.1,
+   "n_candidates": 3
+  },
+  "311": {
+   "caption": "person sits down in a chair.",
+   "partner_caption": "person sits down in a red chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 312,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "312": {
+   "caption": "person sits down in a red chair.",
+   "partner_caption": "person sits down in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 311,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "313": {
+   "caption": "a person is looking out the window.",
+   "partner_caption": "a person looks out the bathroom window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 314,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "314": {
+   "caption": "a person looks out the bathroom window.",
+   "partner_caption": "a person is looking out the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 313,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "318": {
+   "caption": "a person turns on some lights.",
+   "partner_caption": "person turns on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 319,
+   "jaccard": 0.375,
+   "n_candidates": 2
+  },
+  "319": {
+   "caption": "person turns on the light.",
+   "partner_caption": "a person turns on some lights.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 318,
+   "jaccard": 0.375,
+   "n_candidates": 2
+  },
+  "320": {
+   "caption": "person turns on a light.",
+   "partner_caption": "a person turns on some lights.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 318,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "321": {
+   "caption": "person takes book out.",
+   "partner_caption": "person takes a book out from the entertainment center.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 322,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "322": {
+   "caption": "person takes a book out from the entertainment center.",
+   "partner_caption": "person takes book out.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 321,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "326": {
+   "caption": "person takes a picture with a camera.",
+   "partner_caption": "the person takes a picture of something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 327,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "327": {
+   "caption": "the person takes a picture of something.",
+   "partner_caption": "person takes a picture with a camera.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 326,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "330": {
+   "caption": "person playing with a phone.",
+   "partner_caption": "person playing with their phone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 332,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "331": {
+   "caption": "person takes a picture.",
+   "partner_caption": "the person takes a picture of something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 327,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "332": {
+   "caption": "person playing with their phone.",
+   "partner_caption": "person playing with a phone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 330,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "341": {
+   "caption": "person washes clothes.",
+   "partner_caption": "person their other clothes into the washer.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 346,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "342": {
+   "caption": "a person is washing the clothes.",
+   "partner_caption": "person washes clothes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 341,
+   "jaccard": 0.2857,
+   "n_candidates": 2
+  },
+  "343": {
+   "caption": "a person is undressing in their laundry room.",
+   "partner_caption": "a person is undressing in the laundry room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 345,
+   "jaccard": 0.7778,
+   "n_candidates": 1
+  },
+  "345": {
+   "caption": "a person is undressing in the laundry room.",
+   "partner_caption": "a person is undressing in their laundry room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 343,
+   "jaccard": 0.7778,
+   "n_candidates": 1
+  },
+  "346": {
+   "caption": "person their other clothes into the washer.",
+   "partner_caption": "person washes clothes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 341,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "348": {
+   "caption": "one person runs into the room laughing.",
+   "partner_caption": "a person runs into a living.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 350,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "349": {
+   "caption": "the person runs into the room.",
+   "partner_caption": "a person runs into a living.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 350,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "350": {
+   "caption": "a person runs into a living.",
+   "partner_caption": "one person runs into the room laughing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 348,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "354": {
+   "caption": "one person opens the door.",
+   "partner_caption": "a man opens a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 355,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "355": {
+   "caption": "a man opens a door.",
+   "partner_caption": "one person opens the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 354,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "357": {
+   "caption": "the person is seated in a chair.",
+   "partner_caption": "person eats some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 358,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "358": {
+   "caption": "person eats some food.",
+   "partner_caption": "the person is seated in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 357,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "362": {
+   "caption": "person putting on their shoes.",
+   "partner_caption": "person put on their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 363,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "363": {
+   "caption": "person put on their shoes.",
+   "partner_caption": "person putting on their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 362,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "375": {
+   "caption": "a person opens the door to their study.",
+   "partner_caption": "a person opens the front door to their residence.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 376,
+   "jaccard": 0.7,
+   "n_candidates": 1
+  },
+  "376": {
+   "caption": "a person opens the front door to their residence.",
+   "partner_caption": "a person opens the door to their study.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 375,
+   "jaccard": 0.7,
+   "n_candidates": 1
+  },
+  "377": {
+   "caption": "person opens the front door.",
+   "partner_caption": "person opening a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 378,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "378": {
+   "caption": "person opening a door.",
+   "partner_caption": "person opens the front door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 377,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "380": {
+   "caption": "a person runs into the bedroom.",
+   "partner_caption": "a person runs into the the living room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 382,
+   "jaccard": 0.625,
+   "n_candidates": 1
+  },
+  "382": {
+   "caption": "a person runs into the the living room.",
+   "partner_caption": "a person runs into the bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 380,
+   "jaccard": 0.625,
+   "n_candidates": 1
+  },
+  "384": {
+   "caption": "a person kneeling on the floor talks on a phone.",
+   "partner_caption": "person talking on the phone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 385,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "385": {
+   "caption": "person talking on the phone.",
+   "partner_caption": "a person talks on their phone in the kitchen.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 387,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "387": {
+   "caption": "a person talks on their phone in the kitchen.",
+   "partner_caption": "person talking on the phone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 385,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "388": {
+   "caption": "person starts undressing out of their outdoor clothes.",
+   "partner_caption": "person begins to undress.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 392,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "389": {
+   "caption": "person closes the door.",
+   "partner_caption": "person closing the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 391,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "390": {
+   "caption": "person another closes the door.",
+   "partner_caption": "person closing the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 391,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "391": {
+   "caption": "person closing the door.",
+   "partner_caption": "person another closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 390,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "392": {
+   "caption": "person begins to undress.",
+   "partner_caption": "person starts undressing out of their outdoor clothes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 388,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "396": {
+   "caption": "person eating some leftovers from a take-out carton.",
+   "partner_caption": "person start to eat the food with a plastic fork.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 399,
+   "jaccard": 0.1176,
+   "n_candidates": 1
+  },
+  "398": {
+   "caption": "person opens a refrigerator.",
+   "partner_caption": "person opens the refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 400,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "399": {
+   "caption": "person start to eat the food with a plastic fork.",
+   "partner_caption": "person eating some leftovers from a take-out carton.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 396,
+   "jaccard": 0.1176,
+   "n_candidates": 1
+  },
+  "400": {
+   "caption": "person opens the refrigerator.",
+   "partner_caption": "person opens a refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 398,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "404": {
+   "caption": "person sneezing into the mirror they are holding.",
+   "partner_caption": "person they start sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 405,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "405": {
+   "caption": "person they start sneezing.",
+   "partner_caption": "person sneezing into the mirror they are holding.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 404,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "406": {
+   "caption": "person knees takes a book from a cabinet.",
+   "partner_caption": "one person takes a book from a wardrobe.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 408,
+   "jaccard": 0.5556,
+   "n_candidates": 2
+  },
+  "407": {
+   "caption": "a person takes a book from a shelf.",
+   "partner_caption": "person knees takes a book from a cabinet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 406,
+   "jaccard": 0.625,
+   "n_candidates": 2
+  },
+  "408": {
+   "caption": "one person takes a book from a wardrobe.",
+   "partner_caption": "person knees takes a book from a cabinet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 406,
+   "jaccard": 0.5556,
+   "n_candidates": 2
+  },
+  "409": {
+   "caption": "person pouring coffee into a cup in the dining room.",
+   "partner_caption": "person pour a cup of coffee.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 411,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "411": {
+   "caption": "person pour a cup of coffee.",
+   "partner_caption": "person pouring coffee into a cup in the dining room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 409,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "415": {
+   "caption": "a person turns on the light to an entryway.",
+   "partner_caption": "person turns on a light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 417,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "417": {
+   "caption": "person turns on a light.",
+   "partner_caption": "a person turns on the light to an entryway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 415,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "427": {
+   "caption": "person they put the laptop on the pillow.",
+   "partner_caption": "the person puts the laptop down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 429,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "429": {
+   "caption": "the person puts the laptop down.",
+   "partner_caption": "person they put the laptop on the pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 427,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "436": {
+   "caption": "person a few moments later laughs.",
+   "partner_caption": "person laughs a little bit.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 437,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "437": {
+   "caption": "person laughs a little bit.",
+   "partner_caption": "person a few moments later laughs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 436,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "438": {
+   "caption": "person open the door at the bottom of the stairs.",
+   "partner_caption": "person opens a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 440,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "440": {
+   "caption": "person opens a door.",
+   "partner_caption": "person open the door at the bottom of the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 438,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "441": {
+   "caption": "person starts eating.",
+   "partner_caption": "another person walks into a room eating some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 443,
+   "jaccard": 0.2,
+   "n_candidates": 2
+  },
+  "442": {
+   "caption": "person eating from a bowl.",
+   "partner_caption": "another person walks into a room eating some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 443,
+   "jaccard": 0.2727,
+   "n_candidates": 2
+  },
+  "443": {
+   "caption": "another person walks into a room eating some food.",
+   "partner_caption": "person starts eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 441,
+   "jaccard": 0.2,
+   "n_candidates": 2
+  },
+  "446": {
+   "caption": "person put down the bag they were holding.",
+   "partner_caption": "the person puts a bag down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 447,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "447": {
+   "caption": "the person puts a bag down.",
+   "partner_caption": "person put down the bag they were holding.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 446,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "449": {
+   "caption": "person holding a chair opened a refrigerator.",
+   "partner_caption": "person opening a refrigerator in the dining room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 450,
+   "jaccard": 0.2727,
+   "n_candidates": 1
+  },
+  "450": {
+   "caption": "person opening a refrigerator in the dining room.",
+   "partner_caption": "person holding a chair opened a refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 449,
+   "jaccard": 0.2727,
+   "n_candidates": 1
+  },
+  "453": {
+   "caption": "a person eats a sandwich from the table.",
+   "partner_caption": "person eating breakfast.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 456,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "454": {
+   "caption": "the person eats some food.",
+   "partner_caption": "person eating breakfast.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 456,
+   "jaccard": 0.1429,
+   "n_candidates": 2
+  },
+  "455": {
+   "caption": "person opening a cabinet in a kitchen.",
+   "partner_caption": "person opens cabinets above it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 457,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "456": {
+   "caption": "person eating breakfast.",
+   "partner_caption": "a person eats a sandwich from the table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 453,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "457": {
+   "caption": "person opens cabinets above it.",
+   "partner_caption": "person opening a cabinet in a kitchen.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 455,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "464": {
+   "caption": "person starts laughing.",
+   "partner_caption": "person laughs as they lean against the dresser.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 465,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "465": {
+   "caption": "person laughs as they lean against the dresser.",
+   "partner_caption": "person starts laughing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 464,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "468": {
+   "caption": "the person sits in a chair for a moment.",
+   "partner_caption": "person sitting in a chair drinking a something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 470,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "470": {
+   "caption": "person sitting in a chair drinking a something.",
+   "partner_caption": "the person sits in a chair for a moment.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 468,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "472": {
+   "caption": "a person is smiling.",
+   "partner_caption": "a person is standing in their kitchen laughing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 473,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "473": {
+   "caption": "a person is standing in their kitchen laughing.",
+   "partner_caption": "a person is smiling.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 472,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "474": {
+   "caption": "a person puts food into a sandwich maker.",
+   "partner_caption": "a person cooks a sandwich on a panini maker.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 475,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "475": {
+   "caption": "a person cooks a sandwich on a panini maker.",
+   "partner_caption": "a person puts food into a sandwich maker.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 474,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "476": {
+   "caption": "person puts the blanket into a closet.",
+   "partner_caption": "person put the blanket away.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 481,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "477": {
+   "caption": "a person is seen snuggling up to a blanket.",
+   "partner_caption": "a person is snuggling with a blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 482,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "478": {
+   "caption": "a person opens a door.",
+   "partner_caption": "person open their closet door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 479,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "479": {
+   "caption": "person open their closet door.",
+   "partner_caption": "a person opens a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 478,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "481": {
+   "caption": "person put the blanket away.",
+   "partner_caption": "person puts the blanket into a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 476,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "482": {
+   "caption": "a person is snuggling with a blanket.",
+   "partner_caption": "a person is seen snuggling up to a blanket.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 477,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "483": {
+   "caption": "person took a drink from the glass.",
+   "partner_caption": "person takes a drink from the glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 486,
+   "jaccard": 0.75,
+   "n_candidates": 1
+  },
+  "484": {
+   "caption": "person poured its contents into the glass.",
+   "partner_caption": "person pours a glass of something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 485,
+   "jaccard": 0.1818,
+   "n_candidates": 2
+  },
+  "485": {
+   "caption": "person pours a glass of something.",
+   "partner_caption": "person poured its contents into the glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 484,
+   "jaccard": 0.1818,
+   "n_candidates": 2
+  },
+  "486": {
+   "caption": "person takes a drink from the glass.",
+   "partner_caption": "person took a drink from the glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 483,
+   "jaccard": 0.75,
+   "n_candidates": 1
+  },
+  "487": {
+   "caption": "person pours water into a glass.",
+   "partner_caption": "person poured its contents into the glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 484,
+   "jaccard": 0.3,
+   "n_candidates": 2
+  },
+  "491": {
+   "caption": "person takes a pillow from inside.",
+   "partner_caption": "person takes out a pillow like object.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 492,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "492": {
+   "caption": "person takes out a pillow like object.",
+   "partner_caption": "person takes a pillow from inside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 491,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "493": {
+   "caption": "person walks through a doorway to leave the room.",
+   "partner_caption": "person they walk through a doorway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 494,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "494": {
+   "caption": "person they walk through a doorway.",
+   "partner_caption": "person walks through a doorway to leave the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 493,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "495": {
+   "caption": "a person opens a cabinet.",
+   "partner_caption": "a person is opening a cabinet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 496,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "496": {
+   "caption": "a person is opening a cabinet.",
+   "partner_caption": "a person opens a cabinet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 495,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "500": {
+   "caption": "person starts running in place.",
+   "partner_caption": "person start running in palce again.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 505,
+   "jaccard": 0.375,
+   "n_candidates": 4
+  },
+  "502": {
+   "caption": "person begins running in place.",
+   "partner_caption": "person start running in palce again.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 505,
+   "jaccard": 0.375,
+   "n_candidates": 4
+  },
+  "503": {
+   "caption": "person they start running in place again.",
+   "partner_caption": "person starts running in place.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 500,
+   "jaccard": 0.5,
+   "n_candidates": 4
+  },
+  "505": {
+   "caption": "person start running in palce again.",
+   "partner_caption": "person starts running in place.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 500,
+   "jaccard": 0.375,
+   "n_candidates": 4
+  },
+  "506": {
+   "caption": "person starts running in place again.",
+   "partner_caption": "person start running in palce again.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 505,
+   "jaccard": 0.5,
+   "n_candidates": 4
+  },
+  "509": {
+   "caption": "person uses it to take pictures of their self.",
+   "partner_caption": "person take a timed picture.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 510,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "510": {
+   "caption": "person take a timed picture.",
+   "partner_caption": "person uses it to take pictures of their self.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 509,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "517": {
+   "caption": "one person runs into the bathroom grasping a pillow.",
+   "partner_caption": "a man runs into a bathroom holding a pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 518,
+   "jaccard": 0.4545,
+   "n_candidates": 1
+  },
+  "518": {
+   "caption": "a man runs into a bathroom holding a pillow.",
+   "partner_caption": "one person runs into the bathroom grasping a pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 517,
+   "jaccard": 0.4545,
+   "n_candidates": 1
+  },
+  "520": {
+   "caption": "a person runs to the closet.",
+   "partner_caption": "a person runs into a room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 521,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "521": {
+   "caption": "a person runs into a room.",
+   "partner_caption": "a person runs to the closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 520,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "524": {
+   "caption": "the person used the spoon to eat from the cup.",
+   "partner_caption": "person eating a piece of pie.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 525,
+   "jaccard": 0.0769,
+   "n_candidates": 1
+  },
+  "525": {
+   "caption": "person eating a piece of pie.",
+   "partner_caption": "the person used the spoon to eat from the cup.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 524,
+   "jaccard": 0.0769,
+   "n_candidates": 1
+  },
+  "527": {
+   "caption": "person turns off the light.",
+   "partner_caption": "person switch the light off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 528,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "528": {
+   "caption": "person switch the light off.",
+   "partner_caption": "person turns off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 527,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "529": {
+   "caption": "the person turns off the light.",
+   "partner_caption": "person switch the light off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 528,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "533": {
+   "caption": "the person takes out a bottle of medicine.",
+   "partner_caption": "person take some medicine.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 534,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "534": {
+   "caption": "person take some medicine.",
+   "partner_caption": "the person takes out a bottle of medicine.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 533,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "543": {
+   "caption": "a person is eating some food.",
+   "partner_caption": "person eating it out of the box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 545,
+   "jaccard": 0.1818,
+   "n_candidates": 1
+  },
+  "544": {
+   "caption": "person they are watching television in the living room.",
+   "partner_caption": "person watching television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 547,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "545": {
+   "caption": "person eating it out of the box.",
+   "partner_caption": "a person is eating some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 543,
+   "jaccard": 0.1818,
+   "n_candidates": 1
+  },
+  "546": {
+   "caption": "person watching the television.",
+   "partner_caption": "person they are watching television in the living room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 544,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "547": {
+   "caption": "person watching television.",
+   "partner_caption": "person they are watching television in the living room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 544,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "548": {
+   "caption": "the person is holding a broom.",
+   "partner_caption": "a person standing in the doorway holds a broom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 551,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "551": {
+   "caption": "a person standing in the doorway holds a broom.",
+   "partner_caption": "the person is holding a broom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 548,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "557": {
+   "caption": "person sits down on a sofa.",
+   "partner_caption": "person sits on a couch.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 562,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "558": {
+   "caption": "person takes off his shoes.",
+   "partner_caption": "the person takes off a pair of shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 561,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "559": {
+   "caption": "this person takes off their shoes.",
+   "partner_caption": "the person takes off a pair of shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 561,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "560": {
+   "caption": "person drinking from a water bottle.",
+   "partner_caption": "person drinking from a plastic water bottle.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 563,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "561": {
+   "caption": "the person takes off a pair of shoes.",
+   "partner_caption": "this person takes off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 559,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "562": {
+   "caption": "person sits on a couch.",
+   "partner_caption": "person sits down on a sofa.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 557,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "563": {
+   "caption": "person drinking from a plastic water bottle.",
+   "partner_caption": "person drinking from a water bottle.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 560,
+   "jaccard": 0.8571,
+   "n_candidates": 1
+  },
+  "568": {
+   "caption": "person eating something.",
+   "partner_caption": "the person takes off their hoodie/sweater.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 573,
+   "jaccard": 0.1111,
+   "n_candidates": 3
+  },
+  "570": {
+   "caption": "person removes a sweatshirt.",
+   "partner_caption": "the person takes off their hoodie/sweater.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 573,
+   "jaccard": 0.1,
+   "n_candidates": 3
+  },
+  "572": {
+   "caption": "person takes off a sweatshirt.",
+   "partner_caption": "person eating something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 568,
+   "jaccard": 0.1429,
+   "n_candidates": 3
+  },
+  "573": {
+   "caption": "the person takes off their hoodie/sweater.",
+   "partner_caption": "person removes a sweatshirt.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 570,
+   "jaccard": 0.1,
+   "n_candidates": 3
+  },
+  "574": {
+   "caption": "the person eats food.",
+   "partner_caption": "person they start eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 577,
+   "jaccard": 0.1429,
+   "n_candidates": 1
+  },
+  "575": {
+   "caption": "a person is snuggling with their pillow in bed.",
+   "partner_caption": "person snuggling with a pillow.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 576,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "576": {
+   "caption": "person snuggling with a pillow.",
+   "partner_caption": "a person is snuggling with their pillow in bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 575,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "577": {
+   "caption": "person they start eating.",
+   "partner_caption": "the person eats food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 574,
+   "jaccard": 0.1429,
+   "n_candidates": 1
+  },
+  "578": {
+   "caption": "person pick up a cup to drink.",
+   "partner_caption": "person drinks from a cup.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 581,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "579": {
+   "caption": "person eat it.",
+   "partner_caption": "person eats it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 580,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "580": {
+   "caption": "person eats it.",
+   "partner_caption": "person eat it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 579,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "581": {
+   "caption": "person drinks from a cup.",
+   "partner_caption": "person pick up a cup to drink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 578,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "582": {
+   "caption": "a person is running in the living room in circles.",
+   "partner_caption": "person continue to run.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 587,
+   "jaccard": 0.0833,
+   "n_candidates": 4
+  },
+  "584": {
+   "caption": "person begins to run around in a circle again.",
+   "partner_caption": "person start running again.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 588,
+   "jaccard": 0.1818,
+   "n_candidates": 4
+  },
+  "585": {
+   "caption": "a person runs around the room in a circle.",
+   "partner_caption": "person continue to run.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 587,
+   "jaccard": 0.0909,
+   "n_candidates": 4
+  },
+  "587": {
+   "caption": "person continue to run.",
+   "partner_caption": "a person is running in the living room in circles.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 582,
+   "jaccard": 0.0833,
+   "n_candidates": 4
+  },
+  "588": {
+   "caption": "person start running again.",
+   "partner_caption": "a person runs around the room in a circle.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 585,
+   "jaccard": 0.0909,
+   "n_candidates": 4
+  },
+  "589": {
+   "caption": "person reading a book.",
+   "partner_caption": "person reading books.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 590,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "590": {
+   "caption": "person reading books.",
+   "partner_caption": "person reading a book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 589,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "601": {
+   "caption": "the person takes a picture from the table.",
+   "partner_caption": "the person takes a picture from a coffee table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 602,
+   "jaccard": 0.875,
+   "n_candidates": 1
+  },
+  "602": {
+   "caption": "the person takes a picture from a coffee table.",
+   "partner_caption": "the person takes a picture from the table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 601,
+   "jaccard": 0.875,
+   "n_candidates": 1
+  },
+  "605": {
+   "caption": "person opens a closet door.",
+   "partner_caption": "the person opens a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 608,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "606": {
+   "caption": "person closing a closet door in the hallway.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 607,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "607": {
+   "caption": "person closes the door.",
+   "partner_caption": "person closing a closet door in the hallway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 606,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "608": {
+   "caption": "the person opens a closet.",
+   "partner_caption": "person opens a closet door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 605,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "610": {
+   "caption": "a person is putting a book on a chair.",
+   "partner_caption": "a person put a book into a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 612,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "612": {
+   "caption": "a person put a book into a closet.",
+   "partner_caption": "a person is putting a book on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 610,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "616": {
+   "caption": "person turn off the light.",
+   "partner_caption": "person turning off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 618,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "618": {
+   "caption": "person turning off the light.",
+   "partner_caption": "person turn off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 616,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "620": {
+   "caption": "person laughs at cellphone.",
+   "partner_caption": "person laughing a lot.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 621,
+   "jaccard": 0.1429,
+   "n_candidates": 2
+  },
+  "621": {
+   "caption": "person laughing a lot.",
+   "partner_caption": "person laughs at cellphone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 620,
+   "jaccard": 0.1429,
+   "n_candidates": 2
+  },
+  "622": {
+   "caption": "person is laughing at the camera.",
+   "partner_caption": "person laughs at cellphone.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 620,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "626": {
+   "caption": "a person takes off their shoes.",
+   "partner_caption": "person takes off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 628,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "628": {
+   "caption": "person takes off their shoes.",
+   "partner_caption": "a person takes off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 626,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "634": {
+   "caption": "a person is awakening.",
+   "partner_caption": "person awakening.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 636,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "636": {
+   "caption": "person awakening.",
+   "partner_caption": "a person is awakening.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 634,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "637": {
+   "caption": "person turn on the light.",
+   "partner_caption": "person turning on a light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 638,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "638": {
+   "caption": "person turning on a light.",
+   "partner_caption": "person turn on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 637,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "643": {
+   "caption": "person looks outy the window.",
+   "partner_caption": "person watching something out the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 648,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "644": {
+   "caption": "person eating some food.",
+   "partner_caption": "the person begins eating the sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 647,
+   "jaccard": 0.2857,
+   "n_candidates": 2
+  },
+  "645": {
+   "caption": "the person is look at a picture.",
+   "partner_caption": "person looks at the picture.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 649,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "646": {
+   "caption": "a person is eating.",
+   "partner_caption": "the person begins eating the sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 647,
+   "jaccard": 0.2857,
+   "n_candidates": 2
+  },
+  "647": {
+   "caption": "the person begins eating the sandwich.",
+   "partner_caption": "person eating some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 644,
+   "jaccard": 0.2857,
+   "n_candidates": 2
+  },
+  "648": {
+   "caption": "person watching something out the window.",
+   "partner_caption": "person looks outy the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 643,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "649": {
+   "caption": "person looks at the picture.",
+   "partner_caption": "the person is look at a picture.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 645,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "653": {
+   "caption": "person they are drinking a glass of water.",
+   "partner_caption": "person drinks from a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 654,
+   "jaccard": 0.3,
+   "n_candidates": 2
+  },
+  "654": {
+   "caption": "person drinks from a glass.",
+   "partner_caption": "person they are drinking a glass of water.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 653,
+   "jaccard": 0.3,
+   "n_candidates": 2
+  },
+  "655": {
+   "caption": "person begin to drink water from a glass cup.",
+   "partner_caption": "person they are drinking a glass of water.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 653,
+   "jaccard": 0.3077,
+   "n_candidates": 2
+  },
+  "656": {
+   "caption": "person is sneezing.",
+   "partner_caption": "the sneezing person picks up a broom as well.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 657,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "657": {
+   "caption": "the sneezing person picks up a broom as well.",
+   "partner_caption": "person is sneezing.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 656,
+   "jaccard": 0.2,
+   "n_candidates": 1
+  },
+  "659": {
+   "caption": "person putting on their shoes.",
+   "partner_caption": "person proceeds to stand put on a pair of shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 661,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "660": {
+   "caption": "person begin putting on their shoes.",
+   "partner_caption": "person proceeds to stand put on a pair of shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 661,
+   "jaccard": 0.2308,
+   "n_candidates": 2
+  },
+  "661": {
+   "caption": "person proceeds to stand put on a pair of shoes.",
+   "partner_caption": "person begin putting on their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 660,
+   "jaccard": 0.2308,
+   "n_candidates": 2
+  },
+  "664": {
+   "caption": "person turns the light on.",
+   "partner_caption": "a person turns on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 666,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "666": {
+   "caption": "a person turns on the light.",
+   "partner_caption": "person turns the light on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 664,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "669": {
+   "caption": "person closing a wood door.",
+   "partner_caption": "person closing the door next to their bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 672,
+   "jaccard": 0.3,
+   "n_candidates": 2
+  },
+  "671": {
+   "caption": "person closing the door.",
+   "partner_caption": "person closing a wood door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 669,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "672": {
+   "caption": "person closing the door next to their bed.",
+   "partner_caption": "person closing a wood door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 669,
+   "jaccard": 0.3,
+   "n_candidates": 2
+  },
+  "677": {
+   "caption": "a person sitting in a chair eating something.",
+   "partner_caption": "person eating food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 679,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "678": {
+   "caption": "a person is sitting on the couch eating food.",
+   "partner_caption": "a person sitting in a chair eating something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 677,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "679": {
+   "caption": "person eating food.",
+   "partner_caption": "a person sitting in a chair eating something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 677,
+   "jaccard": 0.25,
+   "n_candidates": 2
+  },
+  "686": {
+   "caption": "person opens a box with a book.",
+   "partner_caption": "person opens the book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 687,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "687": {
+   "caption": "person opens the book.",
+   "partner_caption": "person opens a box with a book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 686,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "688": {
+   "caption": "a smiling person opens a box.",
+   "partner_caption": "a person opens a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 689,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "689": {
+   "caption": "a person opens a box.",
+   "partner_caption": "a smiling person opens a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 688,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "694": {
+   "caption": "person so he is closing the bathroom door.",
+   "partner_caption": "person close the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 695,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "695": {
+   "caption": "person close the door.",
+   "partner_caption": "person so he is closing the bathroom door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 694,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "696": {
+   "caption": "person runs around with a bag in their hand.",
+   "partner_caption": "person decides to run with a bag of groceries.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 697,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "697": {
+   "caption": "person decides to run with a bag of groceries.",
+   "partner_caption": "person runs around with a bag in their hand.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 696,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "699": {
+   "caption": "a person is eating.",
+   "partner_caption": "person eating a snack.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 700,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "700": {
+   "caption": "person eating a snack.",
+   "partner_caption": "a person is eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 699,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "702": {
+   "caption": "person eating a sandwich.",
+   "partner_caption": "a person is eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 699,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "705": {
+   "caption": "person put on shoes.",
+   "partner_caption": "person puts on some shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 709,
+   "jaccard": 0.5,
+   "n_candidates": 3
+  },
+  "706": {
+   "caption": "person runs out.",
+   "partner_caption": "person running out of the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 707,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "707": {
+   "caption": "person running out of the room.",
+   "partner_caption": "person runs out.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 706,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "708": {
+   "caption": "person putting shoes on.",
+   "partner_caption": "person puts on some shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 709,
+   "jaccard": 0.5,
+   "n_candidates": 3
+  },
+  "709": {
+   "caption": "person puts on some shoes.",
+   "partner_caption": "person put on shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 705,
+   "jaccard": 0.5,
+   "n_candidates": 3
+  },
+  "710": {
+   "caption": "person putting on shoes.",
+   "partner_caption": "person puts on some shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 709,
+   "jaccard": 0.5,
+   "n_candidates": 3
+  },
+  "711": {
+   "caption": "a person opens a door goes into a room.",
+   "partner_caption": "person opens turns doorknob.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 713,
+   "jaccard": 0.2222,
+   "n_candidates": 2
+  },
+  "712": {
+   "caption": "a person opens a door.",
+   "partner_caption": "person opens turns doorknob.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 713,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "713": {
+   "caption": "person opens turns doorknob.",
+   "partner_caption": "a person opens a door goes into a room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 711,
+   "jaccard": 0.2222,
+   "n_candidates": 2
+  },
+  "714": {
+   "caption": "person starts running in place.",
+   "partner_caption": "person start running in place.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 715,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "715": {
+   "caption": "person start running in place.",
+   "partner_caption": "person starts running in place.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 714,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "718": {
+   "caption": "person opens the door.",
+   "partner_caption": "person opening the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 719,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "719": {
+   "caption": "person opening the door.",
+   "partner_caption": "person opens the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 718,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "724": {
+   "caption": "a person is doing a lot of cooking.",
+   "partner_caption": "person cooks something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 725,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "725": {
+   "caption": "person cooks something.",
+   "partner_caption": "a person is doing a lot of cooking.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 724,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "727": {
+   "caption": "a person drinking from a coffee cup.",
+   "partner_caption": "person they drink from a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 728,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "728": {
+   "caption": "person they drink from a glass.",
+   "partner_caption": "a person drinking from a coffee cup.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 727,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "729": {
+   "caption": "the person opens the refrigerator.",
+   "partner_caption": "person they open the refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 730,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "730": {
+   "caption": "person they open the refrigerator.",
+   "partner_caption": "the person opens the refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 729,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "731": {
+   "caption": "person opens the refrigerator.",
+   "partner_caption": "person they open the refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 730,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "733": {
+   "caption": "person closes the door.",
+   "partner_caption": "person closing the door behind them.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 735,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "734": {
+   "caption": "person sitting in a chair.",
+   "partner_caption": "person sits in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 736,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "735": {
+   "caption": "person closing the door behind them.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 733,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "736": {
+   "caption": "person sits in a chair.",
+   "partner_caption": "person sitting in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 734,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "737": {
+   "caption": "person laughs at a tv.",
+   "partner_caption": "person laughs at the television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 738,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "738": {
+   "caption": "person laughs at the television.",
+   "partner_caption": "person laughs at a tv.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 737,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "740": {
+   "caption": "person laughs at the tv.",
+   "partner_caption": "person laughs at a tv.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 737,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "741": {
+   "caption": "a person takes a lightbulb.",
+   "partner_caption": "person the light turns on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 743,
+   "jaccard": 0.125,
+   "n_candidates": 4
+  },
+  "742": {
+   "caption": "a person tries to put a lightbulb in a fixture.",
+   "partner_caption": "person the light turns on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 743,
+   "jaccard": 0.0833,
+   "n_candidates": 4
+  },
+  "743": {
+   "caption": "person the light turns on.",
+   "partner_caption": "a person tries to put a lightbulb in a fixture.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 742,
+   "jaccard": 0.0833,
+   "n_candidates": 4
+  },
+  "744": {
+   "caption": "person the lightbulb lights up.",
+   "partner_caption": "a person fixing a light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 745,
+   "jaccard": 0.125,
+   "n_candidates": 4
+  },
+  "745": {
+   "caption": "a person fixing a light.",
+   "partner_caption": "person the lightbulb lights up.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 744,
+   "jaccard": 0.125,
+   "n_candidates": 4
+  },
+  "749": {
+   "caption": "a person opens a closet door.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 752,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "750": {
+   "caption": "person puts a broom into the closet.",
+   "partner_caption": "person puts a broom inside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 753,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "751": {
+   "caption": "a person opens a door.",
+   "partner_caption": "a person opens a door with the doorknob.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 754,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "752": {
+   "caption": "person closes the door.",
+   "partner_caption": "a person opens a closet door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 749,
+   "jaccard": 0.2857,
+   "n_candidates": 1
+  },
+  "753": {
+   "caption": "person puts a broom inside.",
+   "partner_caption": "person puts a broom into the closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 750,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "754": {
+   "caption": "a person opens a door with the doorknob.",
+   "partner_caption": "a person opens a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 751,
+   "jaccard": 0.5714,
+   "n_candidates": 1
+  },
+  "759": {
+   "caption": "person opens the door.",
+   "partner_caption": "person try to open the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 760,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "760": {
+   "caption": "person try to open the door.",
+   "partner_caption": "person opens the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 759,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "762": {
+   "caption": "person turns on the light.",
+   "partner_caption": "person walks over to the lights.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 764,
+   "jaccard": 0.2222,
+   "n_candidates": 2
+  },
+  "763": {
+   "caption": "person getting up to turn on light.",
+   "partner_caption": "person walks over to the lights.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 764,
+   "jaccard": 0.1818,
+   "n_candidates": 2
+  },
+  "764": {
+   "caption": "person walks over to the lights.",
+   "partner_caption": "person getting up to turn on light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 763,
+   "jaccard": 0.1818,
+   "n_candidates": 2
+  },
+  "765": {
+   "caption": "a person throws a blanket across the room.",
+   "partner_caption": "a person throws a towel on the floor.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 767,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "767": {
+   "caption": "a person throws a towel on the floor.",
+   "partner_caption": "a person throws a blanket across the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 765,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "775": {
+   "caption": "person takes a picture in the mirror with a camera.",
+   "partner_caption": "person takes a picture of himself in the mirror.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 776,
+   "jaccard": 0.6364,
+   "n_candidates": 1
+  },
+  "776": {
+   "caption": "person takes a picture of himself in the mirror.",
+   "partner_caption": "person takes a picture in the mirror with a camera.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 775,
+   "jaccard": 0.6364,
+   "n_candidates": 1
+  },
+  "777": {
+   "caption": "the person is cleaning off a chair to sit.",
+   "partner_caption": "person they sit down on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 778,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "778": {
+   "caption": "person they sit down on a chair.",
+   "partner_caption": "the person is cleaning off a chair to sit.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 777,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "782": {
+   "caption": "person eating on the bed.",
+   "partner_caption": "the person eats something from off the bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 783,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "783": {
+   "caption": "the person eats something from off the bed.",
+   "partner_caption": "person eating on the bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 782,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "786": {
+   "caption": "finally the person washes their hands in the sink.",
+   "partner_caption": "this person washer their hands.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 787,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "787": {
+   "caption": "this person washer their hands.",
+   "partner_caption": "finally the person washes their hands in the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 786,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "789": {
+   "caption": "person the other is putting shoes in a box.",
+   "partner_caption": "one person puts shoes in a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 790,
+   "jaccard": 0.4545,
+   "n_candidates": 1
+  },
+  "790": {
+   "caption": "one person puts shoes in a box.",
+   "partner_caption": "person the other is putting shoes in a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 789,
+   "jaccard": 0.4545,
+   "n_candidates": 1
+  },
+  "791": {
+   "caption": "the person puts the shoes on.",
+   "partner_caption": "person puts on shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 794,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "794": {
+   "caption": "person puts on shoes.",
+   "partner_caption": "the person puts the shoes on.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 791,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "800": {
+   "caption": "person he pours something into a glass.",
+   "partner_caption": "a person pours some water in a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 801,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "801": {
+   "caption": "a person pours some water in a glass.",
+   "partner_caption": "person he pours something into a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 800,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "804": {
+   "caption": "a person goes running by.",
+   "partner_caption": "another person runs into the room.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 807,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "805": {
+   "caption": "person as the door opens.",
+   "partner_caption": "person the door opens.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 806,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "806": {
+   "caption": "person the door opens.",
+   "partner_caption": "person as the door opens.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 805,
+   "jaccard": 0.8,
+   "n_candidates": 1
+  },
+  "807": {
+   "caption": "another person runs into the room.",
+   "partner_caption": "a person goes running by.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 804,
+   "jaccard": 0.1,
+   "n_candidates": 1
+  },
+  "808": {
+   "caption": "a person is seen eating.",
+   "partner_caption": "a person eating something off of a plate.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 810,
+   "jaccard": 0.3333,
+   "n_candidates": 3
+  },
+  "810": {
+   "caption": "a person eating something off of a plate.",
+   "partner_caption": "a person sits in a chair eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 812,
+   "jaccard": 0.3,
+   "n_candidates": 3
+  },
+  "812": {
+   "caption": "a person sits in a chair eating.",
+   "partner_caption": "a person eating something off of a plate.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 810,
+   "jaccard": 0.3,
+   "n_candidates": 3
+  },
+  "814": {
+   "caption": "person eating from a plate of food.",
+   "partner_caption": "a person sits in a chair eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 812,
+   "jaccard": 0.3,
+   "n_candidates": 3
+  },
+  "815": {
+   "caption": "person watches the television.",
+   "partner_caption": "the person start watching television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 816,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "816": {
+   "caption": "the person start watching television.",
+   "partner_caption": "person watches television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 817,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "817": {
+   "caption": "person watches television.",
+   "partner_caption": "the person start watching television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 816,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "821": {
+   "caption": "person finally laughing to themselves.",
+   "partner_caption": "the person starts laughing as they put the bag down.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 822,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "822": {
+   "caption": "the person starts laughing as they put the bag down.",
+   "partner_caption": "person finally laughing to themselves.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 821,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "823": {
+   "caption": "person takes their shoes off.",
+   "partner_caption": "person take off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 825,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "825": {
+   "caption": "person take off their shoes.",
+   "partner_caption": "person takes their shoes off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 823,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "833": {
+   "caption": "person that turn off the lights.",
+   "partner_caption": "person turn off a light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 835,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "835": {
+   "caption": "person turn off a light.",
+   "partner_caption": "person that turn off the lights.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 833,
+   "jaccard": 0.375,
+   "n_candidates": 1
+  },
+  "838": {
+   "caption": "the person takes off their shoes.",
+   "partner_caption": "person takes their shoes off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 841,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "839": {
+   "caption": "person sits down on a chair.",
+   "partner_caption": "the person sits down in a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 840,
+   "jaccard": 0.625,
+   "n_candidates": 1
+  },
+  "840": {
+   "caption": "the person sits down in a chair.",
+   "partner_caption": "person sits down on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 839,
+   "jaccard": 0.625,
+   "n_candidates": 1
+  },
+  "841": {
+   "caption": "person takes their shoes off.",
+   "partner_caption": "the person takes off their shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 838,
+   "jaccard": 0.8333,
+   "n_candidates": 1
+  },
+  "844": {
+   "caption": "person continuing to drink from the bottle.",
+   "partner_caption": "person drinking from a glass of water.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 845,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "845": {
+   "caption": "person drinking from a glass of water.",
+   "partner_caption": "person continuing to drink from the bottle.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 844,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "846": {
+   "caption": "person eating food from a dish.",
+   "partner_caption": "person eating a sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 847,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "847": {
+   "caption": "person eating a sandwich.",
+   "partner_caption": "person eating food from a dish.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 846,
+   "jaccard": 0.4286,
+   "n_candidates": 1
+  },
+  "853": {
+   "caption": "person looks out the window above the sink.",
+   "partner_caption": "person continuing to look out the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 855,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "854": {
+   "caption": "the person washes their hands at the kitchen sink.",
+   "partner_caption": "a person is washing their hands in the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 856,
+   "jaccard": 0.4167,
+   "n_candidates": 2
+  },
+  "855": {
+   "caption": "person continuing to look out the window.",
+   "partner_caption": "person looks out the window above the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 853,
+   "jaccard": 0.4,
+   "n_candidates": 2
+  },
+  "856": {
+   "caption": "a person is washing their hands in the sink.",
+   "partner_caption": "the person washes their hands at the kitchen sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 854,
+   "jaccard": 0.4167,
+   "n_candidates": 2
+  },
+  "857": {
+   "caption": "a person washes their hands in the kitchen sink.",
+   "partner_caption": "a person is washing their hands in the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 856,
+   "jaccard": 0.6364,
+   "n_candidates": 2
+  },
+  "858": {
+   "caption": "person looking out the window.",
+   "partner_caption": "person looks out the window above the sink.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 853,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "859": {
+   "caption": "a person is standing in a room watching television.",
+   "partner_caption": "a person is watching a television in their bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 862,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "860": {
+   "caption": "person drinking something from a glass.",
+   "partner_caption": "person drinking a glass of milk.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 861,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "861": {
+   "caption": "person drinking a glass of milk.",
+   "partner_caption": "person drinking something from a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 860,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "862": {
+   "caption": "a person is watching a television in their bedroom.",
+   "partner_caption": "a person is standing in a room watching television.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 859,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "865": {
+   "caption": "a person turns on a light.",
+   "partner_caption": "a person turns on a light in their bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 866,
+   "jaccard": 0.625,
+   "n_candidates": 2
+  },
+  "866": {
+   "caption": "a person turns on a light in their bedroom.",
+   "partner_caption": "person turns on the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 867,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "867": {
+   "caption": "person turns on the light.",
+   "partner_caption": "a person turns on a light in their bedroom.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 866,
+   "jaccard": 0.4444,
+   "n_candidates": 2
+  },
+  "872": {
+   "caption": "person closing the front door.",
+   "partner_caption": "person closes a door outside.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 876,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "873": {
+   "caption": "person pours it into a glass.",
+   "partner_caption": "person pours a glass of soda.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 874,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "874": {
+   "caption": "person pours a glass of soda.",
+   "partner_caption": "person pours it into a glass.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 873,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "876": {
+   "caption": "person closes a door outside.",
+   "partner_caption": "person closing the front door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 872,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "880": {
+   "caption": "a person throws a pillow into a closet.",
+   "partner_caption": "the person throws the pillow into the closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 882,
+   "jaccard": 0.7143,
+   "n_candidates": 1
+  },
+  "882": {
+   "caption": "the person throws the pillow into the closet.",
+   "partner_caption": "a person throws a pillow into a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 880,
+   "jaccard": 0.7143,
+   "n_candidates": 1
+  },
+  "884": {
+   "caption": "a person opens a door to a closet.",
+   "partner_caption": "person open up the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 885,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "885": {
+   "caption": "person open up the door.",
+   "partner_caption": "a person opens a door to a closet.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 884,
+   "jaccard": 0.2222,
+   "n_candidates": 1
+  },
+  "888": {
+   "caption": "person starts eating some food.",
+   "partner_caption": "person pick up a sandwich to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 889,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "889": {
+   "caption": "person pick up a sandwich to eat.",
+   "partner_caption": "person starts eating some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 888,
+   "jaccard": 0.0909,
+   "n_candidates": 1
+  },
+  "891": {
+   "caption": "person walk near the window open the curtain.",
+   "partner_caption": "person opens a curtain to look out the window.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 894,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "893": {
+   "caption": "person opens the window.",
+   "partner_caption": "person walk near the window open the curtain.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 891,
+   "jaccard": 0.375,
+   "n_candidates": 2
+  },
+  "894": {
+   "caption": "person opens a curtain to look out the window.",
+   "partner_caption": "person walk near the window open the curtain.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 891,
+   "jaccard": 0.3333,
+   "n_candidates": 2
+  },
+  "899": {
+   "caption": "person eats it.",
+   "partner_caption": "person began to eat.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 900,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "900": {
+   "caption": "person began to eat.",
+   "partner_caption": "person eats it.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 899,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "901": {
+   "caption": "the person turns the light off.",
+   "partner_caption": "person turning off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 902,
+   "jaccard": 0.6667,
+   "n_candidates": 3
+  },
+  "902": {
+   "caption": "person turning off the light.",
+   "partner_caption": "the person turns the light off.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 901,
+   "jaccard": 0.6667,
+   "n_candidates": 3
+  },
+  "903": {
+   "caption": "person turns off the light.",
+   "partner_caption": "person turning off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 902,
+   "jaccard": 0.6667,
+   "n_candidates": 3
+  },
+  "904": {
+   "caption": "the person turns off the light.",
+   "partner_caption": "person turning off the light.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 902,
+   "jaccard": 0.6667,
+   "n_candidates": 3
+  },
+  "905": {
+   "caption": "person opens a laptop.",
+   "partner_caption": "person opening a laptop.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 906,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "906": {
+   "caption": "person opening a laptop.",
+   "partner_caption": "person opens a laptop.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 905,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "909": {
+   "caption": "person eating something.",
+   "partner_caption": "a person by the refrigerator was eating.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 910,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "910": {
+   "caption": "a person by the refrigerator was eating.",
+   "partner_caption": "person eating something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 909,
+   "jaccard": 0.25,
+   "n_candidates": 1
+  },
+  "911": {
+   "caption": "person opening the refrigerator doors.",
+   "partner_caption": "person opens refrigerator.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 914,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "913": {
+   "caption": "person sneezing into a towel.",
+   "partner_caption": "person sneezing on a towel.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 915,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "914": {
+   "caption": "person opens refrigerator.",
+   "partner_caption": "person opening the refrigerator doors.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 911,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "915": {
+   "caption": "person sneezing on a towel.",
+   "partner_caption": "person sneezing into a towel.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 913,
+   "jaccard": 0.6667,
+   "n_candidates": 1
+  },
+  "917": {
+   "caption": "person throws the bag.",
+   "partner_caption": "person puts it on a table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 918,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "918": {
+   "caption": "person puts it on a table.",
+   "partner_caption": "person throws the bag.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 917,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "919": {
+   "caption": "person they begin to put a bag on the table.",
+   "partner_caption": "person throws the bag.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 917,
+   "jaccard": 0.2727,
+   "n_candidates": 2
+  },
+  "924": {
+   "caption": "a person is cooking something on the stove.",
+   "partner_caption": "person cooking at the stove.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 928,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "926": {
+   "caption": "person sits down at the table.",
+   "partner_caption": "person sits on the chair at the dining table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 927,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "927": {
+   "caption": "person sits on the chair at the dining table.",
+   "partner_caption": "person sits down at the table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 926,
+   "jaccard": 0.5556,
+   "n_candidates": 1
+  },
+  "928": {
+   "caption": "person cooking at the stove.",
+   "partner_caption": "a person is cooking something on the stove.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 924,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "929": {
+   "caption": "person putting a blanket on the table.",
+   "partner_caption": "person puts it on the table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 930,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "930": {
+   "caption": "person puts it on the table.",
+   "partner_caption": "person putting a blanket on the table.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 929,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "932": {
+   "caption": "the person closes the box.",
+   "partner_caption": "a person runs into the closet with a box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 937,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "933": {
+   "caption": "person put something in it closes the door.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 934,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "934": {
+   "caption": "person closes the door.",
+   "partner_caption": "person put something in it closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 933,
+   "jaccard": 0.5,
+   "n_candidates": 1
+  },
+  "937": {
+   "caption": "a person runs into the closet with a box.",
+   "partner_caption": "the person closes the box.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 932,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "938": {
+   "caption": "person runs to the kitchen.",
+   "partner_caption": "person begin running around.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 939,
+   "jaccard": 0.125,
+   "n_candidates": 2
+  },
+  "939": {
+   "caption": "person begin running around.",
+   "partner_caption": "person runs out of the couch.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 940,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "940": {
+   "caption": "person runs out of the couch.",
+   "partner_caption": "person begin running around.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 939,
+   "jaccard": 0.1111,
+   "n_candidates": 2
+  },
+  "942": {
+   "caption": "a person walks by eating a sandwich.",
+   "partner_caption": "a person is eating a sandwich in a hallway.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 943,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "943": {
+   "caption": "a person is eating a sandwich in a hallway.",
+   "partner_caption": "a person walks by eating a sandwich.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 942,
+   "jaccard": 0.4444,
+   "n_candidates": 1
+  },
+  "946": {
+   "caption": "the person closes the door.",
+   "partner_caption": "person closes a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 947,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "947": {
+   "caption": "person closes a door.",
+   "partner_caption": "the person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 946,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "948": {
+   "caption": "another person tries to fix a loose doorknob.",
+   "partner_caption": "another person is fixing a doorknob.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 952,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "949": {
+   "caption": "person eating it.",
+   "partner_caption": "the eating man watches his friend fix the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 953,
+   "jaccard": 0.1,
+   "n_candidates": 3
+  },
+  "950": {
+   "caption": "person the other continues to eat.",
+   "partner_caption": "the eating man watches his friend fix the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 953,
+   "jaccard": 0.0769,
+   "n_candidates": 3
+  },
+  "951": {
+   "caption": "person eats a sandwich out of a bag.",
+   "partner_caption": "the eating man watches his friend fix the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 953,
+   "jaccard": 0.0,
+   "n_candidates": 3
+  },
+  "952": {
+   "caption": "another person is fixing a doorknob.",
+   "partner_caption": "another person tries to fix a loose doorknob.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 948,
+   "jaccard": 0.4,
+   "n_candidates": 1
+  },
+  "953": {
+   "caption": "the eating man watches his friend fix the door.",
+   "partner_caption": "person eats a sandwich out of a bag.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 951,
+   "jaccard": 0.0,
+   "n_candidates": 3
+  },
+  "955": {
+   "caption": "person eats some food.",
+   "partner_caption": "person eating something.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 956,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "956": {
+   "caption": "person eating something.",
+   "partner_caption": "person eats some food.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 955,
+   "jaccard": 0.1667,
+   "n_candidates": 1
+  },
+  "958": {
+   "caption": "person closes the door.",
+   "partner_caption": "person closing the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 960,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "960": {
+   "caption": "person closing the door.",
+   "partner_caption": "person closes the door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 958,
+   "jaccard": 0.6,
+   "n_candidates": 1
+  },
+  "961": {
+   "caption": "a person is smiling.",
+   "partner_caption": "the person was smiling.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 963,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "963": {
+   "caption": "the person was smiling.",
+   "partner_caption": "a person is smiling.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 961,
+   "jaccard": 0.3333,
+   "n_candidates": 1
+  },
+  "965": {
+   "caption": "person puts something onto a shelf.",
+   "partner_caption": "a person puts a cup of coffee on the shelf.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 966,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "966": {
+   "caption": "a person puts a cup of coffee on the shelf.",
+   "partner_caption": "person puts something onto a shelf.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 965,
+   "jaccard": 0.3636,
+   "n_candidates": 1
+  },
+  "967": {
+   "caption": "person sits on a chair.",
+   "partner_caption": "person sits down in chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 972,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "969": {
+   "caption": "the person sits down in a chair.",
+   "partner_caption": "person sits on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 967,
+   "jaccard": 0.5,
+   "n_candidates": 2
+  },
+  "972": {
+   "caption": "person sits down in chair.",
+   "partner_caption": "person sits on a chair.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 967,
+   "jaccard": 0.4286,
+   "n_candidates": 2
+  },
+  "977": {
+   "caption": "person closing a door on the stairs.",
+   "partner_caption": "person closing a door.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 978,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "978": {
+   "caption": "person closing a door.",
+   "partner_caption": "person closing a door on the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 977,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "979": {
+   "caption": "person closing the door.",
+   "partner_caption": "person closing a door on the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 977,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "980": {
+   "caption": "the person is throwing shoes.",
+   "partner_caption": "a person throws two shoes down the stairs.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 981,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "981": {
+   "caption": "a person throws two shoes down the stairs.",
+   "partner_caption": "the person is throwing shoes.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 980,
+   "jaccard": 0.3,
+   "n_candidates": 1
+  },
+  "987": {
+   "caption": "person reads a book.",
+   "partner_caption": "person reading a book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 988,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "988": {
+   "caption": "person reading a book.",
+   "partner_caption": "person reads a book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 987,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "989": {
+   "caption": "person start dressing for the weather.",
+   "partner_caption": "person begins to dress.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 990,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "990": {
+   "caption": "person begins to dress.",
+   "partner_caption": "person start dressing for the weather.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 989,
+   "jaccard": 0.1111,
+   "n_candidates": 1
+  },
+  "992": {
+   "caption": "a person reads a book.",
+   "partner_caption": "person reading a book.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 988,
+   "jaccard": 0.6,
+   "n_candidates": 2
+  },
+  "993": {
+   "caption": "person sits on the bed.",
+   "partner_caption": "a person sits down on a bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 996,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  },
+  "994": {
+   "caption": "a person sits on a bed.",
+   "partner_caption": "person sits on the bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 993,
+   "jaccard": 0.6667,
+   "n_candidates": 2
+  },
+  "996": {
+   "caption": "a person sits down on a bed.",
+   "partner_caption": "person sits on the bed.",
+   "partner_kind": "sibling",
+   "partner_src_qid": 993,
+   "jaccard": 0.5714,
+   "n_candidates": 2
+  }
+ }
+}

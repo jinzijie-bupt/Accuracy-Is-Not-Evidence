@@ -1,0 +1,617 @@
+{
+ "sources": [
+  {
+   "table": "S14",
+   "row": "qwenbase / Qwen2.5-VL-7B|base|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwenbase_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_qwenbase_iid_node3.json",
+   "sha16": "21e4d2b96a57b368",
+   "extra": {
+    "tag": "qwenbase",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "qwenbase / Qwen2.5-VL-7B|base|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwenbase_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_qwenbase_ood_node3.json",
+   "sha16": "cb3e1494e98669ab",
+   "extra": {
+    "tag": "qwenbase",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "qwensft / Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwensft_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_qwensft_iid_node3.json",
+   "sha16": "ef793717b3a44972",
+   "extra": {
+    "tag": "qwensft",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "qwensft / Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwensft_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_qwensft_ood_node3.json",
+   "sha16": "37fe9e3bcf909810",
+   "extra": {
+    "tag": "qwensft",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "grpo / Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_grpo_iid_node1.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_grpo_iid_node1.json",
+   "sha16": "f2f83ad71e4f1152",
+   "extra": {
+    "tag": "grpo",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "grpo / Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_grpo_ood_node1.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_grpo_ood_node1.json",
+   "sha16": "031cc4db70e453d9",
+   "extra": {
+    "tag": "grpo",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "qwena05 / Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwena05_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_qwena05_iid_node3.json",
+   "sha16": "c15721479f6b1c7d",
+   "extra": {
+    "tag": "qwena05",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "qwena05 / Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_qwena05_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_qwena05_ood_node3.json",
+   "sha16": "1aea1c6389b7c0a9",
+   "extra": {
+    "tag": "qwena05",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzbase / TimeZero-7B|base|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeZero-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzbase_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tzbase_iid_node3.json",
+   "sha16": "7fdd0c7d11e3675c",
+   "extra": {
+    "tag": "tzbase",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzbase / TimeZero-7B|base|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeZero-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzbase_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tzbase_ood_node3.json",
+   "sha16": "69b1037e7397ad9c",
+   "extra": {
+    "tag": "tzbase",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzbasetf / TimeZero-7B|base|train=v|eval=t",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeZero-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzbasetf_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tzbasetf_iid_node3.json",
+   "sha16": "f2af162e381e48c1",
+   "extra": {
+    "tag": "tzbasetf",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzbasetf / TimeZero-7B|base|train=v|eval=t",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeZero-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzbasetf_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tzbasetf_ood_node3.json",
+   "sha16": "4de708c034a3fc90",
+   "extra": {
+    "tag": "tzbasetf",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzsfttf / TimeZero-7B|sft|b=0|s=0|train=t|eval=t",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeZero-7B|sft|b=0|s=0|train=t|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzsfttf_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tzsfttf_iid_node3.json",
+   "sha16": "b6a62da0bb3f376e",
+   "extra": {
+    "tag": "tzsfttf",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tzsfttf / TimeZero-7B|sft|b=0|s=0|train=t|eval=t",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeZero-7B|sft|b=0|s=0|train=t|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tzsfttf_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tzsfttf_ood_node3.json",
+   "sha16": "a22a8011dcccb504",
+   "extra": {
+    "tag": "tzsfttf",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tza05 / TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tza05_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tza05_iid_node3.json",
+   "sha16": "574a8f9f86fdb4bb",
+   "extra": {
+    "tag": "tza05",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tza05 / TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tza05_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tza05_ood_node3.json",
+   "sha16": "9180f86c09e0ab89",
+   "extra": {
+    "tag": "tza05",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1base / Time-R1-7B|base|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Time-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1base_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tr1base_iid_node3.json",
+   "sha16": "d673c6d1dbd5345d",
+   "extra": {
+    "tag": "tr1base",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1base / Time-R1-7B|base|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Time-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1base_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tr1base_ood_node3.json",
+   "sha16": "e1c12044691cc1f3",
+   "extra": {
+    "tag": "tr1base",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1a05 / Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1a05_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tr1a05_iid_node3.json",
+   "sha16": "c13f9b475fdce3e5",
+   "extra": {
+    "tag": "tr1a05",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1a05 / Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1a05_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tr1a05_ood_node3.json",
+   "sha16": "9274c4143f47af46",
+   "extra": {
+    "tag": "tr1a05",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1a01 / Time-R1-7B|grouped|a=0.1|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "Time-R1-7B|grouped|a=0.1|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1a01_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tr1a01_iid_node3.json",
+   "sha16": "cbec7ee81fe3ef1c",
+   "extra": {
+    "tag": "tr1a01",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tr1a01 / Time-R1-7B|grouped|a=0.1|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "Time-R1-7B|grouped|a=0.1|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tr1a01_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tr1a01_ood_node3.json",
+   "sha16": "7228b694e5b039c7",
+   "extra": {
+    "tag": "tr1a01",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcbase / VideoChat-R1-7B|base|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcbase_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_vcbase_iid_node3.json",
+   "sha16": "0d8924fcacdd73c5",
+   "extra": {
+    "tag": "vcbase",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcbase / VideoChat-R1-7B|base|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcbase_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_vcbase_ood_node3.json",
+   "sha16": "53f1a7dde1c820e7",
+   "extra": {
+    "tag": "vcbase",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcbasetf / VideoChat-R1-7B|base|train=v|eval=t",
+   "column": "iid",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcbasetf_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_vcbasetf_iid_node3.json",
+   "sha16": "7a038e9306c9ada0",
+   "extra": {
+    "tag": "vcbasetf",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcbasetf / VideoChat-R1-7B|base|train=v|eval=t",
+   "column": "ood",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcbasetf_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_vcbasetf_ood_node3.json",
+   "sha16": "695616b85c4bb953",
+   "extra": {
+    "tag": "vcbasetf",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcsfttf / VideoChat-R1-7B|sft|b=0|s=0|train=t|eval=t",
+   "column": "iid",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|sft|b=0|s=0|train=t|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcsfttf_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_vcsfttf_iid_node3.json",
+   "sha16": "d0cb6862a60ebd02",
+   "extra": {
+    "tag": "vcsfttf",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vcsfttf / VideoChat-R1-7B|sft|b=0|s=0|train=t|eval=t",
+   "column": "ood",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|sft|b=0|s=0|train=t|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vcsfttf_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_vcsfttf_ood_node3.json",
+   "sha16": "e0bda9bf3f6149ae",
+   "extra": {
+    "tag": "vcsfttf",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vca10 / VideoChat-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vca10_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_vca10_iid_node3.json",
+   "sha16": "3025f7a6470ac2eb",
+   "extra": {
+    "tag": "vca10",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "vca10 / VideoChat-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "VideoChat-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_vca10_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_vca10_ood_node3.json",
+   "sha16": "53783026865d4636",
+   "extra": {
+    "tag": "vca10",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tlbase / TimeLens-8B|base|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeLens-8B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tlbase_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tlbase_iid_node3.json",
+   "sha16": "37f8664ab7485170",
+   "extra": {
+    "tag": "tlbase",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tlbase / TimeLens-8B|base|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeLens-8B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tlbase_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tlbase_ood_node3.json",
+   "sha16": "fbeaa7d3701f0128",
+   "extra": {
+    "tag": "tlbase",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tlsft / TimeLens-8B|sft|b=0|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeLens-8B|sft|b=0|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tlsft_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tlsft_iid_node3.json",
+   "sha16": "806251222c76c95c",
+   "extra": {
+    "tag": "tlsft",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tlsft / TimeLens-8B|sft|b=0|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeLens-8B|sft|b=0|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tlsft_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tlsft_ood_node3.json",
+   "sha16": "687e7b34ee804a3d",
+   "extra": {
+    "tag": "tlsft",
+    "split": "ood"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tla05 / TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "iid",
+   "kind": "cd",
+   "key": "TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tla05_iid_node3.json",
+   "dataset": "charades-cd-iid",
+   "src_file": "p4cd_tla05_iid_node3.json",
+   "sha16": "d3ddd3eec8f74013",
+   "extra": {
+    "tag": "tla05",
+    "split": "iid"
+   }
+  },
+  {
+   "table": "S14",
+   "row": "tla05 / TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "ood",
+   "kind": "cd",
+   "key": "TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4cd_tla05_ood_node3.json",
+   "dataset": "charades-cd-ood",
+   "src_file": "p4cd_tla05_ood_node3.json",
+   "sha16": "40a6ab5be01ec84b",
+   "extra": {
+    "tag": "tla05",
+    "split": "ood"
+   }
+  }
+ ],
+ "pending": []
+}

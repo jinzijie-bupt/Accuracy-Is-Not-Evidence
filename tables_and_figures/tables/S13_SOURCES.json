@@ -1,0 +1,26 @@
+{
+ "qwenbase": {
+  "clean_v": "aa00c9fef8562dd2",
+  "clean_t": "e79bd9f3445d2172",
+  "black_v": "9c3dbdc1ecd1f820",
+  "black_t": "ca2866f1ab722e93"
+ },
+ "tzbase": {
+  "clean_v": "696acbe19ddf91c4",
+  "clean_t": "febcdfcd1e58eb12",
+  "black_v": "3ab67e940b95c08c",
+  "black_t": "c51b721e51d74dee"
+ },
+ "tr1base": {
+  "clean_v": "e8f51623dfc8f21b",
+  "clean_t": "de15d7da2bb14194",
+  "black_v": "b34259affdd3f8e1",
+  "black_t": "dcf47f09ea466d23"
+ },
+ "vcbase": {
+  "clean_v": "93d4f5c3d1b3e87b",
+  "clean_t": "b08a3b75d0f91656",
+  "black_v": "46835fa63091cb92",
+  "black_t": "73f5a7a94f808453"
+ }
+}

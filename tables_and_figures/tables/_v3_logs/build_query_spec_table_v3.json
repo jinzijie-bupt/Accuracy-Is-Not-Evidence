@@ -1,0 +1,261 @@
+{
+ "sources": [
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / grouped $\\alpha{=}0.25$ / Qwen2.5-VL-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_natbase_a025_vs_base_node1.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natbase_a025_vs_base_node1.json",
+   "sha16": "350d3a44c77ebddd",
+   "extra": {
+    "tag": "natbase_a025_vs_base_node1"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / grouped $\\alpha{=}0.5$ / Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "C",
+   "env_rule": "canonical",
+   "name": "qswap3_natbase_a05_vs_base_node4.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natbase_a05_vs_base_node4.json",
+   "sha16": "7e3ac39a040bedcc",
+   "extra": {
+    "tag": "natbase_a05_vs_base_node4"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / grouped $\\alpha{=}0.5$, $\\beta{=}0.03$ / Qwen2.5-VL-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "qswap3_natbase_a05_b003_vs_base_node2.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natbase_a05_b003_vs_base_node2.json",
+   "sha16": "1b75eb354956c02e",
+   "extra": {
+    "tag": "natbase_a05_b003_vs_base_node2"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / grouped $\\alpha{=}1$ / Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "qswap3_natbase_a10_s0_vs_base_node2.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natbase_a10_s0_vs_base_node2.json",
+   "sha16": "b428953cd236b1ec",
+   "extra": {
+    "tag": "natbase_a10_s0_vs_base_node2"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / grouped $\\alpha{=}1$ (second seed) / Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=1|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=1|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "qswap3_natbase_a10_s1_vs_base_node2.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natbase_a10_s1_vs_base_node2.json",
+   "sha16": "e6e06238ca4e3a72",
+   "extra": {
+    "tag": "natbase_a10_s1_vs_base_node2"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / two-stage, $\\alpha{=}0.5$ / Qwen2.5-VL-7B|two-stage|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|two-stage|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_natsft2g_a05_vs_base_node1.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natsft2g_a05_vs_base_node1.json",
+   "sha16": "95b19122a51bea4c",
+   "extra": {
+    "tag": "natsft2g_a05_vs_base_node1"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / two-stage, $\\beta{=}0.03$ / Qwen2.5-VL-7B|two-stage|b=0.03|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|two-stage|b=0.03|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_natsft2g_b003_vs_base_node1.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natsft2g_b003_vs_base_node1.json",
+   "sha16": "77293d92af3c0286",
+   "extra": {
+    "tag": "natsft2g_b003_vs_base_node1"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / evidence margin only / Qwen2.5-VL-7B|single-margin|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|single-margin|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_abl_single_vs_base_node1.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_abl_single_vs_base_node1.json",
+   "sha16": "2ea8c45706182942",
+   "extra": {
+    "tag": "abl_single_vs_base_node1"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Qwen2.5-VL-7B / SFT / Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_natsft_b0_tf5_vs_base_node1.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natsft_b0_tf5_vs_base_node1.json",
+   "sha16": "ee457515f09ea7fc",
+   "extra": {
+    "tag": "natsft_b0_tf5_vs_base_node1"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "TimeZero / grouped $\\alpha{=}0.25$ / TimeZero-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "TimeZero-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "qswap3_nattz_a025_vs_tzbase_node2.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_nattz_a025_vs_tzbase_node2.json",
+   "sha16": "d672d383a37ea72d",
+   "extra": {
+    "tag": "nattz_a025_vs_tzbase_node2"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "TimeZero / grouped $\\alpha{=}0.5$ / TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "qswap3_nattz_a05_vs_tzbase_node2.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_nattz_a05_vs_tzbase_node2.json",
+   "sha16": "4e00004197fbccba",
+   "extra": {
+    "tag": "nattz_a05_vs_tzbase_node2"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "TimeZero / grouped $\\alpha{=}0.5$, text-first / TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_nattz_a05_tf_vs_tzbase_tf_node5.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_nattz_a05_tf_vs_tzbase_tf_node5.json",
+   "sha16": "5534f7836ffe1ae2",
+   "extra": {
+    "tag": "nattz_a05_tf_vs_tzbase_tf_node5"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "Time-R1 / grouped $\\alpha{=}0.25$ / Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "env": "C",
+   "env_rule": "canonical",
+   "name": "qswap3_nattr1_a025_vs_tr1base_node4.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_nattr1_a025_vs_tr1base_node4.json",
+   "sha16": "7587bbb2daf662bc",
+   "extra": {
+    "tag": "nattr1_a025_vs_tr1base_node4"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "VideoChat-R1 / grouped $\\alpha{=}0.25$ / VideoChat-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "VideoChat-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "env": "C",
+   "env_rule": "canonical",
+   "name": "qswap3_natvc_a025_vs_vcbase_node4.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natvc_a025_vs_vcbase_node4.json",
+   "sha16": "63f38755fa621b93",
+   "extra": {
+    "tag": "natvc_a025_vs_vcbase_node4"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "VideoChat-R1 / grouped $\\alpha{=}0.5$ / VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "C",
+   "env_rule": "canonical",
+   "name": "qswap3_natvc_a05_vs_vcbase_node4.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natvc_a05_vs_vcbase_node4.json",
+   "sha16": "640007c865da4071",
+   "extra": {
+    "tag": "natvc_a05_vs_vcbase_node4"
+   }
+  },
+  {
+   "table": "S11",
+   "row": "VideoChat-R1 / grouped $\\alpha{=}0.5$, text-first / VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "column": "whole row",
+   "kind": "qswap",
+   "key": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "qswap3_natvc_a05_tf_vs_vcbase_tf_node5.json",
+   "dataset": "charades-sta",
+   "src_file": "qswap3_natvc_a05_tf_vs_vcbase_tf_node5.json",
+   "sha16": "86de555f35efed43",
+   "extra": {
+    "tag": "natvc_a05_tf_vs_vcbase_tf_node5"
+   }
+  }
+ ],
+ "pending": []
+}

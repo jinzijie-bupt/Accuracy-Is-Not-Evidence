@@ -1,0 +1,29 @@
+{
+ "what": "SFT minus other objective, change from test-iid to test-ood, points (Qwen2.5-VL-7B)",
+ "sft_minus_iou_grpo": {
+  "point": -4.263426488456865,
+  "ci95": [
+   -7.475957617613628,
+   -0.840613255995324
+  ],
+  "n_iid": 823,
+  "n_ood": 3375,
+  "videos_iid": 333,
+  "videos_ood": 1442,
+  "B": 2000,
+  "seed": 0
+ },
+ "sft_minus_placebo_controlled_a05": {
+  "point": -5.460348319157554,
+  "ci95": [
+   -9.07992361664478,
+   -1.7113461232388087
+  ],
+  "n_iid": 823,
+  "n_ood": 3375,
+  "videos_iid": 333,
+  "videos_ood": 1442,
+  "B": 2000,
+  "seed": 0
+ }
+}

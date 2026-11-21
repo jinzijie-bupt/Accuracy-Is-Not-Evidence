@@ -1,0 +1,74 @@
+{
+ "qwenbase": {
+  "iid": "p4cd_qwenbase_iid_node3.json",
+  "ood": "p4cd_qwenbase_ood_node3.json"
+ },
+ "qwensft": {
+  "iid": "p4cd_qwensft_iid_node3.json",
+  "ood": "p4cd_qwensft_ood_node3.json"
+ },
+ "grpo": {
+  "iid": "p4cd_grpo_iid_node1.json",
+  "ood": "p4cd_grpo_ood_node1.json"
+ },
+ "qwena05": {
+  "iid": "p4cd_qwena05_iid_node3.json",
+  "ood": "p4cd_qwena05_ood_node3.json"
+ },
+ "tzbase": {
+  "iid": "p4cd_tzbase_iid_node3.json",
+  "ood": "p4cd_tzbase_ood_node3.json"
+ },
+ "tzbasetf": {
+  "iid": "p4cd_tzbasetf_iid_node3.json",
+  "ood": "p4cd_tzbasetf_ood_node3.json"
+ },
+ "tzsfttf": {
+  "iid": "p4cd_tzsfttf_iid_node3.json",
+  "ood": "p4cd_tzsfttf_ood_node3.json"
+ },
+ "tza05": {
+  "iid": "p4cd_tza05_iid_node3.json",
+  "ood": "p4cd_tza05_ood_node3.json"
+ },
+ "tr1base": {
+  "iid": "p4cd_tr1base_iid_node3.json",
+  "ood": "p4cd_tr1base_ood_node3.json"
+ },
+ "tr1a05": {
+  "iid": "p4cd_tr1a05_iid_node3.json",
+  "ood": "p4cd_tr1a05_ood_node3.json"
+ },
+ "tr1a01": {
+  "iid": "p4cd_tr1a01_iid_node3.json",
+  "ood": "p4cd_tr1a01_ood_node3.json"
+ },
+ "vcbase": {
+  "iid": "p4cd_vcbase_iid_node3.json",
+  "ood": "p4cd_vcbase_ood_node3.json"
+ },
+ "vcbasetf": {
+  "iid": "p4cd_vcbasetf_iid_node3.json",
+  "ood": "p4cd_vcbasetf_ood_node3.json"
+ },
+ "vcsfttf": {
+  "iid": "p4cd_vcsfttf_iid_node3.json",
+  "ood": "p4cd_vcsfttf_ood_node3.json"
+ },
+ "vca10": {
+  "iid": "p4cd_vca10_iid_node3.json",
+  "ood": "p4cd_vca10_ood_node3.json"
+ },
+ "tlbase": {
+  "iid": "p4cd_tlbase_iid_node3.json",
+  "ood": "p4cd_tlbase_ood_node3.json"
+ },
+ "tlsft": {
+  "iid": "p4cd_tlsft_iid_node3.json",
+  "ood": "p4cd_tlsft_ood_node3.json"
+ },
+ "tla05": {
+  "iid": "p4cd_tla05_iid_node3.json",
+  "ood": "p4cd_tla05_ood_node3.json"
+ }
+}

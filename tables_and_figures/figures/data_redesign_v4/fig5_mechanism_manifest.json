@@ -1,0 +1,145 @@
+{
+ "generator": "scripts/plot_figs_v6.py",
+ "style": "scripts/paper_style.py",
+ "size_inches": [
+  2.53,
+  2.02
+ ],
+ "placed_width_linewidth": 0.46,
+ "points": [
+  {
+   "point": "mDPO-style",
+   "key": "Qwen2.5-VL-7B|mdpo|a=0.5|s=0|train=v|eval=v",
+   "dO": -0.0021212418770121095,
+   "dE": 0.15637306820772762,
+   "src": {
+    "file": "gamma_14Ln_natmdpo_a05_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+    "sha16": "361ecefac9e79840",
+    "env": "C"
+   }
+  },
+  {
+   "point": "all terms",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "dO": 0.010024100313719236,
+   "dE": 1.8240000749703176,
+   "src": {
+    "file": "gamma_14Ln_natbase_a05_g1_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+    "sha16": "1488f66321a7d1bf",
+    "env": "C"
+   }
+  },
+  {
+   "point": "uniform weights",
+   "key": "Qwen2.5-VL-7B|grouped-nodro|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "dO": 0.02021937033875512,
+   "dE": 2.252597100570178,
+   "src": {
+    "file": "gamma_14Ln_natbase_a05_abl_nodro_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+    "sha16": "09f8e4e4a24059a2",
+    "env": "B"
+   }
+  },
+  {
+   "point": "no placebo bound",
+   "key": "Qwen2.5-VL-7B|grouped-nohinge|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "dO": 0.49085126917496835,
+   "dE": 2.7977888814326666,
+   "src": {
+    "file": "gamma_14Ln_natbase_a05_abl_nohinge_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+    "sha16": "31cc020e734d4aed",
+    "env": "B"
+   }
+  },
+  {
+   "point": "no bound, uniform weights",
+   "key": "Qwen2.5-VL-7B|grouped-uniform-nohinge|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "dO": 0.6559218243166006,
+   "dE": 3.52359461730467,
+   "src": {
+    "file": "gamma_14Ln_natbase_a05_abl_uniform_nohinge_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+    "sha16": "3d67af25e0f7cd1b",
+    "env": "B"
+   }
+  },
+  {
+   "point": "evidence margin only",
+   "key": "Qwen2.5-VL-7B|single-margin|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "dO": 1.6483268445969526,
+   "dE": 2.436555028277963,
+   "src": {
+    "file": "gamma_14Ln_natbase_a05_abl_single_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+    "sha16": "67131cc80ab98f06",
+    "env": "B"
+   }
+  },
+  {
+   "point": "pure SFT",
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "dO": -0.0011752025956441423,
+   "dE": 0.10289274167443933,
+   "src": {
+    "file": "gamma_14Ln_natsft_b0_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+    "sha16": "a17818bd144b1831",
+    "env": "C"
+   }
+  },
+  {
+   "point": "base model (from the full objective's paired run)",
+   "dO": -0.06498545011157987,
+   "dE": 0.11946519807290842
+  }
+ ],
+ "rows_top_to_bottom": [
+  {
+   "row": "base",
+   "source_point": "base model (from the full objective's paired run)",
+   "dE": 0.11946519807290842,
+   "dO": -0.06498545011157987
+  },
+  {
+   "row": "SFT",
+   "source_point": "pure SFT",
+   "dE": 0.10289274167443933,
+   "dO": -0.0011752025956441423
+  },
+  {
+   "row": "mDPO-style",
+   "source_point": "mDPO-style",
+   "dE": 0.15637306820772762,
+   "dO": -0.0021212418770121095
+  },
+  {
+   "row": "evidence margin only",
+   "source_point": "evidence margin only",
+   "dE": 2.436555028277963,
+   "dO": 1.6483268445969526
+  },
+  {
+   "row": "no placebo bound",
+   "source_point": "no placebo bound",
+   "dE": 2.7977888814326666,
+   "dO": 0.49085126917496835
+  },
+  {
+   "row": "no bound, uniform",
+   "source_point": "no bound, uniform weights",
+   "dE": 3.52359461730467,
+   "dO": 0.6559218243166006
+  },
+  {
+   "row": "uniform weights",
+   "source_point": "uniform weights",
+   "dE": 2.252597100570178,
+   "dO": 0.02021937033875512
+  },
+  {
+   "row": "full objective",
+   "source_point": "all terms",
+   "dE": 1.8240000749703176,
+   "dO": 0.010024100313719236
+  }
+ ],
+ "base_dO_reference": -0.06498545011157987,
+ "dropped": []
+}

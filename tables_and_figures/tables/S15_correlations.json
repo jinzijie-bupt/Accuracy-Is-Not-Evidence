@@ -1,0 +1,234 @@
+{
+ "n_configs": 32,
+ "dataset": "charades-sta",
+ "operator": "mask",
+ "spearman_gamma_vs_dnll": -0.1979472140762463,
+ "spearman_gamma_vs_signfrac": 0.8423808551124903,
+ "spearman_gamma_vs_gammac": 0.5857771260997067,
+ "rows": [
+  {
+   "label": "Qwen2.5-VL-7B, IoU-GRPO",
+   "d_nll": 0.036935354485054805,
+   "gamma": 0.0001632980960600224,
+   "sign_frac": 0.49038461538461536,
+   "gamma_c": 0.015015238988954698
+  },
+  {
+   "label": "Qwen2.5-VL-7B, SFT",
+   "d_nll": -0.9939313505123721,
+   "gamma": -0.08538945280522571,
+   "sign_frac": 0.4017857142857143,
+   "gamma_c": -0.004204233266253394
+  },
+  {
+   "label": "Qwen2.5-VL-7B, evidence margin only",
+   "d_nll": -0.9515657485342094,
+   "gamma": 0.5362878478232515,
+   "sign_frac": 0.7403846153846154,
+   "gamma_c": -0.3419738726291521
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.25$",
+   "d_nll": -0.7528825449822633,
+   "gamma": 2.033194059448064,
+   "sign_frac": 1.0,
+   "gamma_c": 0.34552596855942275
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$",
+   "d_nll": -0.91692125981733,
+   "gamma": 1.6295253264721101,
+   "sign_frac": 0.9732142857142857,
+   "gamma_c": 0.4019248870255077
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$, $\\beta{=}0.03$",
+   "d_nll": -0.9661433130665924,
+   "gamma": 1.3612440651370301,
+   "sign_frac": 0.7303370786516854,
+   "gamma_c": 0.26356824876580925
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$, 8,434 pairs, trained on 16 frames",
+   "d_nll": 0.7054019851094213,
+   "gamma": 0.23389085735684842,
+   "sign_frac": 0.8314606741573034,
+   "gamma_c": 0.18987875826205233
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$",
+   "d_nll": -0.9539686463187741,
+   "gamma": 1.0342776480016453,
+   "sign_frac": 0.803921568627451,
+   "gamma_c": 0.2771464270366401
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$ (second seed)",
+   "d_nll": -0.9612159169503492,
+   "gamma": 1.1293131455231282,
+   "sign_frac": 0.88,
+   "gamma_c": 0.2842878756951304
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$, $\\beta{=}0.03$",
+   "d_nll": -0.9926851621882417,
+   "gamma": 0.8200979773667506,
+   "sign_frac": 0.8285714285714286,
+   "gamma_c": 0.3431927453752892
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped, no group wts",
+   "d_nll": -0.8657208656935931,
+   "gamma": 1.987284962580331,
+   "sign_frac": 1.0,
+   "gamma_c": 0.3440344630966599
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped, no hinge",
+   "d_nll": -0.9601168462377356,
+   "gamma": 2.0463627122059256,
+   "sign_frac": 1.0,
+   "gamma_c": 0.10538380038821973
+  },
+  {
+   "label": "Qwen2.5-VL-7B, grouped, no hinge, no group wts",
+   "d_nll": -0.9423691421186702,
+   "gamma": 2.620868713635212,
+   "sign_frac": 1.0,
+   "gamma_c": 0.14473411075768788
+  },
+  {
+   "label": "Qwen2.5-VL-7B, two-stage, $\\alpha{=}0.5$",
+   "d_nll": -0.9597609212717333,
+   "gamma": 2.0956537220334868,
+   "sign_frac": 1.0,
+   "gamma_c": 0.36498679821635677
+  },
+  {
+   "label": "Qwen2.5-VL-7B, two-stage, $\\beta{=}0.03$",
+   "d_nll": -0.9640072514238919,
+   "gamma": 2.7507524147058686,
+   "sign_frac": 0.9767441860465116,
+   "gamma_c": 0.38047418131676175
+  },
+  {
+   "label": "TimeZero, grouped $\\alpha{=}0.25$",
+   "d_nll": -0.8185623267553644,
+   "gamma": 1.9987101984684408,
+   "sign_frac": 0.9924812030075187,
+   "gamma_c": 0.3871674872290749
+  },
+  {
+   "label": "TimeZero, grouped $\\alpha{=}0.5$",
+   "d_nll": -0.8715228983182468,
+   "gamma": 1.3962438479185182,
+   "sign_frac": 0.9851851851851852,
+   "gamma_c": 0.35411569186276276
+  },
+  {
+   "label": "TimeZero, grouped $\\alpha{=}0.5$, $\\beta{=}0.03$",
+   "d_nll": -0.966647178943169,
+   "gamma": 0.32343326787447974,
+   "sign_frac": 0.9083969465648855,
+   "gamma_c": 0.2661327278966816
+  },
+  {
+   "label": "TimeZero, grouped $\\alpha{=}0.5$, text-first",
+   "d_nll": -0.944767249107962,
+   "gamma": 1.2892378056121316,
+   "sign_frac": 0.9790209790209791,
+   "gamma_c": 0.5794196915157087
+  },
+  {
+   "label": "TimeZero, grouped $\\alpha{=}1$",
+   "d_nll": -0.9308272606388188,
+   "gamma": 1.0701048772283719,
+   "sign_frac": 0.9307692307692308,
+   "gamma_c": 0.37103668330712
+  },
+  {
+   "label": "Time-R1, grouped $\\alpha{=}0.1$",
+   "d_nll": -0.4458240889909265,
+   "gamma": 2.3959889622269315,
+   "sign_frac": 1.0,
+   "gamma_c": 0.36877136513180053
+  },
+  {
+   "label": "Time-R1, grouped $\\alpha{=}0.25$",
+   "d_nll": -0.7594798299439146,
+   "gamma": 1.8803634301422396,
+   "sign_frac": 1.0,
+   "gamma_c": 0.41739299746742103
+  },
+  {
+   "label": "Time-R1, grouped $\\alpha{=}0.5$",
+   "d_nll": -0.8713580137019332,
+   "gamma": 1.460801159799309,
+   "sign_frac": 0.9763779527559056,
+   "gamma_c": 0.32485916058296116
+  },
+  {
+   "label": "Time-R1, grouped $\\alpha{=}1$",
+   "d_nll": -0.9134280415727651,
+   "gamma": 0.9536835867619975,
+   "sign_frac": 0.8627450980392157,
+   "gamma_c": 0.24803056641810367
+  },
+  {
+   "label": "VideoChat-R1, grouped $\\alpha{=}0.25$",
+   "d_nll": 0.004994051233779828,
+   "gamma": 1.6259231492595079,
+   "sign_frac": 0.9926470588235294,
+   "gamma_c": 0.4218377513379117
+  },
+  {
+   "label": "VideoChat-R1, grouped $\\alpha{=}0.5$",
+   "d_nll": -0.15421043577218285,
+   "gamma": 1.4278987313724885,
+   "sign_frac": 1.0,
+   "gamma_c": 0.444524434518199
+  },
+  {
+   "label": "VideoChat-R1, grouped $\\alpha{=}1$",
+   "d_nll": -0.19471531639052003,
+   "gamma": 1.2004673259020886,
+   "sign_frac": 1.0,
+   "gamma_c": 0.400812400420038
+  },
+  {
+   "label": "TimeLens-8B, grouped $\\alpha{=}0.5$",
+   "d_nll": -1.4943591299058383,
+   "gamma": 1.3552494817070437,
+   "sign_frac": 1.0,
+   "gamma_c": 0.6356432881313577
+  },
+  {
+   "label": "TimeZero (public)",
+   "d_nll": 0.01584172557552388,
+   "gamma": -0.07806703490812848,
+   "sign_frac": 0.4174757281553398,
+   "gamma_c": -0.11369806228071715
+  },
+  {
+   "label": "Time-R1 (public)",
+   "d_nll": -0.07209767517425436,
+   "gamma": 0.0176324585007832,
+   "sign_frac": 0.6039603960396039,
+   "gamma_c": -0.017476946915479182
+  },
+  {
+   "label": "VideoChat-R1 (public)",
+   "d_nll": -0.10077830223470918,
+   "gamma": 0.052389115669523326,
+   "sign_frac": 0.7128712871287128,
+   "gamma_c": -0.0011371232548207015
+  },
+  {
+   "label": "TimeLens-8B (public) against Qwen3-VL-8B",
+   "d_nll": 1.496701051990191,
+   "gamma": -0.1641171854747025,
+   "sign_frac": 0.29411764705882354,
+   "gamma_c": -0.42364103080533944
+  }
+ ]
+}

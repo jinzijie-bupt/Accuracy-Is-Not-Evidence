@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accuracy Is Not Evidence</title>
+<meta name="description" content="Measuring and training evidence dependence in video temporal grounding.">
+<style>
+  :root {
+    --ink: #1d1d1f; --muted: #5f6368; --line: #e3e3e3; --bg: #ffffff; --panel: #f6f7f8; --btn: #1d1d1f; --btn-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e8e8e8; --muted: #a0a4a8; --line: #333; --bg: #141414; --panel: #1d1d1d; --btn: #e8e8e8; --btn-ink: #141414; }
+    figure img { background: #fff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 17px/1.65 "Noto Sans", "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+  header { text-align: center; }
+  h1 { font-size: 2.1rem; line-height: 1.25; margin: 0 0 20px; font-weight: 700; }
+  h1 span { display: block; font-weight: 500; font-size: 1.45rem; margin-top: 6px; }
+  .authors { font-size: 1.1rem; margin: 0 0 6px; }
+  .authors a { color: inherit; text-decoration: none; }
+  .aff { color: var(--muted); font-size: .95rem; margin: 0; }
+  .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 24px 0 8px; }
+  .links a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 999px;
+             background: var(--btn); color: var(--btn-ink); text-decoration: none; font-size: .95rem; }
+  .links a.off { opacity: .45; pointer-events: none; }
+  .links svg { width: 17px; height: 17px; fill: currentColor; }
+  h2 { font-size: 1.45rem; margin: 56px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  p { margin: 0 0 14px; }
+  figure { margin: 22px 0 8px; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+  figcaption { color: var(--muted); font-size: .92rem; margin-top: 8px; }
+  .pair { display: grid; grid-template-columns: 46fr 54fr; gap: 18px; align-items: center; }
+  @media (max-width: 680px) { .pair { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } h1 span { font-size: 1.15rem; } }
+  .tldr { background: var(--panel); border-radius: 8px; padding: 16px 20px; margin-top: 28px; }
+  pre { background: var(--panel); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: .85rem; line-height: 1.5; }
+  footer { color: var(--muted); font-size: .85rem; text-align: center; margin-top: 56px; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Accuracy Is Not Evidence<span>Measuring and Training Evidence Dependence in Video Temporal Grounding</span></h1>
+  <p class="authors">Zijie Jin<sup>1</sup>, Shuai Zhao<sup>1,†</sup>, Haoran Tao<sup>2</sup>, Chaomin Huang<sup>3</sup>, Liwen Luo<sup>4</sup></p>
+  <p class="aff"><sup>1</sup>Beijing University of Posts and Telecommunications &nbsp; <sup>2</sup>Institute of Automation, Chinese Academy of Sciences</p>
+  <p class="aff"><sup>3</sup>Peking University &nbsp; <sup>4</sup>Independent Researcher &nbsp; <sup>†</sup>Corresponding author</p>
+  <nav class="links">
+    <a id="paper-link" class="off" href="#"><svg viewBox="0 0 384 512"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"/></svg>Paper (arXiv, soon)</a>
+    <a href="https://github.com/jinzijie-bupt/Accuracy-Is-Not-Evidence"><svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>Code</a>
+    <a href="https://huggingface.co/jinzijie-bupt"><svg viewBox="0 0 512 512"><path d="M239.1 6.3l-208 78c-18.7 7-31.1 25-31.1 45v225.1c0 18.2 10.3 34.8 26.5 42.9l208 104c13.5 6.8 29.4 6.8 42.9 0l208-104c16.3-8.1 26.5-24.8 26.5-42.9V129.3c0-20-12.4-37.9-31.1-44.9l-208-78C262 2.2 250 2.2 239.1 6.3zM256 68.4l192 72v1.1l-192 78-192-78v-1.1l192-72zm32 356V275.5l160-65v133.9l-160 80z"/></svg>Models</a>
+    <a href="https://huggingface.co/datasets/jinzijie-bupt/Accuracy-Is-Not-Evidence"><svg viewBox="0 0 448 512"><path d="M448 73.1v45.7C448 159.1 347.7 192 224 192S0 159.1 0 118.9V73.1C0 32.9 100.3 0 224 0s224 32.9 224 73.1zM448 176v102.9C448 319.1 347.7 352 224 352S0 319.1 0 278.9V176c48.1 33.1 136.2 48.6 224 48.6S399.9 209.1 448 176zm0 160v102.9C448 479.1 347.7 512 224 512S0 479.1 0 438.9V336c48.1 33.1 136.2 48.6 224 48.6S399.9 369.1 448 336z"/></svg>Data</a>
+  </nav>
+</header>
+
+<div class="tldr"><strong>TL;DR.</strong> A correct interval in video temporal grounding can come from the event's frames or from shortcuts. We measure how much the answer rests on the event against a placebo edit in the same video, show that post-training for accuracy does not raise it, and train it directly.</div>
+
+<figure>
+  <div class="pair">
+    <img src="static/images/teaser.png" alt="Schematic of the evidence edit and the placebo edit, with the two likelihood drops for three kinds of model.">
+    <img src="static/images/map.png" alt="Post-trained models placed by their change in accuracy and in evidence dependence.">
+  </div>
+  <figcaption><strong>Accuracy and evidence dependence are separate axes.</strong> Left: the audit scores the same correct answer with the event's frames masked and with as many frames masked elsewhere, the placebo. Right: each post-trained model, placed by its change from its own base in R@0.5 (horizontal) and in evidence dependence Γ (vertical).</figcaption>
+</figure>
+
+<h2>Abstract</h2>
+<p>In video temporal grounding, a correct interval can come from finding the event, answering blind or fitting one annotation style, and Recall at IoU scores them alike. We measure evidence dependence, how much the answer rests on the event's frames. Our fixed-answer audit edits either the frames inside the annotated interval or, as a placebo, as many frames elsewhere in the same video, and compares the two drops in the annotated answer's likelihood. Supervised fine-tuning and three public checkpoints trained with IoU-reward reinforcement learning raise the accuracy of Qwen2.5-VL-7B by 9 to 20 points, partly by answering blind and by fitting one annotation. Yet their answers rest on the event no more than the base model's, and the same holds for IoU-reward training on our data at the audit's frame rate. This comparison is a difference of the model's own likelihoods, so we can train on it. A placebo contrast and a bound on the placebo drop rule out learning to react to any edit. With them, evidence dependence rises in all five base models we train, and the weight on clean supervision controls how much. Added to IoU-reward training, the objective raises evidence dependence while keeping the accuracy gain. Masking the event's frames makes the trained models decline or miss the event more often than their base; masking as many other frames does not. The dependence moves to another event when the query names it, and holds on a second dataset and under patch scrambling, an edit never used in training.</p>
+
+<h2>The fixed-answer audit</h2>
+<p>The audit holds the annotated answer and the query fixed and scores the answer by teacher forcing. Editing the frames inside the annotated interval gives the evidence drop; editing as many frames outside it with the same operator gives the placebo drop. Their difference is zero for a model that reacts equally to every edit, and a trained model is compared with its own base on the questions both localise correctly.</p>
+<figure>
+  <img src="static/images/audit.png" alt="The audit scores one fixed answer while editing either the evidence frames or as many other frames.">
+  <figcaption>On each question, the audit scores one fixed answer while editing either the evidence frames or as many other frames.</figcaption>
+</figure>
+
+<h2>What post-training for accuracy learns</h2>
+<p>Part of the accuracy that post-training adds comes from answering blind or from fitting one annotation style. On the questions annotated in both Charades-STA and TimeLens, the two label sets rank the 7B models very differently, while the sign of evidence dependence holds under both.</p>
+<figure>
+  <img src="static/images/findings.png" alt="Answers on all-black videos, scores under two label sets, and evidence dependence under both.">
+  <figcaption>Part of the added accuracy comes from answering blind or fitting one annotation; Γ keeps its sign under both label sets.</figcaption>
+</figure>
+
+<h2>The placebo-controlled objective</h2>
+<p>Rewarding the evidence drop alone teaches the model to react to any edit. The objective adds a contrast against the matched placebo and a bound on the placebo drop, both computed against the frozen base, next to clean supervision on the annotated answer.</p>
+<figure>
+  <img src="static/images/objective.png" alt="The objective scores each training pair on the clean video and on both edits.">
+  <figcaption>The objective scores each training pair on the clean video and on both edits, for the trainable model and the frozen base.</figcaption>
+</figure>
+<figure>
+  <div class="pair">
+    <img src="static/images/mechanism.png" alt="Evidence drop and own placebo drop of objectives trained from Qwen2.5-VL-7B.">
+    <img src="static/images/dose.png" alt="Evidence dependence and accuracy change against the weight on clean supervision.">
+  </div>
+  <figcaption>Left: the placebo contrast, and then the bound, bring the trained model's own placebo drop back to the base's. Right: evidence dependence falls with the weight on clean supervision, across five base models.</figcaption>
+</figure>
+
+<h2>Outside the training loss</h2>
+<p>The trained models respond to the query and to the evidence. The dependence moves to a partner event when the query names it, and masking the event's frames removes a larger share of the accuracy than it does for the base.</p>
+<figure>
+  <img src="static/images/readouts.png" alt="Partner-event contrast, rejection of mismatched queries, and evidence share of the accuracy.">
+  <figcaption>The placebo-controlled models respond to the query and to the evidence.</figcaption>
+</figure>
+
+<h2>BibTeX</h2>
+<pre><code>@article{jin2026accuracy,
+  title   = {Accuracy Is Not Evidence: Measuring and Training Evidence Dependence in Video Temporal Grounding},
+  author  = {Jin, Zijie and Zhao, Shuai and Tao, Haoran and Huang, Chaomin and Luo, Liwen},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</code></pre>
+
+<footer>Icons: Font Awesome Free (CC BY 4.0).</footer>
+</main>
+</body>
+</html>

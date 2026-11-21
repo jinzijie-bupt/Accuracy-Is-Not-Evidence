@@ -1,0 +1,3695 @@
+{
+ "generated_by": "canonical_v3.py",
+ "registry": "paper_numbers_v2.json",
+ "registry_sha16": "d7ef739175d87ff1",
+ "rules": "canonical_v3.py -- canonical environments, revision 3 (author ruling 2026-09-23).\n\nDifferences from canonical_v2 (which is kept unchanged):\n  R2' stack choice by pairing completeness: for every configuration count, in the tf5 stack (A u B) and in the\n      tf4.51 stack (C), the table cells that close against the configuration's own base INSIDE ONE specific\n      environment (the v2 'base pairing' count; union over A and B for tf5).  More wins; a tie goes to tf5.\n      A configuration with products only in one stack takes that stack.\n  R2'' inside tf5, the environment is chosen per (configuration, kind, dataset): the one of A / B that holds the\n      product; if both hold it, the environment of the configuration's 14Ln gamma (Charades-STA); without a gamma\n      in exactly one of A/B, the environment with more table cells; then A.\n  R4' a configuration whose stack is C takes every kind from C and never borrows from tf5 (and vice versa).\n  Hard constraint: one value per (configuration, kind, dataset) across all tables -- guaranteed because every\n  pick goes through env_for(); paired quantities close inside one specific environment (A-A, B-B, C-C).\n  Base rows: every (base, kind, dataset) likewise has one global value.  A table that prints a base value from\n  one environment next to a Delta paired in another gets the caption sentence CAPTION_NOTE.\nRulings kept from v2: message order is part of the key; PRIMARY_RUN; TimeZero a=0.5 train=v eval=t stays in A\n(it is a tf5 configuration; its kinds are resolved by R2'').",
+ "primary_run": {
+  "acc|TimeZero-7B|base|v|A|charades-sta": {
+   "must_contain": "tzbase_timer1_default_tf5meta",
+   "reason": "tzbase read is the paper-wide base model read; TimeZero-Charades-7B_ is a second read of the same public weights (same as v1 selector)"
+  },
+  "acc|TimeZero-7B|base|t|A|charades-sta": {
+   "must_contain": "tzbase_timer1_default_textfirst",
+   "reason": "timer1_default prompt; tz_official is a different prompt protocol"
+  },
+  "acc|TimeZero-7B|grouped|t|A|charades-sta": {
+   "must_contain": "timer1_default_textfirst_tf5meta_node2_full",
+   "reason": "full 3720 questions; tz_official n200 is a 200-question subset with a different prompt protocol"
+  },
+  "acc|Time-R1-7B|base|v|B|charades-sta": {
+   "must_contain": "tr1base_timer1_default_full",
+   "reason": "timer1_default prompt; r1_full_h2s0/h2s1 are two samplings of the r1 prompt protocol (same as v1 selector)"
+  },
+  "black|Qwen2.5-VL-7B|base|v|B|charades-sta": {
+   "must_contain": "node1",
+   "reason": "node1 and node3 base model all-black readouts are bit-identical (same environment, two machines); same as v1 selector"
+  },
+  "black|Time-R1-7B|base|t|B|charades-sta": {
+   "must_contain": "node3",
+   "reason": "node3 and node5 readouts are bit-identical (ans .762 / R@0.5 .131); take node3 for consistency with the other B-stack base models"
+  },
+  "acc|Qwen2.5-VL-7B|base|v|B|charades-timelens": {
+   "must_contain": "timer1_default",
+   "reason": "same timer1_default prompt as the trained run (the other one uses the timelens prompt protocol)"
+  }
+ },
+ "configurations": {
+  "Qwen2.5-VL-7B|base|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "B",
+    "order@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 1,
+    "B": 2
+   },
+   "cells": {
+    "A": {
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_qwenbase_timer1_default_tf_node2.json",
+       "sha16": "28e437928a19255a"
+      }
+     ]
+    },
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_qwenbase_timer1_default_textfirst_black_node3_full.json",
+       "sha16": "874cd9fcfb58b49d"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+       "sha16": "e79bd9f3445d2172",
+       "black": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_textfirst_black_node3_full.json",
+       "base": "qwenbase"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|base|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@charades-timelens": "B",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "B",
+    "black@qvhighlights": "A",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "labelswap@charades-sta": "B",
+    "order@charades-sta": "B",
+    "tneg@charades-sta": "A"
+   },
+   "reason": "R2': closable cells tf5=0 >= C=0(tie goes to tf5)",
+   "coverage": {
+    "A": 5,
+    "B": 7,
+    "C": 2
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_qwenbase_timer1_default_tf5meta_node2_full.json",
+       "sha16": "662b01f36d68446c"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_qwenbase_timer1_default_node2.json",
+       "sha16": "7e5987d1e4083dae"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_qwenbase_timer1_default_black_node2_full.json",
+       "sha16": "481d2a48fa8dad78"
+      }
+     ],
+     "black@qvhighlights": [
+      {
+       "file": "read_black_qvh_qwenbase_node2.json",
+       "sha16": "7612267993a24cd7"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_qwenbase_node2.json",
+       "sha16": "bc9b27a1b42c9842"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_base_timer1_default_tf5meta_node1_full.json",
+       "sha16": "fcbe4e6892a058a0"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_qwenbase_timelens_node3.json",
+       "sha16": "81c2bad6526071c2"
+      },
+      {
+       "file": "read_selective_p6n_chtl_qwenbase_timer1_default_node5.json",
+       "sha16": "bc180b633203958d"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_base_timer1_default_black_node1_full.json",
+       "sha16": "5ae2c03bd76c0806"
+      },
+      {
+       "file": "read_black_p4nat_qwenbase_timer1_default_black_node3_full.json",
+       "sha16": "7bb7213080cb81af"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_qwenbase_iid_node3.json",
+       "sha16": "21e4d2b96a57b368",
+       "tag": "qwenbase",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_qwenbase_ood_node3.json",
+       "sha16": "cb3e1494e98669ab",
+       "tag": "qwenbase",
+       "split": "ood"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_qwenbase.json",
+       "sha16": "127bd2ccf07560b9"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+       "sha16": "aa00c9fef8562dd2",
+       "black": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_black_node3_full.json",
+       "base": "qwenbase"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_qwenbase_timer1_default_tf451_node4_full.json",
+       "sha16": "4da6ae7aaa9a1ee8"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node4_qwenbase.json",
+       "sha16": "beed6b89cb694556"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-4800|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_g1_l4800_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "c131f9f4dc22e487"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_g1_l4800_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+       "sha16": "7191b8ddd4e4551d"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf5meta_node3_full__p4nat_natbase_a05_g1_l4800_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "19ea360b71d082a3"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-full-budget|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_e1full_a05_g1_s0_timer1_default_tf5meta_node1_full.json",
+       "sha16": "193f2832136dd5ca"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_e1full_a05_g1_s0_timer1_default_black_node1_full.json",
+       "sha16": "c36fbe9fd544b936"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_e1full_a05_g1_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "122fe1569d22f127"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-k16|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "gamma@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 2
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_k16sel_a05_g1_s0_timer1_default_native_node2_full.json",
+       "sha16": "54a074b8ca634d4f"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_k16sel_a05_g1_s0_native_node2__vs__14Ln_base_timer1_default_node2.json",
+       "sha16": "2ee9f206e7fa5802"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-nodro|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_abl_nodro_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "f15a20eed0e1ddcf"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_abl_nodro_s0_timer1_default_black_node3_full.json",
+       "sha16": "7d65a333029c80bb"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_abl_nodro_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+       "sha16": "09f8e4e4a24059a2"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_base_timer1_default_tf5meta_node1_full__p4nat_natbase_a05_abl_nodro_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "ed61ebeea9506adf"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-nohinge|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_abl_nohinge_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "3dd390be516e56d4"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_abl_nohinge_s0_timer1_default_black_node3_full.json",
+       "sha16": "177e922fd5e705d0"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_abl_nohinge_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+       "sha16": "31cc020e734d4aed"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_base_timer1_default_tf5meta_node1_full__p4nat_natbase_a05_abl_nohinge_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "38a5890687c1b9bd"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped-uniform-nohinge|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_abl_uniform_nohinge_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "05a638c6696a4c11"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_abl_uniform_nohinge_s0_timer1_default_black_node3_full.json",
+       "sha16": "f2198415de98ed09"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_abl_uniform_nohinge_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+       "sha16": "3d67af25e0f7cd1b"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_base_timer1_default_tf5meta_node1_full__p4nat_natbase_a05_abl_uniform_nohinge_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "96b3b5e834785ff6"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a025_g1_s0_timer1_default_tf5meta_node1_full.json",
+       "sha16": "ffaacf545e6605c3"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a025_g1_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "0d502de2167a8812"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_base_timer1_default_tf5meta_node1_full__p4nat_natbase_a025_g1_s0_timer1_default_tf5meta_node1_full.json",
+       "sha16": "be1f87e965e9b40a"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a025_vs_base_node1.json",
+       "sha16": "350d3a44c77ebddd",
+       "tag": "natbase_a025_vs_base_node1"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "gamma@qvhighlights",
+     "pair_acc@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "A",
+    "gamma@charades-sta": "A",
+    "gamma@qvhighlights": "A",
+    "pair_acc@charades-sta": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "A",
+    "tneg@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 9
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_b003_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "00cb7613fe7d8808"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_natbase_a05_b003_g1_s0_timer1_default_node2.json",
+       "sha16": "f80cc836db3ebb96"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_b003_g1_s0_timer1_default_black_node2_full.json",
+       "sha16": "ab705b1e3c0230a7"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_b003_g1_s0_timer1_default_node2__vs__14Ln_base_timer1_default_node2.json",
+       "sha16": "777bcaf528f4e66a"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_a05b003_node2.json",
+       "sha16": "96b1ea665fc94255"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf5meta_node2_full__p4nat_natbase_a05_b003_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "9a1a4cd0275dc8da"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_qwenbase_timer1_default_node2__p6n_qvh_natbase_a05_b003_g1_s0_timer1_default_node2.json",
+       "sha16": "4fed4c6e2761f0e3"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a05_b003_vs_base_node2.json",
+       "sha16": "1b75eb354956c02e",
+       "tag": "natbase_a05_b003_vs_base_node2"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_a05_b003_node2.json",
+       "sha16": "fa55cad6582ec1ce"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@charades-timelens",
+     "acc@qvhighlights",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "black@qvhighlights",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "gamma@qvhighlights",
+     "newly@charades-sta",
+     "pair_acc@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "labelswap@charades-sta",
+     "pair_acc@charades-sta",
+     "qswap@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "acc@charades-timelens": "B",
+    "acc@qvhighlights": "A",
+    "behav@charades-sta": "B",
+    "black@charades-sta": "C",
+    "black@qvhighlights": "A",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "C",
+    "gamma@charades-timelens": "C",
+    "gamma@qvhighlights": "A",
+    "labelswap@charades-sta": "C",
+    "newly@charades-sta": "A",
+    "pair_acc@charades-sta": "C",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "C",
+    "tneg@charades-sta": "A"
+   },
+   "reason": "R2': closable cells tf5=16 >= C=6(tie goes to tf5); R5: kinds available on training stack C take C",
+   "coverage": {
+    "A": 13,
+    "B": 7,
+    "C": 7
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_g1_s0_tf5_timer1_default_tf5meta_node2_full.json",
+       "sha16": "d3dfac5353b895d1"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_natbase_a05_g1_s0_tf5_timer1_default_node2.json",
+       "sha16": "cc70eafde3148189"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_g1_s0_tf5_timer1_default_black_node2_full.json",
+       "sha16": "039a4a0a335a740c"
+      }
+     ],
+     "black@qvhighlights": [
+      {
+       "file": "read_black_qvh_a05_node2.json",
+       "sha16": "9091fbe87488079d"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_g1_s0_tf5_timer1_default_node2__vs__14Ln_base_timer1_default_node2.json",
+       "sha16": "f9424f5d54620cac"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_a05tf5_node2.json",
+       "sha16": "4aa35ca0517402dc"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_a05tf5_node2.json",
+       "sha16": "ca1613122c6304c3"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_natbase_a05.json",
+       "sha16": "6a674e76ad189230"
+      }
+     ],
+     "newly@charades-sta": [
+      {
+       "file": "newly_correct_v1.json",
+       "sha16": "41461f0c5d340968",
+       "key": "grouped_a05_envA"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf5meta_node2_full__p4nat_natbase_a05_g1_s0_tf5_timer1_default_tf5meta_node2_full.json",
+       "sha16": "f21a9c6b6278a280"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_qwenbase_timer1_default_node2__p6n_qvh_natbase_a05_g1_s0_tf5_timer1_default_node2.json",
+       "sha16": "ed250fdeb5c3b2a8"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a05_tf5_vs_base_node2.json",
+       "sha16": "315b255c286d0dda",
+       "tag": "natbase_a05_tf5_vs_base_node2"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_a05_node2.json",
+       "sha16": "fabfe27f59aaeab1"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_g1_nat_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "28ec73bfa84a4925"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_natbase_a05_g1_s0_timer1_default_node5.json",
+       "sha16": "0449d6fbdc010312"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_qwen.json",
+       "sha16": "b3c7bafa213e62dc"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_qwena05_iid_node3.json",
+       "sha16": "c15721479f6b1c7d",
+       "tag": "qwena05",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_qwena05_ood_node3.json",
+       "sha16": "1aea1c6389b7c0a9",
+       "tag": "qwena05",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_g1_nat_s0_timer1_default_node3__vs__14Ln_base_timer1_default_node3.json",
+       "sha16": "79c98a9f6a64b2bb"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf5meta_node3_full__p4nat_natbase_a05_g1_nat_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "699728a35f7541c9"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_g1_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "ff08251014bed28b"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a05_g1_s0_timer1_default_black_node4_full.json",
+       "sha16": "671e5f33752e61df"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_g1_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+       "sha16": "1488f66321a7d1bf"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_a05_node4.json",
+       "sha16": "814788a0fe74b8a9"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node4_natbase_a05.json",
+       "sha16": "cbc933645cbf0d90"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf451_node4_full__p4nat_natbase_a05_g1_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "5835062ab49b7ded"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a05_vs_base_node4.json",
+       "sha16": "7e3ac39a040bedcc",
+       "tag": "natbase_a05_vs_base_node4"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=1|b=0.03|s=0|train=v|eval=v": {
+   "stack": "C",
+   "env": "C",
+   "candidates": [
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": [
+     "acc@charades-sta",
+     "gamma@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "gamma@charades-sta": "C"
+   },
+   "reason": "R2': only the C stack has outputs",
+   "coverage": {
+    "C": 2
+   },
+   "cells": {
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a10_b003_g1_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "2a35b61858616659"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a10_b003_g1_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+       "sha16": "77edf80b3b612bde"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "gamma@qvhighlights",
+     "newly@charades-sta",
+     "pair_acc@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "A",
+    "gamma@charades-sta": "A",
+    "gamma@charades-timelens": "A",
+    "gamma@qvhighlights": "A",
+    "newly@charades-sta": "A",
+    "pair_acc@charades-sta": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 10
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a10_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "fff08f512ee7d6f9"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_natbase_a10_g1_s0_timer1_default_node2.json",
+       "sha16": "ae9ea2ae356f2aff"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natbase_a10_g1_s0_timer1_default_black_node2_full.json",
+       "sha16": "55828a37f6b64115"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a10_g1_s0_timer1_node2__vs__14Ln_base_timer1_default_node2.json",
+       "sha16": "6f0a43874eb58fd1"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_a10_node2.json",
+       "sha16": "59fbe65faa964082"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_a10_node2.json",
+       "sha16": "a63a76e12021ba0d"
+      }
+     ],
+     "newly@charades-sta": [
+      {
+       "file": "newly_correct_v1.json",
+       "sha16": "41461f0c5d340968",
+       "key": "grouped_a10_envA"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf5meta_node2_full__p4nat_natbase_a10_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "2b0a4c3fa1a3ab89"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_qwenbase_timer1_default_node2__p6n_qvh_natbase_a10_g1_s0_timer1_default_node2.json",
+       "sha16": "a7bb2f9937837ab3"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a10_s0_vs_base_node2.json",
+       "sha16": "b428953cd236b1ec",
+       "tag": "natbase_a10_s0_vs_base_node2"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=1|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "gamma@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "gamma@charades-sta": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 5
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a10_g1_s1_timer1_default_tf5meta_node2_full.json",
+       "sha16": "a7b187370ec8d717"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_natbase_a10_g1_s1_timer1_default_node2.json",
+       "sha16": "f9d6dacfe540321e"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a10_g1_s1_timer1_default_node2__vs__14Ln_base_timer1_default_node2.json",
+       "sha16": "cdbe13f3c73da479"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_qwenbase_timer1_default_node2__p6n_qvh_natbase_a10_g1_s1_timer1_default_node2.json",
+       "sha16": "a36a690bd75157a3"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natbase_a10_s1_vs_base_node2.json",
+       "sha16": "e6e06238ca4e3a72",
+       "tag": "natbase_a10_s1_vs_base_node2"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "newly@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "behav@charades-sta": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B",
+    "newly@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 7
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_x0s0iou700_timer1_default_tf5meta_node1_full.json",
+       "sha16": "e82e9655176d3f70"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node1_grpo.json",
+       "sha16": "7e1de2003f7cab9a"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_x0s0iou700_timer1_default_black_node1_full.json",
+       "sha16": "26cd00dcfafdb3f3"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_grpo_iid_node1.json",
+       "sha16": "f2f83ad71e4f1152",
+       "tag": "grpo",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_grpo_ood_node1.json",
+       "sha16": "031cc4db70e453d9",
+       "tag": "grpo",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_x0s0iou700_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "06b3e7b0059bfbae"
+      }
+     ],
+     "newly@charades-sta": [
+      {
+       "file": "newly_correct_v1.json",
+       "sha16": "41461f0c5d340968",
+       "key": "iou_grpo_envB"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|mdpo|a=0.5|s=0|train=v|eval=v": {
+   "stack": "C",
+   "env": "C",
+   "candidates": [
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [
+     "behav@charades-sta"
+    ],
+    "C": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "black@charades-sta": "C",
+    "gamma@charades-sta": "C",
+    "pair_acc@charades-sta": "C"
+   },
+   "reason": "R2': closable cells C=3 > tf5=1",
+   "coverage": {
+    "B": 1,
+    "C": 4
+   },
+   "cells": {
+    "B": {
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_mdpo.json",
+       "sha16": "1cf905501ea9c11f"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natmdpo_a05_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "86777be6f159f5db"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natmdpo_a05_s0_timer1_default_black_node4_full.json",
+       "sha16": "1160fc668a1c22de"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natmdpo_a05_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+       "sha16": "361ecefac9e79840"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf451_node4_full__p4nat_natmdpo_a05_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "2db96cdec73790da"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@charades-timelens",
+     "acc@qvhighlights",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "gamma@qvhighlights",
+     "pair_acc@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "labelswap@charades-sta",
+     "newly@charades-sta",
+     "pair_acc@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "acc@charades-timelens": "B",
+    "acc@qvhighlights": "A",
+    "behav@charades-sta": "B",
+    "black@charades-sta": "C",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "C",
+    "gamma@charades-timelens": "C",
+    "gamma@qvhighlights": "A",
+    "labelswap@charades-sta": "C",
+    "newly@charades-sta": "C",
+    "pair_acc@charades-sta": "C",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "B",
+    "tneg@charades-sta": "A"
+   },
+   "reason": "R2': closable cells tf5=14 >= C=6(tie goes to tf5); R5: kinds available on training stack C take C",
+   "coverage": {
+    "A": 5,
+    "B": 9,
+    "C": 7
+   },
+   "cells": {
+    "A": {
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_natsft_b0_s0_tf5_timer1_default_node2.json",
+       "sha16": "f3b4b45e0330f439"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_sfttf5_node2.json",
+       "sha16": "123f88823836fad2"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_sfttf5_node2.json",
+       "sha16": "eb49896540c031d3"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_qwenbase_timer1_default_node2__p6n_qvh_natsft_b0_s0_tf5_timer1_default_node2.json",
+       "sha16": "19d2465f3e34cfbb"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_sft_node2.json",
+       "sha16": "a254f7b43fae146c"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "single_p4nat_natsft_b0_s0_tf5_timer1_default_tf5meta_node1_full.json",
+       "sha16": "2e8660df89eb1ec7"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_natsft_b0_s0_timer1_default_node5.json",
+       "sha16": "f6bb644343673ff5"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_sft.json",
+       "sha16": "5d082ceab1c3cdfd"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natsft_b0_s0_tf5_timer1_default_black_node1_full.json",
+       "sha16": "4ee25fdce23a131c"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_qwensft_iid_node3.json",
+       "sha16": "ef793717b3a44972",
+       "tag": "qwensft",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_qwensft_ood_node3.json",
+       "sha16": "37fe9e3bcf909810",
+       "tag": "qwensft",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natsft_b0_s0_tf5_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "ca7f7c113ad496aa"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_base_timer1_default_tf5meta_node1_full__p4nat_natsft_b0_s0_tf5_timer1_default_tf5meta_node1_full.json",
+       "sha16": "4f84ab77c9ed6d35"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natsft_b0_tf5_vs_base_node1.json",
+       "sha16": "ee457515f09ea7fc",
+       "tag": "natsft_b0_tf5_vs_base_node1"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natsft_b0_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "e6125c9203675963"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natsft_b0_s0_timer1_default_black_node4_full.json",
+       "sha16": "69af943f3dcb2f22"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natsft_b0_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+       "sha16": "a17818bd144b1831"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_sft_node4.json",
+       "sha16": "00c12712ac854a9c"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_natsft.json",
+       "sha16": "5b2c5eefbc449e02"
+      }
+     ],
+     "newly@charades-sta": [
+      {
+       "file": "newly_correct_v1.json",
+       "sha16": "41461f0c5d340968",
+       "key": "sft_envC_subset994"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_qwenbase_timer1_default_tf451_node4_full__p4nat_natsft_b0_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "d8f32c63513e5e1c"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|single-margin|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natbase_a05_abl_single_s0_timer1_default_tf5meta_node1_full.json",
+       "sha16": "dc78652b427cf80d"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natbase_a05_abl_single_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "67131cc80ab98f06"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_abl_single_vs_base_node1.json",
+       "sha16": "2ea8c45706182942",
+       "tag": "abl_single_vs_base_node1"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|two-stage|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "gamma@charades-sta",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "gamma@charades-sta": "B",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 2
+   },
+   "cells": {
+    "B": {
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natsft2g_a05_g1_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "ebdf3da6dbfa52f3"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natsft2g_a05_vs_base_node1.json",
+       "sha16": "95b19122a51bea4c",
+       "tag": "natsft2g_a05_vs_base_node1"
+      }
+     ]
+    }
+   }
+  },
+  "Qwen2.5-VL-7B|two-stage|b=0.03|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "gamma@charades-sta",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "gamma@charades-sta": "B",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 2
+   },
+   "cells": {
+    "B": {
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natsft2g_b003_g1_s0_timer1_default_node1__vs__14Ln_base_timer1_default_node1.json",
+       "sha16": "e4b5210c42a41d49"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natsft2g_b003_vs_base_node1.json",
+       "sha16": "77293d92af3c0286",
+       "tag": "natsft2g_b003_vs_base_node1"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|base|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B",
+    "order@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 2
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tr1base_timer1_default_textfirst_black_node3_full.json",
+       "sha16": "6cf9a79f3487a8c2"
+      },
+      {
+       "file": "read_black_p4nat_tr1base_timer1_default_textfirst_black_node5_full.json",
+       "sha16": "8d4792804f5d4669"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_tr1base_timer1_default_textfirst_tf5meta_node3_full.json",
+       "sha16": "de15d7da2bb14194",
+       "black": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_textfirst_black_node3_full.json",
+       "base": "tr1base"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|base|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@charades-timelens": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "labelswap@charades-sta": "B",
+    "order@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': closable cells tf5=0 >= C=0(tie goes to tf5)",
+   "coverage": {
+    "B": 8,
+    "C": 1
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_tr1base_timer1_default_full_node3.json",
+       "sha16": "60b5ddb2cdb5c530"
+      },
+      {
+       "file": "read_selective_p4nat_tr1base_timer1_r1_full_h2s0_node3.json",
+       "sha16": "f20c036d725878dc"
+      },
+      {
+       "file": "read_selective_p4nat_tr1base_timer1_r1_full_h2s1_node3.json",
+       "sha16": "aa12d7f5d4cf2f2d"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_tr1base_timer1_default_node5.json",
+       "sha16": "dad35bd17c112ecb"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tr1base_timer1_default_black_node3_full.json",
+       "sha16": "1b9553adfb7e0740"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tr1base_iid_node3.json",
+       "sha16": "d673c6d1dbd5345d",
+       "tag": "tr1base",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tr1base_ood_node3.json",
+       "sha16": "e1c12044691cc1f3",
+       "tag": "tr1base",
+       "split": "ood"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_tr1base.json",
+       "sha16": "b53cd2e5cdb0b66b"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_tr1base_timer1_default_tf5meta_node3_full.json",
+       "sha16": "e8f51623dfc8f21b",
+       "black": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_black_node3_full.json",
+       "base": "tr1base"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tr1base_node3.json",
+       "sha16": "4671b40bab8c949e"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_Time-R1-7B_timer1_default_tf451_node4_full.json",
+       "sha16": "fb6ad56ee91582cc"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|grouped|a=0.1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 5
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattr1_a01_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "3e8009b536d17601"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattr1_a01_g1_s0_timer1_default_black_node3_full.json",
+       "sha16": "7d8dae869f90ac34"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tr1a01_iid_node3.json",
+       "sha16": "cbec7ee81fe3ef1c",
+       "tag": "tr1a01",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tr1a01_ood_node3.json",
+       "sha16": "7228b694e5b039c7",
+       "tag": "tr1a01",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattr1_a01_g1_s0_timer1_default_node3__vs__14Ln_tr1base_timer1_default_node3.json",
+       "sha16": "1b501817d74f4efa"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v": {
+   "stack": "C",
+   "env": "C",
+   "candidates": [
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-timelens",
+     "behav@charades-sta"
+    ],
+    "C": [
+     "acc@charades-sta",
+     "behav@charades-sta",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "qswap@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "behav@charades-sta": "C",
+    "black@charades-sta": "C",
+    "gamma@charades-sta": "C",
+    "gamma@charades-timelens": "C",
+    "labelswap@charades-sta": "C",
+    "qswap@charades-sta": "C"
+   },
+   "reason": "R2': closable cells C=5 > tf5=2",
+   "coverage": {
+    "B": 2,
+    "C": 7
+   },
+   "cells": {
+    "B": {
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_nattr1_a025_g1_s0_timer1_default_node5.json",
+       "sha16": "886e744ef08946b9"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_tr1.json",
+       "sha16": "3a7240e6b3b9542c"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattr1_a025_g1_s0_timer1_default_tf451_node4_full.json",
+       "sha16": "db127855f2a65d74"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node4_tr1.json",
+       "sha16": "c3a7a42584cfbd2c"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattr1_a025_g1_s0_timer1_default_black_node4_full.json",
+       "sha16": "0c7262db3fc7253a"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattr1_a025_g1_s0_timer1_default_node4__vs__14Ln_tr1base_timer1_default_node4.json",
+       "sha16": "bd2f7b876a4fbefa"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_tr1_a025_node4.json",
+       "sha16": "9f4721da7537ed50"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_nattr1_a025.json",
+       "sha16": "bb4afd1f01c59629"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_nattr1_a025_vs_tr1base_node4.json",
+       "sha16": "7587bbb2daf662bc",
+       "tag": "nattr1_a025_vs_tr1base_node4"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 6
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattr1_a05_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "5603c221a0534fba"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattr1_a05_g1_s0_timer1_default_black_node3_full.json",
+       "sha16": "5551f280f9ad12d2"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tr1a05_iid_node3.json",
+       "sha16": "c13f9b475fdce3e5",
+       "tag": "tr1a05",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tr1a05_ood_node3.json",
+       "sha16": "9274c4143f47af46",
+       "tag": "tr1a05",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattr1_a05_g1_s0_timer1_default_node3__vs__14Ln_tr1base_timer1_default_node3.json",
+       "sha16": "eff13d470ab85da9"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tr1_a05_node3.json",
+       "sha16": "e10bb64bba091c6e"
+      }
+     ]
+    }
+   }
+  },
+  "Time-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattr1_a10_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "3c75cdcff52142d8"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattr1_a10_g1_s0_timer1_default_black_node3_full.json",
+       "sha16": "7a14e7d5c418b4c2"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattr1_a10_g1_s0_timer1_default_node3__vs__14Ln_tr1base_timer1_default_node3.json",
+       "sha16": "91c66c7647ed43cf"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tr1_a10_node3.json",
+       "sha16": "6314df58ccc5d9f3"
+      }
+     ]
+    }
+   }
+  },
+  "TimeLens-8B|base|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@charades-timelens": "B",
+    "black@charades-sta": "B",
+    "black@charades-timelens": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B",
+    "gamma@charades-timelens": "B",
+    "labelswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 9
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_timelens8b_timelens_tf5meta_node3_full.json",
+       "sha16": "81382468608b7dfe"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_timelens8b_timelens_node3.json",
+       "sha16": "20d9b07db063a7f1"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_timelens8b_timelens_black_node3_full.json",
+       "sha16": "87615e37a5385361"
+      }
+     ],
+     "black@charades-timelens": [
+      {
+       "file": "read_black_chtl_timelens8b_base_node3.json",
+       "sha16": "b5410e58bf02a442"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tlbase_iid_node3.json",
+       "sha16": "37f8664ab7485170",
+       "tag": "tlbase",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tlbase_ood_node3.json",
+       "sha16": "fbeaa7d3701f0128",
+       "tag": "tlbase",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_tl8b_vs_q3vl8b_node3.json",
+       "sha16": "d47ba81e93868bdb"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_tl8b_vs_q3vl8b_chtl_node3.json",
+       "sha16": "d9c63cac70c567a5"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_TL8B_base.json",
+       "sha16": "582e3a5284621375"
+      }
+     ]
+    }
+   }
+  },
+  "TimeLens-8B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattimelens8b_a025_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "a89060a4001f82fa"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattimelens8b_a025_g1_s0_timelens_node3_nat_o0n200R3__vs__14Ln_timelens8b_base_timelens_node3.json",
+       "sha16": "2108936e1f63ab3d"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_timelens8b_timelens_tf5meta_node3_full__p4nat_nattimelens8b_a025_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "8241958c95737ef8"
+      }
+     ]
+    }
+   }
+  },
+  "TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@charades-timelens",
+     "black@charades-sta",
+     "black@charades-timelens",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "labelswap@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@charades-timelens": "B",
+    "black@charades-sta": "B",
+    "black@charades-timelens": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B",
+    "gamma@charades-timelens": "B",
+    "labelswap@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 10
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattimelens8b_a05_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "92e1716676c4a60f"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_nattimelens8b_a05_g1_s0_timelens_node3.json",
+       "sha16": "00debfcbb2d29edc"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattimelens8b_a05_g1_s0_timelens_black_node3_full.json",
+       "sha16": "c10eb10ef6002f94"
+      }
+     ],
+     "black@charades-timelens": [
+      {
+       "file": "read_black_chtl_nattimelens8b_a05_node3.json",
+       "sha16": "e0d3456e85b20a95"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tla05_iid_node3.json",
+       "sha16": "d3ddd3eec8f74013",
+       "tag": "tla05",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tla05_ood_node3.json",
+       "sha16": "40a6ab5be01ec84b",
+       "tag": "tla05",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattimelens8b_a05_g1_s0_timelens_node3__vs__14Ln_timelens8b_base_timelens_node3.json",
+       "sha16": "3bf30bc1a78a6d36"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_timelens_a05_node3.json",
+       "sha16": "586b3783624e077e"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_TL8B_arm_a05.json",
+       "sha16": "c3313be499079d3e"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_timelens8b_timelens_tf5meta_node3_full__p4nat_nattimelens8b_a05_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "f7d487b203f74f28"
+      }
+     ]
+    }
+   }
+  },
+  "TimeLens-8B|grouped|a=1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattimelens8b_a10_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "4735c58c898c257f"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattimelens8b_a10_g1_s0_timelens_node3_nat_o0n200R3__vs__14Ln_timelens8b_base_timelens_node3.json",
+       "sha16": "78e310e7f626eaa0"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_timelens8b_timelens_tf5meta_node3_full__p4nat_nattimelens8b_a10_g1_s0_timelens_tf5meta_node3_full.json",
+       "sha16": "9736bd4dbcb93469"
+      }
+     ]
+    }
+   }
+  },
+  "TimeLens-8B|sft|b=0|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-timelens",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-timelens"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-timelens": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-timelens": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_nattimelens8b_sft_b0_s0_timelens_node3.json",
+       "sha16": "cc8e4283862ff489"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tlsft_iid_node3.json",
+       "sha16": "806251222c76c95c",
+       "tag": "tlsft",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tlsft_ood_node3.json",
+       "sha16": "687e7b34ee804a3d",
+       "tag": "tlsft",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_timelens_sft_node3.json",
+       "sha16": "a83a1aa3bd2b6a30"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|base|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@charades-timelens": "B",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "order@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 3,
+    "B": 6
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_tzbase_timer1_default_textfirst_tf5meta_node2_full.json",
+       "sha16": "cb0882cd6b702101"
+      },
+      {
+       "file": "read_selective_p4nat_tzbase_tz_official_textfirst_tf5meta_node2_full.json",
+       "sha16": "2c9d130bf0405140"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_tzbase_timer1_default_tf_node2.json",
+       "sha16": "81c766775ee33d48"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tzbase_timer1_default_textfirst_black_node2_full.json",
+       "sha16": "b7b27b892464dbf8"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+       "sha16": "cce83ce569687ab2"
+      }
+     ],
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_tzbase_timer1_default_node5.json",
+       "sha16": "d852723ca3f19cac"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tzbase_timer1_default_textfirst_black_node3_full.json",
+       "sha16": "22b05ed972ce28ba"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tzbasetf_iid_node3.json",
+       "sha16": "f2af162e381e48c1",
+       "tag": "tzbasetf",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tzbasetf_ood_node3.json",
+       "sha16": "4de708c034a3fc90",
+       "tag": "tzbasetf",
+       "split": "ood"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+       "sha16": "febcdfcd1e58eb12",
+       "black": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_textfirst_black_node3_full.json",
+       "base": "tzbase"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|base|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "B",
+    "black@qvhighlights": "A",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "labelswap@charades-sta": "B",
+    "order@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 4,
+    "B": 7
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_TimeZero-Charades-7B_timer1_default_tf5meta_node2_full.json",
+       "sha16": "6782a74527135555"
+      },
+      {
+       "file": "read_selective_p4nat_tzbase_timer1_default_tf5meta_node2_full.json",
+       "sha16": "9ff7809fa01e6ba6"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_tzbase_timer1_default_node2.json",
+       "sha16": "53fe44976d4b8c75"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tzbase_timer1_default_black_node2_full.json",
+       "sha16": "186000d88d3e7c9b"
+      }
+     ],
+     "black@qvhighlights": [
+      {
+       "file": "read_black_qvh_tzbase_node2.json",
+       "sha16": "66f4088e08ee87cb"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_tzbase_timer1_default_full_node3.json",
+       "sha16": "c6aa4b48ef8d49bd"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_tzbase_timer1_default_black_node3_full.json",
+       "sha16": "7de78a49c2b4fb95"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tzbase_iid_node3.json",
+       "sha16": "7fdd0c7d11e3675c",
+       "tag": "tzbase",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tzbase_ood_node3.json",
+       "sha16": "69b1037e7397ad9c",
+       "tag": "tzbase",
+       "split": "ood"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_tzbase.json",
+       "sha16": "5444f4bf4c10b467"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_tzbase_timer1_default_tf5meta_node3_full.json",
+       "sha16": "696acbe19ddf91c4",
+       "black": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_black_node3_full.json",
+       "base": "tzbase"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tzbase_node3.json",
+       "sha16": "ed0977bebd47f95a"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "gamma@qvhighlights",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "A",
+    "gamma@charades-sta": "A",
+    "gamma@qvhighlights": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 7
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattz_a025_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "b77435f4ee43b80f"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_nattz_a025_g1_s0_timer1_default_node2.json",
+       "sha16": "9df66f4d9a620b29"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a025_g1_s0_timer1_default_black_node2_full.json",
+       "sha16": "28859f1f6dd48b64"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattz_a025_g1_s0_timer1_default_node2__vs__14Ln_tzbase_timer1_default_node2.json",
+       "sha16": "15e50d72dc8364ba"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_tz_a025_node2.json",
+       "sha16": "119887d476f69854"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_tzbase_timer1_default_node2__p6n_qvh_nattz_a025_g1_s0_timer1_default_node2.json",
+       "sha16": "6b08dc296086a17b"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_nattz_a025_vs_tzbase_node2.json",
+       "sha16": "d672d383a37ea72d",
+       "tag": "nattz_a025_vs_tzbase_node2"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 5
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattz_a05_b003_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "8f58b044e346efb2"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a05_b003_g1_s0_timer1_default_black_node3_full.json",
+       "sha16": "1f6ea985d5c47daa"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattz_a05_b003_g1_s0_timer1_default_node3__vs__14Ln_tzbase_timer1_default_node3.json",
+       "sha16": "c5e5ea4466ea5f51"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_tzbase_timer1_default_full_node3__p4nat_nattz_a05_b003_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "aeb48f49dcdb1f48"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tz_a05_b003_node3.json",
+       "sha16": "16646e918997dbf5"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "gamma@qvhighlights",
+     "pair_acc@qvhighlights"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "black@charades-sta": "A",
+    "gamma@charades-sta": "A",
+    "gamma@qvhighlights": "A",
+    "pair_acc@qvhighlights": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 6
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattz_a05_g1_tf_s0_timer1_default_textfirst_tf5meta_node2_full.json",
+       "sha16": "e87e6ea9157c5f2f"
+      },
+      {
+       "file": "read_selective_p4nat_nattz_a05_g1_tf_s0_tz_official_textfirst_tf5meta_node2_n200_o0.json",
+       "sha16": "93e60ebcaec45975"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_nattz_a05_g1_tf_s0_timer1_default_tf_node2.json",
+       "sha16": "db667e3150c626ae"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a05_g1_tf_s0_timer1_default_textfirst_black_node2_full.json",
+       "sha16": "7cfb5a79e05071c0"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattz_a05_g1_tf_s0_timer1_default_textfirst_node2__vs__14Ln_tzbase_timer1_default_textfirst_node2.json",
+       "sha16": "0cd79eb7a85e8936"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_tz_a05tf_textfirst_node2.json",
+       "sha16": "58f7afbb49eb1914"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_tzbase_timer1_default_tf_node2__p6n_qvh_nattz_a05_g1_tf_s0_timer1_default_tf_node2.json",
+       "sha16": "91fcd6816544cce9"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=t|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 1
+   },
+   "cells": {
+    "A": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a05_g1_tf_s0_timer1_default_black_node2_full.json",
+       "sha16": "c9a7a02216b6d448"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-timelens",
+     "acc@qvhighlights",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-timelens": "B",
+    "acc@qvhighlights": "A",
+    "behav@charades-sta": "B",
+    "black@charades-sta": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 3,
+    "B": 3
+   },
+   "cells": {
+    "A": {
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_nattz_a05_g1_s0_timer1_default_tf_node2.json",
+       "sha16": "4df1e1b5c0f36e51"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a05_g1_s0_timer1_default_textfirst_black_node2_full.json",
+       "sha16": "f8aa9e4e4f7429ee"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_tzbase_timer1_default_tf_node2__p6n_qvh_nattz_a05_g1_s0_timer1_default_tf_node2.json",
+       "sha16": "e89ebd4814ec9754"
+      }
+     ]
+    },
+    "B": {
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_nattz_a05_g1_s0_timer1_default_node5.json",
+       "sha16": "639c7c71446965e3"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_tz.json",
+       "sha16": "fab739f58d994b4b"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_nattz_a05_tf_vs_tzbase_tf_node5.json",
+       "sha16": "5534f7836ffe1ae2",
+       "tag": "nattz_a05_tf_vs_tzbase_tf_node5"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "A",
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "acc@qvhighlights",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "black@qvhighlights",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "gamma@qvhighlights",
+     "pair_acc@charades-sta",
+     "pair_acc@qvhighlights",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "A",
+    "acc@qvhighlights": "A",
+    "behav@charades-sta": "A",
+    "black@charades-sta": "A",
+    "black@qvhighlights": "A",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "A",
+    "gamma@charades-timelens": "A",
+    "gamma@qvhighlights": "A",
+    "labelswap@charades-sta": "A",
+    "pair_acc@charades-sta": "A",
+    "pair_acc@qvhighlights": "A",
+    "qswap@charades-sta": "A"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "A": 12,
+    "B": 2
+   },
+   "cells": {
+    "A": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattz_a05_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "974186b93bd07d31"
+      }
+     ],
+     "acc@qvhighlights": [
+      {
+       "file": "read_selective_p6n_qvh_nattz_a05_g1_s0_timer1_default_node2.json",
+       "sha16": "be4a49534ca94cd3"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node2_tzvf.json",
+       "sha16": "4cbbcc35b3cc6188"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a05_g1_s0_timer1_default_black_node2_full.json",
+       "sha16": "4ef4c1203aaac74b"
+      }
+     ],
+     "black@qvhighlights": [
+      {
+       "file": "read_black_qvh_tz_a05_node2.json",
+       "sha16": "68ae813ebb997e93"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattz_a05_g1_s0_timer1_default_node2__vs__14Ln_tzbase_timer1_default_node2.json",
+       "sha16": "9ec9f510bf03910b"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_tz_a05_node2.json",
+       "sha16": "aaa8eb49aa52834f"
+      }
+     ],
+     "gamma@qvhighlights": [
+      {
+       "file": "gamma_qvh_tz_a05_node2.json",
+       "sha16": "92032a9e77a4ddab"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_nattz_a05.json",
+       "sha16": "ed06961e881bea45"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_tzbase_timer1_default_tf5meta_node2_full__p4nat_nattz_a05_g1_s0_timer1_default_tf5meta_node2_full.json",
+       "sha16": "9ec430b9558c50cd"
+      }
+     ],
+     "pair_acc@qvhighlights": [
+      {
+       "file": "pair_p6n_qvh_tzbase_timer1_default_node2__p6n_qvh_nattz_a05_g1_s0_timer1_default_node2.json",
+       "sha16": "47686c71c6e74f23"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_nattz_a05_vs_tzbase_node2.json",
+       "sha16": "4e00004197fbccba",
+       "tag": "nattz_a05_vs_tzbase_node2"
+      }
+     ]
+    },
+    "B": {
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tza05_iid_node3.json",
+       "sha16": "574a8f9f86fdb4bb",
+       "tag": "tza05",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tza05_ood_node3.json",
+       "sha16": "9180f86c09e0ab89",
+       "tag": "tza05",
+       "split": "ood"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=1|b=0.1|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 1
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a10_g1_tf_s0_timer1_default_textfirst_black_node3_full.json",
+       "sha16": "a721af13b9de2c38"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "tneg@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "gamma@charades-sta": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_nattz_a10_g1_s0_timer1_default_tf5meta_node3_full.json",
+       "sha16": "d012eacf74f759d6"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattz_a10_g1_s0_timer1_default_black_node3_full.json",
+       "sha16": "b848b70883cb0fd0"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_nattz_a10_g1_s0_timer1_default_node3__vs__14Ln_tzbase_timer1_default_node3.json",
+       "sha16": "8ba19795d1618159"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tz_a10_node3.json",
+       "sha16": "2e8a37e8f8a5a292"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|sft|b=0|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "tneg@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 4
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_nattzsft_tf_b0_s0_timer1_default_black_node3_full.json",
+       "sha16": "a3c9e7b5e8851e06"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_tzsfttf_iid_node3.json",
+       "sha16": "b6a62da0bb3f376e",
+       "tag": "tzsfttf",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_tzsfttf_ood_node3.json",
+       "sha16": "a22a8011dcccb504",
+       "tag": "tzsfttf",
+       "split": "ood"
+      }
+     ],
+     "tneg@charades-sta": [
+      {
+       "file": "tneg_tzsft_tf_node3.json",
+       "sha16": "aa442b3206e9e306"
+      }
+     ]
+    }
+   }
+  },
+  "TimeZero-7B|two-stage|b=0.1|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 1
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natsft2g_tz_tf_s0_timer1_default_textfirst_black_node3_full.json",
+       "sha16": "135991c7a88ccf63"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|base|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-timelens": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "order@charades-sta": "B"
+   },
+   "reason": "R2': closable cells tf5=0 >= C=0(tie goes to tf5)",
+   "coverage": {
+    "B": 5,
+    "C": 1
+   },
+   "cells": {
+    "B": {
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_vcbase_vchat_node5.json",
+       "sha16": "5f891d372f8e2ab1"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_vcbase_vchat_textfirst_black_node3_full.json",
+       "sha16": "9a8f5c071e78c506"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_vcbasetf_iid_node3.json",
+       "sha16": "7a038e9306c9ada0",
+       "tag": "vcbasetf",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_vcbasetf_ood_node3.json",
+       "sha16": "695616b85c4bb953",
+       "tag": "vcbasetf",
+       "split": "ood"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_vcbase_vchat_textfirst_tf5meta_node3_full.json",
+       "sha16": "b08a3b75d0f91656",
+       "black": "results/native_eval_20260918_node3/p4nat_vcbase_vchat_textfirst_black_node3_full.json",
+       "base": "vcbase"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_vcbase_tz_official_textfirst_tf451_node4_full.json",
+       "sha16": "42f169fe05bf5982"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|base|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B",
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "labelswap@charades-sta": "B",
+    "order@charades-sta": "B"
+   },
+   "reason": "R2': closable cells tf5=0 >= C=0(tie goes to tf5)",
+   "coverage": {
+    "B": 6,
+    "C": 2
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_vcbase_vchat_tf5meta_node3_full.json",
+       "sha16": "cf1a50b74a3b5123"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_vcbase_vchat_black_node3_full.json",
+       "sha16": "27b9b70eac235947"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_vcbase_iid_node3.json",
+       "sha16": "0d8924fcacdd73c5",
+       "tag": "vcbase",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_vcbase_ood_node3.json",
+       "sha16": "53f1a7dde1c820e7",
+       "tag": "vcbase",
+       "split": "ood"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_vcbase.json",
+       "sha16": "60e28d14fa28f4cf"
+      }
+     ],
+     "order@charades-sta": [
+      {
+       "file": "p4nat_vcbase_vchat_tf5meta_node3_full.json",
+       "sha16": "93d4f5c3d1b3e87b",
+       "black": "results/native_eval_20260918_node3/p4nat_vcbase_vchat_black_node3_full.json",
+       "base": "vcbase"
+      }
+     ]
+    },
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_VideoChat-R1_7B_timer1_default_tf451_node4_full.json",
+       "sha16": "27edf5f8ad6efe39"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_vcbase_vchat_black_node4_full.json",
+       "sha16": "f90c1ea391ce9fe4"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v": {
+   "stack": "C",
+   "env": "C",
+   "candidates": [
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": [
+     "acc@charades-sta",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta",
+     "qswap@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "gamma@charades-sta": "C",
+    "pair_acc@charades-sta": "C",
+    "qswap@charades-sta": "C"
+   },
+   "reason": "R2': only the C stack has outputs",
+   "coverage": {
+    "C": 4
+   },
+   "cells": {
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natvc_a025_g1_s0_vchat_tf451_node4_full.json",
+       "sha16": "72510f38a71a6838"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natvc_a025_g1_s0_vchat_node4__vs__14Ln_vcbase_vchat_node4.json",
+       "sha16": "dd40da0328e5d51f"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_vcbase_vchat_tf451_node4_full__p4nat_natvc_a025_g1_s0_vchat_tf451_node4_full.json",
+       "sha16": "690eab7bea3f2f64"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natvc_a025_vs_vcbase_node4.json",
+       "sha16": "63f38755fa621b93",
+       "tag": "natvc_a025_vs_vcbase_node4"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-timelens",
+     "behav@charades-sta",
+     "qswap@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-timelens": "B",
+    "behav@charades-sta": "B",
+    "qswap@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "acc@charades-timelens": [
+      {
+       "file": "read_selective_p6n_chtl_natvc_a05_g1_s0_vchat_node5.json",
+       "sha16": "f4404ef4859b8d6c"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node5_vc.json",
+       "sha16": "8ebc1de53809b7a0"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natvc_a05_tf_vs_vcbase_tf_node5.json",
+       "sha16": "86de555f35efed43",
+       "tag": "natvc_a05_tf_vs_vcbase_tf_node5"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v": {
+   "stack": "C",
+   "env": "C",
+   "candidates": [
+    "C"
+   ],
+   "closable": {
+    "tf5": [],
+    "C": [
+     "acc@charades-sta",
+     "behav@charades-sta",
+     "black@charades-sta",
+     "gamma@charades-sta",
+     "gamma@charades-timelens",
+     "pair_acc@charades-sta",
+     "qswap@charades-sta"
+    ]
+   },
+   "kind_env": {
+    "acc@charades-sta": "C",
+    "behav@charades-sta": "C",
+    "black@charades-sta": "C",
+    "gamma@charades-sta": "C",
+    "gamma@charades-timelens": "C",
+    "labelswap@charades-sta": "C",
+    "pair_acc@charades-sta": "C",
+    "qswap@charades-sta": "C"
+   },
+   "reason": "R2': only the C stack has outputs",
+   "coverage": {
+    "C": 8
+   },
+   "cells": {
+    "C": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natvc_a05_g1_s0_vchat_tf451_node4_full.json",
+       "sha16": "55acb44d1bc53284"
+      }
+     ],
+     "behav@charades-sta": [
+      {
+       "file": "read_p5n_v2_node46_vc.json",
+       "sha16": "7767e3edc2e3f691"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natvc_a05_g1_s0_vchat_black_node4_full.json",
+       "sha16": "43cbef13ea6b20cb"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natvc_a05_g1_s0_vchat_node4__vs__14Ln_vcbase_vchat_node4.json",
+       "sha16": "724de1acb1f83c27"
+      }
+     ],
+     "gamma@charades-timelens": [
+      {
+       "file": "gamma_chtl_vc_a05_node4.json",
+       "sha16": "2a816d737837f184"
+      }
+     ],
+     "labelswap@charades-sta": [
+      {
+       "file": "read_tl_labelswap_node5_natvc_a05.json",
+       "sha16": "e2a7bda258676004"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_vcbase_vchat_tf451_node4_full__p4nat_natvc_a05_g1_s0_vchat_tf451_node4_full.json",
+       "sha16": "e240a7c9492be836"
+      }
+     ],
+     "qswap@charades-sta": [
+      {
+       "file": "qswap3_natvc_a05_vs_vcbase_node4.json",
+       "sha16": "640007c865da4071",
+       "tag": "natvc_a05_vs_vcbase_node4"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "acc@charades-sta",
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood",
+     "gamma@charades-sta",
+     "pair_acc@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "acc@charades-sta": "B",
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B",
+    "gamma@charades-sta": "B",
+    "pair_acc@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 6
+   },
+   "cells": {
+    "B": {
+     "acc@charades-sta": [
+      {
+       "file": "read_selective_p4nat_natvc_a10_g1_s0_vchat_tf5meta_node3_full.json",
+       "sha16": "d556d67533fb418b"
+      }
+     ],
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natvc_a10_g1_s0_vchat_black_node3_full.json",
+       "sha16": "28d4e2af91e2ba5d"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_vca10_iid_node3.json",
+       "sha16": "3025f7a6470ac2eb",
+       "tag": "vca10",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_vca10_ood_node3.json",
+       "sha16": "53783026865d4636",
+       "tag": "vca10",
+       "split": "ood"
+      }
+     ],
+     "gamma@charades-sta": [
+      {
+       "file": "gamma_14Ln_natvc_a10_g1_s0_vchat_node3__vs__14Ln_vcbase_vchat_node3.json",
+       "sha16": "e4adda19b8896a79"
+      }
+     ],
+     "pair_acc@charades-sta": [
+      {
+       "file": "pair_p4nat_vcbase_vchat_tf5meta_node3_full__p4nat_natvc_a10_g1_s0_vchat_tf5meta_node3_full.json",
+       "sha16": "17a0c3a7d194e73f"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|sft|b=0|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta",
+     "cd@charades-cd-iid",
+     "cd@charades-cd-ood"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B",
+    "cd@charades-cd-iid": "B",
+    "cd@charades-cd-ood": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 3
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natvcsft_tf_b0_s0_vchat_black_node3_full.json",
+       "sha16": "8ee32fe8ec7a435b"
+      }
+     ],
+     "cd@charades-cd-iid": [
+      {
+       "file": "p4cd_vcsfttf_iid_node3.json",
+       "sha16": "d0cb6862a60ebd02",
+       "tag": "vcsfttf",
+       "split": "iid"
+      }
+     ],
+     "cd@charades-cd-ood": [
+      {
+       "file": "p4cd_vcsfttf_ood_node3.json",
+       "sha16": "e0bda9bf3f6149ae",
+       "tag": "vcsfttf",
+       "split": "ood"
+      }
+     ]
+    }
+   }
+  },
+  "VideoChat-R1-7B|two-stage|b=0.1|s=0|train=t|eval=t": {
+   "stack": "tf5",
+   "env": "tf5",
+   "candidates": [
+    "B"
+   ],
+   "closable": {
+    "tf5": [
+     "black@charades-sta"
+    ],
+    "C": []
+   },
+   "kind_env": {
+    "black@charades-sta": "B"
+   },
+   "reason": "R2': only the tf5 stack has outputs",
+   "coverage": {
+    "B": 1
+   },
+   "cells": {
+    "B": {
+     "black@charades-sta": [
+      {
+       "file": "read_black_p4nat_natsft2g_vc_tf_s0_vchat_textfirst_black_node3_full.json",
+       "sha16": "500c1564a6e68ff2"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

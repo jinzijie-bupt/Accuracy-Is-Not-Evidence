@@ -1,0 +1,513 @@
+{
+ "sources": [
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, IoU-GRPO",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "x0s0iou700_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_x0s0iou700_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, SFT",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natsft_b0_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_natsft_b0_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, evidence margin only",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_abl_single_s0_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_abl_single_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.25$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a025_g1_s0_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a025_g1_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_g1_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$, $\\beta{=}0.03$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_b003_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_b003_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$, 8,434 pairs, trained on 16 frames",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "e1full_a05_g1_s0_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_e1full_a05_g1_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a10_g1_s0_timer1_node2",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a10_g1_s0_timer1_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$ (second seed)",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a10_g1_s1_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a10_g1_s1_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$, $\\beta{=}0.03$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a10_b003_g1_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a10_b003_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped, no group wts",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_abl_nodro_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_abl_nodro_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped, no hinge",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_abl_nohinge_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_abl_nohinge_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped, no hinge, no group wts",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natbase_a05_abl_uniform_nohinge_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_abl_uniform_nohinge_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, two-stage, $\\alpha{=}0.5$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natsft2g_a05_g1_s0_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_natsft2g_a05_g1_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, two-stage, $\\beta{=}0.03$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natsft2g_b003_g1_s0_timer1_default_node1",
+   "arm": "results/native_audit_20260917/14Ln_natsft2g_b003_g1_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.25$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattz_a025_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_nattz_a025_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.5$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattz_a05_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_nattz_a05_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.5$, $\\beta{=}0.03$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattz_a05_b003_g1_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattz_a05_b003_g1_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.5$, text-first",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattz_a05_g1_tf_s0_timer1_default_textfirst_node2",
+   "arm": "results/native_audit_20260917/14Ln_nattz_a05_g1_tf_s0_timer1_default_textfirst_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tzbase_timer1_default_textfirst_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}1$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattz_a10_g1_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattz_a10_g1_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1, grouped $\\alpha{=}0.1$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattr1_a01_g1_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattr1_a01_g1_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1, grouped $\\alpha{=}0.25$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattr1_a025_g1_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_nattr1_a025_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1, grouped $\\alpha{=}0.5$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattr1_a05_g1_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattr1_a05_g1_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1, grouped $\\alpha{=}1$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattr1_a10_g1_s0_timer1_default_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattr1_a10_g1_s0_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "VideoChat-R1, grouped $\\alpha{=}0.25$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natvc_a025_g1_s0_vchat_node4",
+   "arm": "results/native_audit_20260917/14Ln_natvc_a025_g1_s0_vchat_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_vcbase_vchat_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "VideoChat-R1, grouped $\\alpha{=}0.5$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natvc_a05_g1_s0_vchat_node4",
+   "arm": "results/native_audit_20260917/14Ln_natvc_a05_g1_s0_vchat_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_vcbase_vchat_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "VideoChat-R1, grouped $\\alpha{=}1$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "natvc_a10_g1_s0_vchat_node3",
+   "arm": "results/native_audit_20260917/14Ln_natvc_a10_g1_s0_vchat_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_vcbase_vchat_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeLens-8B, grouped $\\alpha{=}0.5$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "nattimelens8b_a05_g1_s0_timelens_node3",
+   "arm": "results/native_audit_20260917/14Ln_nattimelens8b_a05_g1_s0_timelens_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_timelens8b_base_timelens_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero (public)",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "TimeZero(public RL) vs Qwen",
+   "arm": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1 (public)",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "Time-R1(public RL) vs Qwen",
+   "arm": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "VideoChat-R1 (public)",
+   "src_file": "a6_vc_vs_qwen.json",
+   "sha16": "21c6cd53ec2336aa",
+   "a3_label": "VideoChat-R1 (node5) vs Qwen2.5-VL-7B (node5), vchat template",
+   "arm": "results/native_audit_20260924/14Ln_vcbase_vchat_node5_nat_o0n200R3.json",
+   "base": "results/native_audit_20260924/14Ln_qwenbase_vchat_node5_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeLens-8B (public) against Qwen3-VL-8B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "TimeLens-8B(public) vs Qwen3-VL-8B",
+   "arm": "results/native_audit_20260917/14Ln_timelens8b_base_timelens_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_q3vl8b_base_timelens_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, SFT",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_natsft_b0_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_chtl_natsft_b0_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_qwenbase_timer1_default_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_natbase_a05_g1_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_chtl_natbase_a05_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_qwenbase_timer1_default_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_natbase_a10_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_chtl_natbase_a10_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_qwenbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.5$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_nattz_a05_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_chtl_nattz_a05_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_tzbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Time-R1, grouped $\\alpha{=}0.25$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_nattr1_a025_g1_s0_timer1_default_node4",
+   "arm": "results/native_audit_20260917/14Ln_chtl_nattr1_a025_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_tr1base_timer1_default_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "VideoChat-R1, grouped $\\alpha{=}0.5$",
+   "env": "C",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_natvc_a05_g1_s0_vchat_node4",
+   "arm": "results/native_audit_20260917/14Ln_chtl_natvc_a05_g1_s0_vchat_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_vcbase_vchat_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeLens-8B, SFT",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_nattimelens8b_sft_b0_s0_timelens_node3",
+   "arm": "results/native_audit_20260917/14Ln_chtl_nattimelens8b_sft_b0_s0_timelens_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_timelens8b_base_timelens_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeLens-8B, grouped $\\alpha{=}0.5$",
+   "env": "B",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "chtl_nattimelens8b_a05_g1_s0_timelens_node3",
+   "arm": "results/native_audit_20260917/14Ln_chtl_nattimelens8b_a05_g1_s0_timelens_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_chtl_timelens8b_base_timelens_node3_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, SFT",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "qvh_adapter_nat_sft_b0_s0_tf5_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_qvh_adapter_nat_sft_b0_s0_tf5_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_qvh_qwenbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "qvh_adapter_nat_base_a05_g1_s0_tf5_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_qvh_adapter_nat_base_a05_g1_s0_tf5_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_qvh_qwenbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "qvh_adapter_nat_base_a10_g1_s0_timer1_default_node2",
+   "arm": "results/native_audit_20260917/14Ln_qvh_adapter_nat_base_a10_g1_s0_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_qvh_qwenbase_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S15",
+   "row": "TimeZero, grouped $\\alpha{=}0.5$, text-first",
+   "env": "A",
+   "src_file": "a3_scale.json",
+   "sha16": "35d0ade021dac607",
+   "a3_label": "qvh_adapter_nat_tz_a05_g1_tf_s0_timer1_default_textfirst_node2",
+   "arm": "results/native_audit_20260917/14Ln_qvh_adapter_nat_tz_a05_g1_tf_s0_timer1_default_textfirst_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_qvh_tzbase_timer1_default_textfirst_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, SFT",
+   "env": "C",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_natsft_b0_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, IoU-GRPO",
+   "env": "B",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_x0s0iou700_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.25$",
+   "env": "B",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a025_g1_s0_timer1_default_node1_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node1_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}0.5$",
+   "env": "C",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a05_g1_s0_timer1_default_node4_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_node4_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$",
+   "env": "A",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a10_g1_s0_timer1_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Qwen2.5-VL-7B, grouped $\\alpha{=}1$ (second seed)",
+   "env": "A",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_natbase_a10_g1_s1_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "TimeZero (public)",
+   "env": "A",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_tzbase_timer1_default_node2_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node2_nat_o0n200R3.json"
+  },
+  {
+   "table": "S16",
+   "row": "Time-R1 (public)",
+   "env": "B",
+   "src_file": "a2_newly_correct.json",
+   "sha16": "80fc98e5620bf014",
+   "arm": "results/native_audit_20260917/14Ln_tr1base_timer1_default_node3_nat_o0n200R3.json",
+   "base": "results/native_audit_20260917/14Ln_base_timer1_default_node3_nat_o0n200R3.json"
+  }
+ ],
+ "pending": []
+}

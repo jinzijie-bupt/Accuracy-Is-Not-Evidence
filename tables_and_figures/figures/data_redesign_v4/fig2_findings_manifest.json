@@ -1,0 +1,445 @@
+{
+ "generator": "scripts/plot_figs_v6.py",
+ "style": "scripts/paper_style.py",
+ "size_inches": [
+  5.5,
+  2.12
+ ],
+ "placed_width_linewidth": 1.0,
+ "points": [
+  {
+   "point": "Qwen2.5-VL-7B base",
+   "key": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "answer_rate": 0.11639784946236559,
+   "black_R50": 0.006720430107526882,
+   "src": {
+    "file": "read_black_p4nat_base_timer1_default_black_node1_full.json",
+    "sha16": "5ae2c03bd76c0806",
+    "env": "B"
+   }
+  },
+  {
+   "point": "+ pure SFT",
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "answer_rate": 0.7838709677419354,
+   "black_R50": 0.1403225806451613,
+   "src": {
+    "file": "read_black_p4nat_natsft_b0_s0_timer1_default_black_node4_full.json",
+    "sha16": "69af943f3dcb2f22",
+    "env": "C"
+   }
+  },
+  {
+   "point": "+ IoU-reward GRPO",
+   "key": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "answer_rate": 0.3239247311827957,
+   "black_R50": 0.037096774193548385,
+   "src": {
+    "file": "read_black_p4nat_x0s0iou700_timer1_default_black_node1_full.json",
+    "sha16": "26cd00dcfafdb3f3",
+    "env": "B"
+   }
+  },
+  {
+   "point": "+ mDPO-style",
+   "key": "Qwen2.5-VL-7B|mdpo|a=0.5|s=0|train=v|eval=v",
+   "answer_rate": 0.025,
+   "black_R50": 0.002150537634408602,
+   "src": {
+    "file": "read_black_p4nat_natmdpo_a05_s0_timer1_default_black_node4_full.json",
+    "sha16": "1160fc668a1c22de",
+    "env": "C"
+   }
+  },
+  {
+   "point": "TimeZero",
+   "key": "TimeZero-7B|base|train=v|eval=v",
+   "answer_rate": 0.9682795698924731,
+   "black_R50": 0.13629032258064516,
+   "src": {
+    "file": "read_black_p4nat_tzbase_timer1_default_black_node3_full.json",
+    "sha16": "7de78a49c2b4fb95",
+    "env": "B"
+   }
+  },
+  {
+   "point": "Time-R1",
+   "key": "Time-R1-7B|base|train=v|eval=v",
+   "answer_rate": 0.7959677419354839,
+   "black_R50": 0.1053763440860215,
+   "src": {
+    "file": "read_black_p4nat_tr1base_timer1_default_black_node3_full.json",
+    "sha16": "1b9553adfb7e0740",
+    "env": "B"
+   }
+  },
+  {
+   "point": "+ placebo-controlled, α=1.0",
+   "key": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "answer_rate": 0.0008064516129032258,
+   "black_R50": 0.0,
+   "src": {
+    "file": "read_black_p4nat_natbase_a10_g1_s0_timer1_default_black_node2_full.json",
+    "sha16": "55828a37f6b64115",
+    "env": "A"
+   }
+  },
+  {
+   "point": "+ placebo-controlled, α=0.5",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "answer_rate": 0.0,
+   "black_R50": 0.0,
+   "src": {
+    "file": "read_black_p4nat_natbase_a05_g1_s0_timer1_default_black_node4_full.json",
+    "sha16": "671e5f33752e61df",
+    "env": "C"
+   }
+  },
+  {
+   "point": "TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "sta": 0.6701149425287356,
+   "tl": 0.42873563218390803,
+   "src": {
+    "file": "read_tl_labelswap_TL8B_arm_a05.json",
+    "sha16": "c3313be499079d3e",
+    "env": "B"
+   }
+  },
+  {
+   "point": "TimeLens-8B|base|train=v|eval=v",
+   "sta": 0.432183908045977,
+   "tl": 0.6241379310344828,
+   "src": {
+    "file": "read_tl_labelswap_TL8B_base.json",
+    "sha16": "582e3a5284621375",
+    "env": "B"
+   }
+  },
+  {
+   "point": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "sta": 0.5609195402298851,
+   "tl": 0.3816091954022989,
+   "src": {
+    "file": "read_tl_labelswap_node4_natbase_a05.json",
+    "sha16": "cbc933645cbf0d90",
+    "env": "C"
+   }
+  },
+  {
+   "point": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "sta": 0.5252873563218391,
+   "tl": 0.3689655172413793,
+   "src": {
+    "file": "read_tl_labelswap_node4_qwenbase.json",
+    "sha16": "beed6b89cb694556",
+    "env": "C"
+   }
+  },
+  {
+   "point": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "sta": 0.6218390804597701,
+   "tl": 0.3310344827586207,
+   "src": {
+    "file": "read_tl_labelswap_node5_natsft.json",
+    "sha16": "5b2c5eefbc449e02",
+    "env": "C"
+   }
+  },
+  {
+   "point": "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "sta": 0.6436781609195402,
+   "tl": 0.364367816091954,
+   "src": {
+    "file": "read_tl_labelswap_node5_nattr1_a025.json",
+    "sha16": "bb4afd1f01c59629",
+    "env": "C"
+   }
+  },
+  {
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "sta": 0.7264367816091954,
+   "tl": 0.38045977011494253,
+   "src": {
+    "file": "read_tl_labelswap_node5_nattz_a05.json",
+    "sha16": "ed06961e881bea45",
+    "env": "A"
+   }
+  },
+  {
+   "point": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "sta": 0.696551724137931,
+   "tl": 0.39425287356321836,
+   "src": {
+    "file": "read_tl_labelswap_node5_natvc_a05.json",
+    "sha16": "e2a7bda258676004",
+    "env": "C"
+   }
+  },
+  {
+   "point": "Time-R1-7B|base|train=v|eval=v",
+   "sta": 0.6160919540229886,
+   "tl": 0.34022988505747126,
+   "src": {
+    "file": "read_tl_labelswap_node5_tr1base.json",
+    "sha16": "b53cd2e5cdb0b66b",
+    "env": "B"
+   }
+  },
+  {
+   "point": "TimeZero-7B|base|train=v|eval=v",
+   "sta": 0.7126436781609196,
+   "tl": 0.36091954022988504,
+   "src": {
+    "file": "read_tl_labelswap_node5_tzbase.json",
+    "sha16": "5444f4bf4c10b467",
+    "env": "B"
+   }
+  },
+  {
+   "point": "VideoChat-R1-7B|base|train=v|eval=v",
+   "sta": 0.7114942528735633,
+   "tl": 0.3781609195402299,
+   "src": {
+    "file": "read_tl_labelswap_node5_vcbase.json",
+    "sha16": "60e28d14fa28f4cf",
+    "env": "B"
+   }
+  }
+ ],
+ "contrast_rows": [
+  {
+   "key": "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "fam": "Time-R1",
+   "sft": false,
+   "alpha": 0.25,
+   "label": "Time-R1, α=0.25",
+   "sta": 1.8803634301422396,
+   "sta_ci": [
+    1.6444811683205571,
+    2.0898563449343537
+   ],
+   "tl": 1.4276733339091026,
+   "tl_ci": [
+    1.188280128003007,
+    1.6980220026249933
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_nattr1_a025_g1_s0_timer1_default_node4__vs__14Ln_tr1base_timer1_default_node4.json",
+    "sha16": "bd2f7b876a4fbefa",
+    "env": "C"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_tr1_a025_node4.json",
+    "sha16": "9f4721da7537ed50",
+    "env": "C"
+   }
+  },
+  {
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "Qwen-7B",
+   "sft": false,
+   "alpha": 0.5,
+   "label": "Qwen-7B, α=0.5",
+   "sta": 1.6295253264721101,
+   "sta_ci": [
+    1.3599481962099196,
+    1.8926372228938475
+   ],
+   "tl": 1.2056445442458528,
+   "tl_ci": [
+    0.9226684078704125,
+    1.494203234770166
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_natbase_a05_g1_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+    "sha16": "1488f66321a7d1bf",
+    "env": "C"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_a05_node4.json",
+    "sha16": "814788a0fe74b8a9",
+    "env": "C"
+   }
+  },
+  {
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "TimeZero",
+   "sft": false,
+   "alpha": 0.5,
+   "label": "TimeZero, α=0.5",
+   "sta": 1.3962438479185182,
+   "sta_ci": [
+    1.1858865434178851,
+    1.5978376414501334
+   ],
+   "tl": 1.0019590565677412,
+   "tl_ci": [
+    0.7810967177894235,
+    1.2828108499827022
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_nattz_a05_g1_s0_timer1_default_node2__vs__14Ln_tzbase_timer1_default_node2.json",
+    "sha16": "9ec9f510bf03910b",
+    "env": "A"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_tz_a05_node2.json",
+    "sha16": "aaa8eb49aa52834f",
+    "env": "A"
+   }
+  },
+  {
+   "key": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "VideoChat-R1",
+   "sft": false,
+   "alpha": 0.5,
+   "label": "VideoChat-R1, α=0.5",
+   "sta": 1.4278987313724885,
+   "sta_ci": [
+    1.2657746187576746,
+    1.5829200394613556
+   ],
+   "tl": 0.9847853650077618,
+   "tl_ci": [
+    0.8579373825311146,
+    1.1407023698454815
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_natvc_a05_g1_s0_vchat_node4__vs__14Ln_vcbase_vchat_node4.json",
+    "sha16": "724de1acb1f83c27",
+    "env": "C"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_vc_a05_node4.json",
+    "sha16": "2a816d737837f184",
+    "env": "C"
+   }
+  },
+  {
+   "key": "TimeLens-8B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "TimeLens-8B",
+   "sft": false,
+   "alpha": 0.5,
+   "label": "TimeLens-8B, α=0.5",
+   "sta": 1.3552494817070437,
+   "sta_ci": [
+    1.2383537646258445,
+    1.470367269995353
+   ],
+   "tl": 0.9525186129433323,
+   "tl_ci": [
+    0.8233049048176322,
+    1.0809282952600339
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_nattimelens8b_a05_g1_s0_timelens_node3__vs__14Ln_timelens8b_base_timelens_node3.json",
+    "sha16": "3bf30bc1a78a6d36",
+    "env": "B"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_timelens_a05_node3.json",
+    "sha16": "586b3783624e077e",
+    "env": "B"
+   }
+  },
+  {
+   "key": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "fam": "Qwen-7B",
+   "sft": false,
+   "alpha": 1.0,
+   "label": "Qwen-7B, α=1",
+   "sta": 1.0342776480016453,
+   "sta_ci": [
+    0.802301084583509,
+    1.269575853377091
+   ],
+   "tl": 0.8656033680555695,
+   "tl_ci": [
+    0.6349882148891534,
+    1.09977252112439
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_natbase_a10_g1_s0_timer1_node2__vs__14Ln_base_timer1_default_node2.json",
+    "sha16": "6f0a43874eb58fd1",
+    "env": "A"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_a10_node2.json",
+    "sha16": "59fbe65faa964082",
+    "env": "A"
+   }
+  },
+  {
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "fam": "Qwen-7B",
+   "sft": true,
+   "alpha": null,
+   "label": "Qwen-7B, SFT",
+   "sta": -0.08538945280522571,
+   "sta_ci": [
+    -0.14889059672397423,
+    -0.020135149255286797
+   ],
+   "tl": -0.029390034467975074,
+   "tl_ci": [
+    -0.07833038671408862,
+    0.013746393266941144
+   ],
+   "sta_src": {
+    "file": "gamma_14Ln_natsft_b0_s0_timer1_default_node4__vs__14Ln_base_timer1_node4.json",
+    "sha16": "a17818bd144b1831",
+    "env": "C"
+   },
+   "tl_src": {
+    "file": "gamma_chtl_sft_node4.json",
+    "sha16": "00c12712ac854a9c",
+    "env": "C"
+   }
+  },
+  {
+   "key": "TimeLens-8B|sft|b=0|s=0|train=v|eval=v",
+   "fam": "TimeLens-8B",
+   "sft": true,
+   "alpha": null,
+   "label": "TimeLens-8B, SFT",
+   "sta": null,
+   "sta_ci": null,
+   "tl": -0.21107279512175808,
+   "tl_ci": [
+    -0.24221661067401684,
+    -0.17790263516607221
+   ],
+   "sta_src": null,
+   "tl_src": {
+    "file": "gamma_chtl_timelens_sft_node3.json",
+    "sha16": "a83a1aa3bd2b6a30",
+    "env": "B"
+   }
+  }
+ ],
+ "dropped": [
+  {
+   "point": "TimeLens-8B|base|train=v|eval=v (TL labels)",
+   "reason": "not one of our trained models (Table S5 lower block)"
+  }
+ ],
+ "constant_window": {
+  "value": 0.317,
+  "src": "tables/T1_audit.tex reference row"
+ },
+ "summary": {
+  "n_7B": 9,
+  "span_STA_pp": 20.114942528735636,
+  "span_TL_pp": 6.3218390804597675,
+  "TL8B": {
+   "trained": [
+    0.6701149425287356,
+    0.42873563218390803
+   ],
+   "base": [
+    0.432183908045977,
+    0.6241379310344828
+   ]
+  }
+ }
+}

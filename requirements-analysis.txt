@@ -1,0 +1,9 @@
+# Readers, table and figure scripts (no GPU). Regenerated with Python 3.14.
+numpy
+scipy
+matplotlib
+SciencePlots
+pandas
+opencv-python-headless   # qualitative-case figure only
+PyMuPDF                  # schematic figures only
+fonttools                # schematic figures only

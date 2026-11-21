@@ -1,0 +1,393 @@
+{
+ "generator": "scripts/plot_figs_v6.py",
+ "style": "scripts/paper_style.py",
+ "size_inches": [
+  5.5,
+  2.42
+ ],
+ "placed_width_linewidth": 1.0,
+ "points_a": [
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.7541576596730957,
+   "d_psi_cross": -1.3119239918734087,
+   "gamma_spec": 3.066081651546505,
+   "src": {
+    "file": "qswap3_natbase_a025_vs_base_node1.json",
+    "sha16": "350d3a44c77ebddd"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v",
+   "d_psi_own": 1.3406638397699244,
+   "d_psi_cross": -1.4880434164877818,
+   "gamma_spec": 2.828707256257706,
+   "src": {
+    "file": "qswap3_natbase_a05_b003_vs_base_node2.json",
+    "sha16": "1b75eb354956c02e"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.5908006691978682,
+   "d_psi_cross": -1.2668395990124461,
+   "gamma_spec": 2.857640268210313,
+   "src": {
+    "file": "qswap3_natbase_a05_vs_base_node4.json",
+    "sha16": "7e3ac39a040bedcc"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 0.9993650569320888,
+   "d_psi_cross": -1.1478372143231024,
+   "gamma_spec": 2.1472022712551913,
+   "src": {
+    "file": "qswap3_natbase_a10_s0_vs_base_node2.json",
+    "sha16": "b428953cd236b1ec"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=1|train=v|eval=v",
+   "d_psi_own": 1.0582267022634533,
+   "d_psi_cross": -1.0431241811845926,
+   "gamma_spec": 2.101350883448046,
+   "src": {
+    "file": "qswap3_natbase_a10_s1_vs_base_node2.json",
+    "sha16": "e6e06238ca4e3a72"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "d_psi_own": -0.10673646286732363,
+   "d_psi_cross": -0.06342902862263101,
+   "gamma_spec": -0.04330743424469263,
+   "src": {
+    "file": "qswap3_natsft_b0_tf5_vs_base_node1.json",
+    "sha16": "ee457515f09ea7fc"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|single-margin|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 0.98885354327018,
+   "d_psi_cross": -1.0131826329453708,
+   "gamma_spec": 2.002036176215551,
+   "src": {
+    "file": "qswap3_abl_single_vs_base_node1.json",
+    "sha16": "2ea8c45706182942"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|two-stage|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 2.095326716242538,
+   "d_psi_cross": -0.8838129067012053,
+   "gamma_spec": 2.9791396229437437,
+   "src": {
+    "file": "qswap3_natsft2g_a05_vs_base_node1.json",
+    "sha16": "95b19122a51bea4c"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Qwen2.5-VL-7B|two-stage|b=0.03|s=0|train=v|eval=v",
+   "d_psi_own": 2.6431864305110233,
+   "d_psi_cross": -1.3488654281437147,
+   "gamma_spec": 3.992051858654739,
+   "src": {
+    "file": "qswap3_natsft2g_b003_vs_base_node1.json",
+    "sha16": "77293d92af3c0286"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.6396387501239567,
+   "d_psi_cross": -1.2003262183889896,
+   "gamma_spec": 2.839964968512946,
+   "src": {
+    "file": "qswap3_nattr1_a025_vs_tr1base_node4.json",
+    "sha16": "7587bbb2daf662bc"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "TimeZero-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.8804055938162554,
+   "d_psi_cross": -1.265522221879535,
+   "gamma_spec": 3.145927815695791,
+   "src": {
+    "file": "qswap3_nattz_a025_vs_tzbase_node2.json",
+    "sha16": "d672d383a37ea72d"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "d_psi_own": 0.5641504603536743,
+   "d_psi_cross": 0.02736104223203084,
+   "gamma_spec": 0.5367894181216435,
+   "src": {
+    "file": "qswap3_nattz_a05_tf_vs_tzbase_tf_node5.json",
+    "sha16": "5534f7836ffe1ae2"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.367069440044163,
+   "d_psi_cross": -0.7684555785176518,
+   "gamma_spec": 2.135525018561815,
+   "src": {
+    "file": "qswap3_nattz_a05_vs_tzbase_node2.json",
+    "sha16": "4e00004197fbccba"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "VideoChat-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.6173981788779102,
+   "d_psi_cross": 0.689183284212779,
+   "gamma_spec": 0.9282148946651314,
+   "src": {
+    "file": "qswap3_natvc_a025_vs_vcbase_node4.json",
+    "sha16": "63f38755fa621b93"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "d_psi_own": 0.9342362732600322,
+   "d_psi_cross": 0.35486129824788226,
+   "gamma_spec": 0.5793749750121497,
+   "src": {
+    "file": "qswap3_natvc_a05_tf_vs_vcbase_tf_node5.json",
+    "sha16": "86de555f35efed43"
+   }
+  },
+  {
+   "panel": "a",
+   "point": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "d_psi_own": 1.3982702995227991,
+   "d_psi_cross": 0.6678032010071658,
+   "gamma_spec": 0.7304670985156331,
+   "src": {
+    "file": "qswap3_natvc_a05_vs_vcbase_node4.json",
+    "sha16": "640007c865da4071"
+   }
+  }
+ ],
+ "points_b": [
+  {
+   "row": "Qwen-7B base",
+   "point": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "matched": 0.3,
+   "mismatched": 11.899999999999999
+  },
+  {
+   "row": "Qwen-7B SFT",
+   "point": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "matched": 0.0,
+   "mismatched": 0.3
+  },
+  {
+   "row": "Qwen-7B α=0.5",
+   "point": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "matched": 5.2,
+   "mismatched": 21.0
+  },
+  {
+   "row": "Qwen-7B β=0.03",
+   "point": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v",
+   "matched": 16.400000000000002,
+   "mismatched": 82.69999999999999
+  },
+  {
+   "row": "Time-R1 public",
+   "point": "Time-R1-7B|base|train=v|eval=v",
+   "matched": 0.0,
+   "mismatched": 5.0
+  },
+  {
+   "row": "Time-R1 α=0.5",
+   "point": "Time-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "matched": 1.7999999999999998,
+   "mismatched": 40.400000000000006
+  },
+  {
+   "row": "Time-R1 α=1",
+   "point": "Time-R1-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "matched": 19.400000000000002,
+   "mismatched": 85.7
+  },
+  {
+   "row": "TimeZero public",
+   "point": "TimeZero-7B|base|train=v|eval=v",
+   "matched": 0.0,
+   "mismatched": 0.0
+  },
+  {
+   "row": "TimeZero SFT (text-first)",
+   "point": "TimeZero-7B|sft|b=0|s=0|train=t|eval=t",
+   "matched": 0.0,
+   "mismatched": 0.0
+  },
+  {
+   "row": "TimeZero α=1",
+   "point": "TimeZero-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "matched": 0.0,
+   "mismatched": 0.0
+  },
+  {
+   "row": "TimeZero β=0.03",
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.03|s=0|train=v|eval=v",
+   "matched": 0.0,
+   "mismatched": 0.0
+  }
+ ],
+ "points_c": [
+  {
+   "key": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "VideoChat-R1",
+   "sft": false,
+   "alpha": 0.5,
+   "est": 29.111623491116244,
+   "ci": [
+    24.753460066401065,
+    33.717378587062186
+   ],
+   "rule": "canonical",
+   "src": {
+    "file": "read_p5n_v2_node46_vc.json",
+    "sha16": "7767e3edc2e3f691",
+    "env": "C"
+   },
+   "s6_row": "VideoChat-R1, placebo-controlled $\\alpha{=}0.5$ (video-first)",
+   "s6_cell": "+29.1 \\ci{24.8}{33.7}"
+  },
+  {
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "Qwen-7B",
+   "sft": false,
+   "alpha": 0.5,
+   "est": 15.716152795104854,
+   "ci": [
+    11.447941907151257,
+    20.329718542657307
+   ],
+   "rule": "canonical",
+   "src": {
+    "file": "read_p5n_v2_node5_qwen.json",
+    "sha16": "b3c7bafa213e62dc",
+    "env": "B"
+   },
+   "s6_row": "Qwen2.5-VL-7B, placebo-controlled $\\alpha{=}0.5$ (video-first)",
+   "s6_cell": "+15.7 \\ci{11.4}{20.3}"
+  },
+  {
+   "key": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "fam": "TimeZero",
+   "sft": false,
+   "alpha": 0.5,
+   "est": 10.77507994420419,
+   "ci": [
+    7.456630031886063,
+    14.15506661302832
+   ],
+   "rule": "canonical",
+   "src": {
+    "file": "read_p5n_v2_node2_tzvf.json",
+    "sha16": "4cbbcc35b3cc6188",
+    "env": "A"
+   },
+   "s6_row": "TimeZero, placebo-controlled $\\alpha{=}0.5$ (video-first)",
+   "s6_cell": "+10.8 \\ci{7.5}{14.2}"
+  },
+  {
+   "key": "Time-R1-7B|grouped|a=0.25|b=0.1|s=0|train=v|eval=v",
+   "fam": "Time-R1",
+   "sft": false,
+   "alpha": 0.25,
+   "est": 7.6744239367190215,
+   "ci": [
+    4.808803473591745,
+    10.848422938313027
+   ],
+   "rule": "S6 six-operator block",
+   "src": {
+    "file": "read_p5n_v2_node5_tr1.json",
+    "sha16": "3a7240e6b3b9542c",
+    "env": "B"
+   },
+   "s6_row": "Time-R1, placebo-controlled $\\alpha{=}0.25$ (video-first)",
+   "s6_cell": "+7.7 \\ci{4.8}{10.8}"
+  },
+  {
+   "key": "Qwen2.5-VL-7B|sft|b=0|s=0|train=v|eval=v",
+   "fam": "Qwen-7B",
+   "sft": true,
+   "alpha": null,
+   "est": -14.660191290916657,
+   "ci": [
+    -19.75255196463859,
+    -9.365923622458212
+   ],
+   "rule": "canonical",
+   "src": {
+    "file": "read_p5n_v2_node5_sft.json",
+    "sha16": "5d082ceab1c3cdfd",
+    "env": "B"
+   },
+   "s6_row": "Qwen2.5-VL-7B, SFT (video-first)",
+   "s6_cell": "$-$14.7 \\ci{$-$19.8}{$-$9.4}"
+  }
+ ],
+ "dropped": [
+  {
+   "panel": "b",
+   "point": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "reason": "not a placebo-controlled model at beta=0.1 or SFT"
+  },
+  {
+   "panel": "b",
+   "point": "Qwen2.5-VL-7B|mdpo|a=0.5|s=0|train=v|eval=v",
+   "reason": "not a placebo-controlled model at beta=0.1 or SFT"
+  },
+  {
+   "panel": "b",
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "reason": "evaluated text-first"
+  },
+  {
+   "panel": "b",
+   "point": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "reason": "evaluated text-first"
+  }
+ ],
+ "dropped_c": [
+  {
+   "point": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "reason": "not a placebo-controlled model at beta=0.1 or SFT"
+  },
+  {
+   "point": "Qwen2.5-VL-7B|mdpo|a=0.5|s=0|train=v|eval=v",
+   "reason": "not a placebo-controlled model at beta=0.1 or SFT"
+  },
+  {
+   "point": "TimeZero-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "reason": "evaluated text-first"
+  },
+  {
+   "point": "VideoChat-R1-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=t",
+   "reason": "evaluated text-first"
+  }
+ ],
+ "note_c": "panel c follows the S6 rule (six-operator block); each value asserted equal to tables/S6_behavioural.tex"
+}

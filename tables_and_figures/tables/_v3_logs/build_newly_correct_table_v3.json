@@ -1,0 +1,53 @@
+{
+ "sources": [
+  {
+   "table": "S12",
+   "row": "IoU-GRPO / Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "column": "whole row",
+   "kind": "newly",
+   "key": "Qwen2.5-VL-7B|iou-grpo|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "newly_correct_v1.json",
+   "dataset": "charades-sta",
+   "src_file": "newly_correct_v1.json",
+   "sha16": "41461f0c5d340968",
+   "extra": {
+    "key": "iou_grpo_envB"
+   }
+  },
+  {
+   "table": "S12",
+   "row": "grouped $\\alpha{=}0.5$ / Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "newly",
+   "key": "Qwen2.5-VL-7B|grouped|a=0.5|b=0.1|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "newly_correct_v1.json",
+   "dataset": "charades-sta",
+   "src_file": "newly_correct_v1.json",
+   "sha16": "41461f0c5d340968",
+   "extra": {
+    "key": "grouped_a05_envA"
+   }
+  },
+  {
+   "table": "S12",
+   "row": "grouped $\\alpha{=}1$ / Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "column": "whole row",
+   "kind": "newly",
+   "key": "Qwen2.5-VL-7B|grouped|a=1|b=0.1|s=0|train=v|eval=v",
+   "env": "A",
+   "env_rule": "canonical",
+   "name": "newly_correct_v1.json",
+   "dataset": "charades-sta",
+   "src_file": "newly_correct_v1.json",
+   "sha16": "41461f0c5d340968",
+   "extra": {
+    "key": "grouped_a10_envA"
+   }
+  }
+ ],
+ "pending": []
+}

@@ -1,0 +1,141 @@
+{
+ "sources": [
+  {
+   "table": "S13",
+   "row": "Qwen2.5-VL-7B / v",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "Qwen2.5-VL-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_qwenbase_timer1_default_tf5meta_node3_full.json",
+   "sha16": "aa00c9fef8562dd2",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_black_node3_full.json",
+    "base": "qwenbase"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "Qwen2.5-VL-7B / t",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "Qwen2.5-VL-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_qwenbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "sha16": "e79bd9f3445d2172",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_qwenbase_timer1_default_textfirst_black_node3_full.json",
+    "base": "qwenbase"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "TimeZero / v",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "TimeZero-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_tzbase_timer1_default_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_tzbase_timer1_default_tf5meta_node3_full.json",
+   "sha16": "696acbe19ddf91c4",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_black_node3_full.json",
+    "base": "tzbase"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "TimeZero / t",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "TimeZero-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_tzbase_timer1_default_textfirst_tf5meta_node3_full.json",
+   "sha16": "febcdfcd1e58eb12",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_tzbase_timer1_default_textfirst_black_node3_full.json",
+    "base": "tzbase"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "Time-R1 / v",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "Time-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_tr1base_timer1_default_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_tr1base_timer1_default_tf5meta_node3_full.json",
+   "sha16": "e8f51623dfc8f21b",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_black_node3_full.json",
+    "base": "tr1base"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "Time-R1 / t",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "Time-R1-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_tr1base_timer1_default_textfirst_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_tr1base_timer1_default_textfirst_tf5meta_node3_full.json",
+   "sha16": "de15d7da2bb14194",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_tr1base_timer1_default_textfirst_black_node3_full.json",
+    "base": "tr1base"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "VideoChat-R1 / v",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "VideoChat-R1-7B|base|train=v|eval=v",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_vcbase_vchat_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_vcbase_vchat_tf5meta_node3_full.json",
+   "sha16": "93d4f5c3d1b3e87b",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_vcbase_vchat_black_node3_full.json",
+    "base": "vcbase"
+   }
+  },
+  {
+   "table": "S13",
+   "row": "VideoChat-R1 / t",
+   "column": "clean+black",
+   "kind": "order",
+   "key": "VideoChat-R1-7B|base|train=v|eval=t",
+   "env": "B",
+   "env_rule": "canonical",
+   "name": "p4nat_vcbase_vchat_textfirst_tf5meta_node3_full.json",
+   "dataset": "charades-sta",
+   "src_file": "p4nat_vcbase_vchat_textfirst_tf5meta_node3_full.json",
+   "sha16": "b08a3b75d0f91656",
+   "extra": {
+    "black": "results/native_eval_20260918_node3/p4nat_vcbase_vchat_textfirst_black_node3_full.json",
+    "base": "vcbase"
+   }
+  }
+ ],
+ "pending": []
+}

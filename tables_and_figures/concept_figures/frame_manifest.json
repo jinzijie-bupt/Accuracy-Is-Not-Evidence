@@ -1,0 +1,181 @@
+{
+ "dataset": "Charades-STA",
+ "split": "test",
+ "video_id": "K7NRW",
+ "video_sha256": "2f655ecdf139fb269ec3f259c2eea1e7edbe70af14d01ef145592b70c0108923",
+ "fps": 30.0,
+ "event_A": "another person is fixing a doorknob.",
+ "interval_A": [
+  13.2,
+  23.7
+ ],
+ "event_B": {
+  "query": "a person opens a bag.",
+  "annotated_interval_sec": [
+   0.0,
+   4.6
+  ],
+  "annotation_line_1based": 955
+ },
+ "annotation_source": "<data_root>/charades_sta/anno/charades_sta_test.txt",
+ "annotation_sha256": "fab341679c20b0917173dcffffde367a71113fe63f3a645558cef2ebfbfefb55",
+ "frames": [
+  {
+   "timestamp_sec": 0.8,
+   "frame_index": 24,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t000.80.jpg",
+   "sha256": "8375379733709c9ae6a2fa5f699164442aa1f9ca7e845c22849e1d3166ca838c"
+  },
+  {
+   "timestamp_sec": 4,
+   "frame_index": 120,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t004.00.jpg",
+   "sha256": "7293d4f8b30d963ea1aa12984213688ded80796289060cc187f1191befb74bed"
+  },
+  {
+   "timestamp_sec": 7.2,
+   "frame_index": 216,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t007.20.jpg",
+   "sha256": "79cbb3c0bfc1103adcbe85789436e29ebe7355cded6adca7691bc961e489f42d"
+  },
+  {
+   "timestamp_sec": 11,
+   "frame_index": 330,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t011.00.jpg",
+   "sha256": "fda7c8c9344170998506b0dbe9c79160799c730d2633147a909544ff09f4914f"
+  },
+  {
+   "timestamp_sec": 15,
+   "frame_index": 450,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t015.00.jpg",
+   "sha256": "e55ed0f08a999dbfe15d22f62ceee1574dee8784356ce63a646b36a46e06ca96"
+  },
+  {
+   "timestamp_sec": 16.5,
+   "frame_index": 495,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t016.50.jpg",
+   "sha256": "052ab6996448b5914b30686116f82040555a8b47b1ffd8c3ba87e848ffa6c3d5"
+  },
+  {
+   "timestamp_sec": 18,
+   "frame_index": 540,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t018.00.jpg",
+   "sha256": "adf07940c51c1722c9564511ae1b74eab8197ba1be55a7a3f408d06e2555bb1e"
+  },
+  {
+   "timestamp_sec": 20.5,
+   "frame_index": 615,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t020.50.jpg",
+   "sha256": "dad7d1577ad6f72463a44134c6d8919a3ee1f6f8baf5ff3e142e2bf156755b4c"
+  },
+  {
+   "timestamp_sec": 23.9,
+   "frame_index": 717,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t023.90.jpg",
+   "sha256": "ba5af58f71f932b567c79517bf58396eb1cc0437f267330e15539cce4d80a7e9"
+  },
+  {
+   "timestamp_sec": 25,
+   "frame_index": 750,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t025.00.jpg",
+   "sha256": "956ee151f81ea14bf85edc788a3fc5526bcade18ec44acb0a06ebe23217364c3"
+  },
+  {
+   "timestamp_sec": 27,
+   "frame_index": 810,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t027.00.jpg",
+   "sha256": "193a5a542add59977d503b9889f3be102306546fa4dc0c22c5743a4af99403c9"
+  },
+  {
+   "timestamp_sec": 28,
+   "frame_index": 840,
+   "size": [
+    480,
+    360
+   ],
+   "file": "K7NRW_t028.00.jpg",
+   "sha256": "8f8512a575394d6836d71397bee0889a6ee6765186826e5e49f2acca04a071fb"
+  }
+ ],
+ "sampling": "Illustrative chronological samples, not an experimental evaluation batch.",
+ "teaser_times": [
+  0.8,
+  7.2,
+  11,
+  15,
+  18,
+  20.5,
+  23.9,
+  25,
+  28
+ ],
+ "teaser_E": [
+  3,
+  4,
+  5
+ ],
+ "teaser_O": [
+  0,
+  7,
+  8
+ ],
+ "audit_objective_times": [
+  0.8,
+  15,
+  18,
+  25,
+  28
+ ],
+ "audit_objective_E": [
+  1,
+  2
+ ],
+ "audit_objective_O": [
+  0,
+  4
+ ]
+}

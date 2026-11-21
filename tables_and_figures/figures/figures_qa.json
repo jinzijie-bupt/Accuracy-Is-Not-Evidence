@@ -1,0 +1,72 @@
+{
+ "fig1_map": {
+  "size_in": [
+   3.08,
+   2.36
+  ],
+  "placed_linewidth": 0.56,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig2_findings": {
+  "size_in": [
+   5.5,
+   2.12
+  ],
+  "placed_linewidth": 1.0,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig5_mechanism": {
+  "size_in": [
+   2.53,
+   2.02
+  ],
+  "placed_linewidth": 0.46,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig6_dose": {
+  "size_in": [
+   5.5,
+   1.8
+  ],
+  "placed_linewidth": 1.0,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig5_readouts": {
+  "size_in": [
+   5.5,
+   2.42
+  ],
+  "placed_linewidth": 1.0,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig9_ood": {
+  "size_in": [
+   5.5,
+   2.15
+  ],
+  "placed_linewidth": 1.0,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ },
+ "fig10_dynamics": {
+  "size_in": [
+   5.5,
+   1.75
+  ],
+  "placed_linewidth": 1.0,
+  "min_font_pt": 7.0,
+  "text_overlaps": [],
+  "outside_canvas": []
+ }
+}
