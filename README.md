@@ -4,7 +4,7 @@
 
 <sup>1</sup>Beijing University of Posts and Telecommunications &nbsp; <sup>2</sup>Institute of Automation, Chinese Academy of Sciences &nbsp; <sup>3</sup>Peking University &nbsp; <sup>4</sup>Independent Researcher &nbsp; <sup>†</sup>Corresponding author
 
-[Homepage](https://jinzijie-bupt.github.io/Accuracy-Is-Not-Evidence/) · [Paper (arXiv)](#citation) · [Models](#released-models) · [Data](https://huggingface.co/datasets/jinzijie-bupt/Accuracy-Is-Not-Evidence)
+[Homepage](https://jinzijie-bupt.github.io/Accuracy-Is-Not-Evidence/) · [Paper (arXiv)](https://arxiv.org/abs/2611.30320) · [Models](#released-models) · [Data](https://huggingface.co/datasets/jinzijie-bupt/Accuracy-Is-Not-Evidence)
 
 <p align="center"><img src="docs/static/images/teaser.png" width="46%"> <img src="docs/static/images/map.png" width="52%"></p>
 
@@ -178,7 +178,7 @@ its own license:
 @article{jin2026accuracy,
   title   = {Accuracy Is Not Evidence: Measuring and Training Evidence Dependence in Video Temporal Grounding},
   author  = {Jin, Zijie and Zhao, Shuai and Tao, Haoran and Huang, Chaomin and Luo, Liwen},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2611.30320},
   year    = {2026}
 }
 ```
